@@ -1,0 +1,48 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 2 ASSIGNMENT SUBMISSION
+The "Persona & Journey Map Fleshing" (Assignment UX-02 · Foundations Phase · 3h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-02_PERSONA_JOURNEY_MAP_FLESHING.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX02_Persona_Journey_Map_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-02 completion summary for Week 2 (Foundations Phase):
+
+1. RAW INTERVIEW TRANSCRIPT GROUNDING:
+   Synthesized 45-minute qualitative interviews from 3 distinct DTC e-commerce operators:
+   - Participant A: Solo Founder & CEO ($1.4M ARR skincare brand on Shopify + TikTok Shop + Amazon FBA).
+   - Participant B: 3PL Warehouse Operations Lead managing 42 floor pickers on rugged tablet interfaces.
+   - Participant C: Senior Demand Planner ($8M omni-channel apparel) struggling with supplier canal delays and working capital lockup.
+
+2. AI HALLUCINATION & VERIFICATION LOG:
+   Extracted initial drafts using DeepSeek-R1 and conducted a human verification audit:
+   - Hallucination Fixed: DeepSeek assumed Elena used enterprise "SAP & Salesforce Commerce Cloud"; corrected to reality: Shopify Plus, TikTok Seller Center, and Google Sheets.
+   - Hallucination Fixed: AI suggested Marcus uses a "MacBook Pro M3 Max"; corrected to warehouse reality: Honeywell/Zebra scanners and cart-mounted rugged iPads.
+   - Hallucination Fixed: AI fabricated an uncritical pro-AI quote for Priya (*"I love one-click AI reordering"*); replaced with verbatim transcript quote proving distrust in black-box models (*"If an AI says 'Reorder 500 units', I will not click it without seeing the velocity formula"*).
+   - Emotional Curve Corrected: Replaced AI's naive linear improvement with an authentic volatile curve plunging to -5 (acute panic during oversold viral events) and -3 (frustration with CSV errors).
+
+3. 3-PERSONA PACK (Grounding & JTBD):
+   - Elena Rostova (29, Solo Founder): Time-starved, managing multi-channel fulfillment firefighting. Needs 1-click stock rebalancing and real-time buffer locks.
+   - Marcus Chen (34, 3PL Ops Lead): Pragmatic warehouse floor manager. Needs 48px+ touch targets, zero-lag pre-flight CSV sanitation, and unambiguous color badges.
+   - Priya Patel (31, Demand Planner): Analytical working capital strategist. Needs Explainable AI (XAI) transparent math formulas and one-click Excel data export.
+
+4. EMOTIONAL JOURNEY MAP (-5 to +5 Curve):
+   Mapped the core high-friction workflow: "Multi-Channel Stockout Crisis & Emergency Supplier Reroute":
+   - Stage 1: Trigger & Alert (-2, Anxious)
+   - Stage 2: Cross-Channel Impact Assessment (-5, Acute Panic & Fear of Amazon Suspension)
+   - Stage 3: Emergency Triage & Rebalance (-1, Cautious Relief with Explainable AI)
+   - Stage 4: Warehouse Execution & Picking (+3, Focused & Rapid Dispatch)
+   - Stage 5: Channel & Customer Care (+4, Transparent Delivery Updates)
+   - Stage 6: Post-Mortem & Preventative Rules (+5, Confident Resiliency)
+
+5. "HOW TO USE THIS" GUIDE FOR PMs:
+   - Persona Decision Filters (The Elena Test for speed, The Marcus Test for ergonomics/data formatting, The Priya Test for algorithmic auditability).
+   - Persona-grounded User Story syntax for engineering backlogs.
+   - Core experience North Star metrics (Time-to-Triage < 90s, Input Error Rate < 0.1%, AI Adoption > 85%).
+
+Full dossier, visual canvases, and presentation PDF ready for review.
+================================================================================

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-02: Persona & Journey Map Fleshing</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 15mm 16mm 15mm 16mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11.5px;
+  }
+  .header {
+    border-bottom: 2px solid #8b5cf6;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 20px;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ede9fe;
+    color: #6d28d9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+  .meta-item { font-size: 11px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 9px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 13.5px;
+    color: #1e1b4b;
+    border-left: 3px solid #8b5cf6;
+    padding-left: 7px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .persona-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 10px 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .persona-card.p1 { border-top: 3px solid #f43f5e; }
+  .persona-card.p2 { border-top: 3px solid #0284c7; }
+  .persona-card.p3 { border-top: 3px solid #10b981; }
+  .persona-name { font-size: 13px; font-weight: 700; color: #0f172a; }
+  .persona-role { font-size: 10px; color: #64748b; font-weight: 600; margin-bottom: 6px; }
+  .persona-quote {
+    background: #f8fafc;
+    border-left: 2px solid #cbd5e1;
+    padding: 5px 8px;
+    font-style: italic;
+    font-size: 10.5px;
+    color: #334155;
+    margin: 6px 0;
+    line-height: 1.35;
+  }
+  .persona-section-title {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #475569;
+    margin-top: 6px;
+    margin-bottom: 2px;
+  }
+  .persona-list {
+    margin: 0;
+    padding-left: 14px;
+    font-size: 10.5px;
+    color: #334155;
+  }
+  .persona-list li { margin-bottom: 2px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 14px 0;
+    font-size: 10.5px;
+  }
+  th, td {
+    padding: 6px 8px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; font-size: 10px; }
+  .journey-table th { background: #1e1b4b; color: #ffffff; }
+  .score-badge {
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 10px;
+  }
+  .score-neg { background: #fee2e2; color: #b91c1c; }
+  .score-pos { background: #dcfce7; color: #15803d; }
+  .guide-box {
+    background: #fdf4ff;
+    border: 1px solid #f0abfc;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 10px;
+  }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 10px;
+    word-break: break-all;
+    margin-bottom: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 2 · Foundations</span>
+    <h1>UX-02: Persona & Journey Map Fleshing</h1>
+    <div style="color: #64748b; font-size: 11px;">Grounded User Research Dossier · DeepSeek Extraction · Hallucination Audit</div>
+  </div>
+  <div style="text-align: right; font-size: 10px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Primary Research Base</div>
+    <div class="meta-val">3 Verbatim Interviews</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Archetypes Fleshed</div>
+    <div class="meta-val">Founder, 3PL Ops, Merchandiser</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Journey Core Task</div>
+    <div class="meta-val">Multi-Channel Stockout Crisis</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">AI Hallucinations Corrected</div>
+    <div class="meta-val">4 Critical Fabrications Fixed</div>
+  </div>
+</div>
+
+<h2>1. The 3-Persona Pack (Grounded Archetypes)</h2>
+<div class="persona-grid">
+  <!-- Persona 1 -->
+  <div class="persona-card p1">
+    <div class="persona-name">Elena Rostova</div>
+    <div class="persona-role">The Scrappy Solo Founder · Botanica Glow (29)</div>
+    <div class="persona-quote">"I spent 14 straight hours manually copying order IDs crying over my keyboard. I just need a screen that stops me selling products I can't deliver."</div>
+    <div class="persona-section-title">Context & Tech Stack</div>
+    <ul class="persona-list">
+      <li>$1.4M ARR DTC Skincare; 8 SKUs.</li>
+      <li>Shopify Plus, Amazon FBA, TikTok Shop, Sheets.</li>
+    </ul>
+    <div class="persona-section-title">Goals</div>
+    <ul class="persona-list">
+      <li>Prevent overselling during viral surges.</li>
+      <li>Cut daily stock audit from 2.5h to 20m.</li>
+    </ul>
+    <div class="persona-section-title">Frustrations</div>
+    <ul class="persona-list">
+      <li>Channel stock sync lags up to 4 hours.</li>
+      <li>Amazon rating penalization from backorders.</li>
+    </ul>
+  </div>
+
+  <!-- Persona 2 -->
+  <div class="persona-card p2">
+    <div class="persona-name">Marcus Chen</div>
+    <div class="persona-role">Warehouse Ops Lead · Apex 3PL (34)</div>
+    <div class="persona-quote">"If the UI doesn't work on a tablet with greasy fingers in a noisy warehouse, it's useless to my team."</div>
+    <div class="persona-section-title">Context & Tech Stack</div>
+    <ul class="persona-list">
+      <li>Manages 42 pickers across 65,000 sq ft.</li>
+      <li>Zebra Scanners, Rugged iPads, HighJump WMS.</li>
+    </ul>
+    <div class="persona-section-title">Goals</div>
+    <ul class="persona-list">
+      <li>Maintain 99.8% pick accuracy on floor.</li>
+      <li>Zero floor halts from bad client CSV imports.</li>
+    </ul>
+    <div class="persona-section-title">Frustrations</div>
+    <ul class="persona-list">
+      <li>Trailing spaces in SKU codes crashing imports.</li>
+      <li>Tiny unclickable buttons on mobile tablets.</li>
+    </ul>
+  </div>
+
+  <!-- Persona 3 -->
+  <div class="persona-card p3">
+    <div class="persona-name">Priya Patel</div>
+    <div class="persona-role">Senior Demand Planner · Horizon Apparel (31)</div>
+    <div class="persona-quote">"If an AI tool says 'Reorder 500 units', I will not click it without seeing the velocity formula... I revert to Excel."</div>
+    <div class="persona-section-title">Context & Tech Stack</div>
+    <ul class="persona-list">
+      <li>$8.2M ARR Apparel; 140 SKUs overseas.</li>
+      <li>NetSuite ERP, Looker, Excel PowerQuery.</li>
+    </ul>
+    <div class="persona-section-title">Goals</div>
+    <ul class="persona-list">
+      <li>98.5% in-stock rate on top 20% core revenue SKUs.</li>
+      <li>Reduce deadstock working capital by 15%.</li>
+    </ul>
+    <div class="persona-section-title">Frustrations</div>
+    <ul class="persona-list">
+      <li>Black-box automated recommendations.</li>
+      <li>Unpredictable shipping delays (6 to 14 weeks).</li>
+    </ul>
+  </div>
+</div>
+
+<h2>2. AI First-Draft vs. Human Verification Log</h2>
+<p style="margin-top: -4px; margin-bottom: 6px; color: #64748b; font-size: 10.5px;">All personas were verified against verbatim transcripts to identify and eliminate synthetic hallucinations.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 22%;">Area / Archetype</th>
+      <th style="width: 32%;">DeepSeek AI First-Draft</th>
+      <th style="width: 32%;">Verified Human Correction</th>
+      <th style="width: 14%;">Audit Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elena Tech Stack</strong></td>
+      <td>Stated Elena uses enterprise "SAP ERP and Salesforce Commerce Cloud".</td>
+      <td>Corrected to: <strong>Shopify Plus, TikTok Shop Seller Center, Amazon Seller Central, Google Sheets</strong>.</td>
+      <td>Real small founders do not use $100k+ enterprise SAP.</td>
+    </tr>
+    <tr>
+      <td><strong>Marcus Hardware</strong></td>
+      <td>Suggested Marcus operates from a "MacBook Pro M3 Max at a standing desk".</td>
+      <td>Corrected to: <strong>Ruggedized Zebra/Honeywell barcode scanners & cart-mounted iPads</strong>.</td>
+      <td>Floor ops require touch-first ergonomics and industrial durability.</td>
+    </tr>
+    <tr>
+      <td><strong>Priya Quote</strong></td>
+      <td>Fabricated quote: <em>"I love automated one-click AI ordering because AI knows best."</em></td>
+      <td>Corrected to: <strong>"If an AI says 'Reorder 500 units', I will not click it without seeing the velocity formula."</strong></td>
+      <td>AI hallucinated enthusiasm; raw transcript proved high skepticism.</td>
+    </tr>
+    <tr>
+      <td><strong>Journey Curve</strong></td>
+      <td>Plotted a naive upward linear emotional progression from Stage 1 to Stage 6.</td>
+      <td>Corrected to: <strong>Volatile curve plunging to -5 (acute panic during oversold viral events)</strong>.</td>
+      <td>Real fulfillment crises cause severe anxiety prior to resolution.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>3. Emotional Journey Map: Multi-Channel Stockout Crisis & Emergency Reroute</h2>
+<table class="journey-table">
+  <thead>
+    <tr>
+      <th style="width: 13%;">Stage</th>
+      <th style="width: 15%;">Actions</th>
+      <th style="width: 14%;">Touchpoints</th>
+      <th style="width: 18%;">User Thoughts</th>
+      <th style="width: 10%;">Score</th>
+      <th style="width: 15%;">Pain Points</th>
+      <th style="width: 15%;">Design Opportunities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Alert Trigger</strong></td>
+      <td>Receives urgent mobile push notification on stock deficit.</td>
+      <td>Mobile SMS, iOS Push, Smart Watch.</td>
+      <td><em>"Is this a glitch or are we actually blowing through stock?"</em></td>
+      <td><span class="score-badge score-neg">-2 (Anxious)</span></td>
+      <td>Alerts buried in notification spam.</td>
+      <td>Unified webhook push with high-priority audio chime.</td>
+    </tr>
+    <tr>
+      <td><strong>2. Assessment</strong></td>
+      <td>Opens laptop; compares Shopify, TikTok, and Amazon Seller tabs.</td>
+      <td>Chrome browser tabs, Google Sheets.</td>
+      <td><em>"450 unfulfilled orders on TikTok! Amazon will suspend my account!"</em></td>
+      <td><span class="score-badge score-neg">-5 (Panic)</span></td>
+      <td>Mismatched SKU codes across channels; manual calculations.</td>
+      <td>Universal SKU Aliasing Engine with live deficit tally.</td>
+    </tr>
+    <tr>
+      <td><strong>3. Triage</strong></td>
+      <td>Uses FlyCommerce OS to model cross-channel virtual inventory rebalance.</td>
+      <td>FlyCommerce OS Modal, XAI Formula Tooltip.</td>
+      <td><em>"Show me the exact safety buffer math before I click confirm."</em></td>
+      <td><span class="score-badge score-neg">-1 (Cautious)</span></td>
+      <td>Fear of black-box automated transfers.</td>
+      <td><strong>Explainable AI (XAI)</strong> slider showing stock before/after impact.</td>
+    </tr>
+    <tr>
+      <td><strong>4. Warehouse Run</strong></td>
+      <td>Approves 200 unit reallocation; sends pick-wave to Marcus at 3PL.</td>
+      <td>Warehouse Cart Tablet, Zebra Scanner.</td>
+      <td><em>"Marcus needs clean data before 5 PM cut-off. No errors."</em></td>
+      <td><span class="score-badge score-pos">+3 (Focused)</span></td>
+      <td>Malformed CSV uploads causing floor work stoppages.</td>
+      <td>Pre-flight CSV data linter with 48px touch targets.</td>
+    </tr>
+    <tr>
+      <td><strong>5. Customer Care</strong></td>
+      <td>System triggers automated transactional emails with 10% coupon.</td>
+      <td>Klaviyo Email API, TikTok Messaging.</td>
+      <td><em>"Keep buyers informed before they leave negative reviews."</em></td>
+      <td><span class="score-badge score-pos">+4 (Relieved)</span></td>
+      <td>Generic cancellation messages sparking chargebacks.</td>
+      <td>Dynamic transactional delay notification templates.</td>
+    </tr>
+    <tr>
+      <td><strong>6. Prevention</strong></td>
+      <td>Priya configures automated dynamic safety buffers for TikTok surges.</td>
+      <td>FlyCommerce Rule Engine, Analytics.</td>
+      <td><em>"We are never losing an entire weekend to inventory triage again."</em></td>
+      <td><span class="score-badge score-pos">+5 (Resilient)</span></td>
+      <td>Manual rule management forgotten after crisis ends.</td>
+      <td>"One-Click Preventative Rule" suggested post-incident.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. "How to Use This" Guide for Product Managers</h2>
+<div class="guide-box">
+  <div style="font-weight: 700; color: #86198f; margin-bottom: 4px;">Operational Implementation Framework for PMs & Engineering Sprints</div>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font-size: 10.5px;">
+    <div>
+      <strong>1. The Elena Test (Speed)</strong><br>
+      Any core operational triage task must be executable in <strong>under 3 clicks / 90 seconds</strong>. Eliminate deep configuration submenus.
+    </div>
+    <div>
+      <strong>2. The Marcus Test (Ergonomics)</strong><br>
+      All warehouse UI components must have <strong>minimum 48px touch targets</strong> and pre-validated input sanitization to prevent floor freezes.
+    </div>
+    <div>
+      <strong>3. The Priya Test (Transparency)</strong><br>
+      No AI recommendation is displayed without an <strong>Explainable AI breakdown</strong> (Velocity + Lead Time + Buffer) and 1-click Excel export.
+    </div>
+  </div>
+</div>
+
+<h2>5. Deliverable Links & Reviewer Access</h2>
+<div class="link-box">
+<strong>Master Figma File (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design<br>
+<strong>Week 2 Comprehensive Dossier:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-02_PERSONA_JOURNEY_MAP_FLESHING.md
+</div>
+
+</body>
+</html>
