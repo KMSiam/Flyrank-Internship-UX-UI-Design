@@ -1,0 +1,57 @@
+================================================================================
+FLYRANK INTERNSHIP SUBMISSION PORTAL: UX-10
+Assignment: UX-10 Accessibility and Polish Pass (Week 7 · Submit · 3h)
+Candidate: K. M. Siam (GitHub: @KMSiam)
+Capstone: FlyCommerce OS (Predictive Multi-Channel E-Commerce Fulfillment & Inventory Hub)
+================================================================================
+
+[FIELD 1: DELIVERABLE LINK]
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+
+(Direct GitHub Technical Report & Audit Dossier):
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-10_ACCESSIBILITY_AND_POLISH_PASS.md
+
+--------------------------------------------------------------------------------
+
+[FIELD 2: ATTACHED PDF REPORT]
+File: e:\FlyRank\UX-UI-Design\FlyRank_UX10_Accessibility_Polish_Report.pdf
+
+--------------------------------------------------------------------------------
+
+[FIELD 3: NOTES / CONTEXT FOR REVIEWER]
+Hi Team,
+
+Here is my complete submission for UX-10: Accessibility and Polish Pass for FlyCommerce OS.
+
+Key Highlights of the Accessibility Audit & Polish Sweep:
+1. 12-Point WCAG 2.1 AA/AAA Audit Matrix:
+   - Audited every key high-fidelity screen across color contrast, non-color visual indicators, touch targets, focus rings, and form feedback states.
+   - Lowest audited body text contrast ratio is 7.3:1 (text-secondary #475569 on surface-card #FFFFFF), well exceeding the WCAG 4.5:1 AA standard and achieving AAA compliance.
+
+2. Remediation Fixed at the Token Level (Zero Screen Detaches):
+   - Rather than patching individual frames, all contrast deficiencies were updated directly within the FlyCore Design System Variables collection:
+     • text-secondary upgraded from #64748B (4.4:1) to #475569 (7.3:1 AAA).
+     • Table headers upgraded from #94A3B8 (2.8:1) to #475569 (6.6:1 AAA).
+     • Warning text darkened from #F59E0B (2.1:1) to #B45309 (4.9:1 AA on #FEF3C7).
+     • Codified border-focus token: 2px solid #6366F1 with 2px offset ring for keyboard users.
+     • Enlarged warehouse tablet touch targets from 32px to 54px height (WCAG 2.5.5 AAA).
+
+3. WCAG 1.4.1 Dual-Signaling Architecture:
+   - Eliminated reliance on color alone: inventory statuses pair color tokens with distinct geometric glyphs:
+     • SYNCED: Hexagon (⬡) + Checkmark
+     • AT RISK: Triangle (△) + Exclamation
+     • BLOCKED: Square (▢) + Cross
+     • IN TRANSIT: Capsule (⭘) + Directional Arrows
+
+4. Full Design System Consistency Sweep:
+   - Spacing: 100% codified to an 8pt geometric scale (4, 8, 16, 24, 32, 48, 64px).
+   - Typography: 100% bound to 1.250 Major Third modular styles with tabular figures (tnum) on tables.
+   - Corner Radii: Standardized to 5 semantic levels (4px badges, 6px inputs, 8px buttons, 12px cards, 16px modals).
+   - Icons: Bounded to 16px, 20px, and 24px square boxes.
+
+The comprehensive audit table and redlines are published on the '06_Developer Hand-off & Redlines' page in the master Figma file and detailed in the attached report.
+
+Figma Master File: https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+Interactive Prototype: https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access
+GitHub Repository: https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+================================================================================

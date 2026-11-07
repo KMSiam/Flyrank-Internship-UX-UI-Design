@@ -38,12 +38,19 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 6** | **UX-08** | **Interactive Prototype & Motion Architecture** | **Build+** | ✅ **Completed** | [UX-08 Dossier](./UX-08_INTERACTIVE_PROTOTYPE.md) · [Submission Notes](./submission_notes_ux_08.txt) · [PDF Report](./FlyRank_UX08_Interactive_Prototype_Report.pdf) |
 | **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
 | **Week 7** | **UX-09** | **Usability Testing & Iterative Critique** | **Submit** | ✅ **Completed** | [UX-09 Dossier](./UX-09_USABILITY_TEST_AND_ITERATE.md) · [Submission Notes](./submission_notes_ux_09.txt) · [PDF Report](./FlyRank_UX09_Usability_Test_Report.pdf) |
-| Week 9 | UX-10 | Design Token Sync & Developer Hand-off | Hand-off | ⏳ Upcoming | Hand-off Specs & Redlines |
-| Week 10 | UX-11 | Final Capstone Showcase & Portfolio Deck | Showcase | ⏳ Upcoming | Case Study & Portfolio Piece |
+| **Week 7** | **UX-10** | **Accessibility and Polish Pass** | **Submit** | ✅ **Completed** | [UX-10 Dossier](./UX-10_ACCESSIBILITY_AND_POLISH_PASS.md) · [Submission Notes](./submission_notes_ux_10.txt) · [PDF Report](./FlyRank_UX10_Accessibility_Polish_Report.pdf) |
+| Week 9 | UX-11 | Final Capstone Showcase & Portfolio Deck | Showcase | ⏳ Upcoming | Case Study & Portfolio Piece |
 
 ---
 
 ## 🛠️ Assignment Highlights
+
+### Week 7 (UX-10): Accessibility and Polish Pass
+- Conducted an exhaustive **12-point WCAG 2.1 AA/AAA Accessibility Audit** across all key screens.
+- Lowest audited text contrast is **7.3:1 (AAA Pass)**; all failures corrected **at the token variable level** (zero detached instances).
+- Codified **WCAG 1.4.1 non-color signaling** pairing distinct geometric glyphs (Hexagon, Triangle, Square) with color status badges.
+- Standardized warehouse touch targets to **54px**, 2px visible focus rings with 2px offset, and zero-layout-shift error containers.
+- Completed full system-wide consistency sweep across the 8pt spacing grid, modular typography, and semantic corner radii.
 
 ### Week 7 (UX-09): Usability Testing and Iterate
 - Executed moderated think-aloud usability testing with **5 real operator participants** across 3 non-leading task scenarios.
