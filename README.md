@@ -26,6 +26,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 3** | **UX-03** | **Users, Jobs, and Flows** | **Foundations** | ✅ **Completed** | [UX-03 Dossier](./UX-03_USERS_JOBS_AND_FLOWS.md) · [Submission Notes](./submission_notes_ux_03.txt) · [PDF Report](./FlyRank_UX03_IA_and_Flows_Report.pdf) |
 | **Week 4** | **UX-04A** | **The "Kill Your Darlings" Cut-Down** | **Build** | ✅ **Completed** | [UX-04A Dossier](./UX-04_KILL_YOUR_DARLINGS_CUT_DOWN.md) · [Submission Notes](./submission_notes_ux_04.txt) · [PDF Report](./FlyRank_UX04_Kill_Your_Darlings_Report.pdf) |
 | **Week 4** | **UX-04B** | **Why Grunt Work is Actually a Promotion Strategy** | **Build** | ✅ **Completed** | [UX-04B Dossier](./UX-04B_GRUNT_WORK_PROMOTION_STRATEGY.md) · [Submission Notes](./submission_notes_ux_04_grunt_work.txt) · [PDF Report](./FlyRank_UX04B_Grunt_Work_File_Hygiene_Report.pdf) |
+| **Week 4** | **UX-04C** | **Wireframes: AI Draft vs Hand-Built** | **Build** | ✅ **Completed** | [UX-04C Dossier](./UX-04_WIREFRAMES_AI_VS_HANDBUILT.md) · [Submission Notes](./submission_notes_ux_04_wireframes.txt) · [PDF Report](./FlyRank_UX04_Wireframes_Experiment_Report.pdf) |
 | Week 5 | UX-05 | Design System Foundations (Tokens & Atomic UI) | UI System | ⏳ Upcoming | Component Library |
 | Week 6 | UX-06 | High-Fidelity Responsive UI | UI Design | ⏳ Upcoming | Desktop & Tablet Views |
 | Week 7 | UX-07 | Interactive Prototyping & Micro-Interactions | Prototype | ⏳ Upcoming | Clickable Prototype |
@@ -37,13 +38,8 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 4A (UX-04A): The "Kill Your Darlings" Cut-Down
-- Subjected `SCR-04 / MOD-02` (Emergency Rebalance Modal) to a 50% dev velocity cut constraint.
-- Cut **11 out of 25 UI elements (44% reduction)**, eliminating conversational AI chatboxes, vanity TikTok view meters, competitor repricing, and redundant export buttons.
-- Preserved 100% of the core user goal: reallocating safety stock in <90s with Explainable AI transparency.
-
-### Week 4B (UX-04B): Why Grunt Work is Actually a Promotion Strategy
-- Audited legacy company file (`Dashboard-USADrop`), purging **142 invisible ghost layers** and renaming **86 ambiguous frames** ("Rectangle 47").
-- Codified strict semantic atomic slash naming: `Category / Component / Variant / Size / State`.
-- Restructured workspace into **7 numbered pages** (`00_Cover` to `06_Handoff`) with a **3-bullet Handover Note** for 5-second retrieval.
-- Recorded a **2-minute Loom walkthrough** with a timed production script.
+### Week 4C (UX-04C): Wireframes: AI Draft vs Hand-Built
+- Created **12 low-fidelity wireframe screens** covering primary emergency triage, onboarding wizard, and CSV recovery flows.
+- Executed the **AI Draft vs. Hand-Built Experiment** comparing Figma AI / First Draft against hand-crafted designs on SCR-01 (Stock Grid) and MOD-02 (Rebalance Modal).
+- Authored **6 empirical observations** detailing spatial density, multi-channel segmentation, XAI formula transparency, and warehouse tablet ergonomics.
+- Documented **2 visible peer-review iterations** (Reserve Depletion Safeguard & Tablet Status Discriminability).

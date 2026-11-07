@@ -1,0 +1,54 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 4 ASSIGNMENT SUBMISSION
+Wireframes: AI Draft vs Hand-Built (Assignment UX-04 · Build Phase · 6h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-04_WIREFRAMES_AI_VS_HANDBUILT.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX04_Wireframes_Experiment_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-04 (Wireframes: AI Draft vs Hand-Built) Summary:
+
+1. 12-SCREEN LOW-FIDELITY WIREFRAME SUITE (Traced to UX-03 IA):
+   - Primary Task Flow (Emergency Triage):
+     * SCR-01: Unified Multi-Channel Stock Grid (High-density 1440px desktop grid)
+     * SCR-02: SKU Detail & Channel Aliasing Drawer
+     * SCR-04: Emergency Stockout Triage Center
+     * MOD-02: Cross-Channel Virtual Rebalancing Modal (Tactile slider + quick-snaps)
+     * MOD-01: Explainable AI (XAI) Formula Inspector Modal
+   - Onboarding & First-Run Flow:
+     * WIZ-01: Multi-Store OAuth Connection Stepper (Shopify, TikTok Shop, Amazon FBA)
+     * WIZ-02: Catalog Ingestion Progress Stepper
+     * WIZ-03: Automated SKU Auto-Match & Conflict Resolver
+     * WIZ-04: Baseline Buffer Strategy Calibration (15% dynamic buffer activation)
+   - Recovery & Warehouse Execution Flow:
+     * MOD-03: Pre-Flight CSV Upload & In-Browser Linting Modal
+     * MOD-04: CSV Trailing Space & Syntax Warning Drawer
+     * BAN-01: Persistent 60-Second Floating Undo Banner & Rollback
+
+2. AI DRAFT VS. HAND-BUILT EXPERIMENT:
+   Tested Figma AI / First Draft against hand-crafted designs on two key screens:
+   - Screen 1 (SCR-01 Stock Grid):
+     * AI Output: Consumer e-commerce card layout, 32px whitespace, retail price tags, destructive delete buttons. Only 3 items visible per viewport.
+     * Hand-Built: High-density 8pt data table showing 12+ SKUs per viewport, multi-channel split (Shopify/TikTok/FBA/Reserve), and persistent sync health header.
+   - Screen 2 (MOD-02 Rebalance Modal):
+     * AI Output: Generic accounting adjustments ("Damaged Stock") treating inventory as a single static number.
+     * Hand-Built: Dynamic Source-to-Target routing, tactile slider with quick-snaps, Explainable AI math formula, and factory blackout calendar warnings.
+
+3. 6 IN-DEPTH OBSERVATIONS:
+   - Obs 1 (Spatial Density / Fitts's Law): AI's low-density consumer cards increase triage time by 300%; hand-built 40px table rows maximize scanning velocity.
+   - Obs 2 (Multi-Channel Blindspot): AI modeled inventory as a single static number; hand-built architecture captures multi-channel segmentation.
+   - Obs 3 (Triage vs Accounting): AI defaulted to damage write-offs; hand-built focused on virtual buffer routing.
+   - Obs 4 (Explainable AI): AI gave black-box outputs; hand-built exposed the underlying sales velocity and lead-time formula.
+   - Obs 5 (Warehouse Tablet Ergonomics): AI used microscopic 28px buttons; hand-built applied 48px+ touch targets for gloved warehouse operators.
+   - Obs 6 (Unhappy Paths): AI assumed 100% happy paths; hand-built introduced client-side CSV linting and 60-second undo rollbacks.
+
+4. TWO DOCUMENTED PEER-REVIEW ITERATIONS:
+   - Round 1 (Senior Designer Alex): Added dynamic reserve depletion health bar and 75% safety lock toggle to prevent accidental complete reserve drain.
+   - Round 2 (Logistics Engineer Dave): Enlarged tablet touch targets to 54px and converted status tags to distinct geometric shapes (Hexagon=Synced, Triangle=At-Risk, Square=Blocked) for warehouse legibility.
+
+Full comparative wireframe schematics, design rationales, and printable PDF report available in the repository.
+================================================================================
