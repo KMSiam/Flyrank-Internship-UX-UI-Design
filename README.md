@@ -40,10 +40,17 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 7** | **UX-09** | **Usability Testing & Iterative Critique** | **Submit** | ✅ **Completed** | [UX-09 Dossier](./UX-09_USABILITY_TEST_AND_ITERATE.md) · [Submission Notes](./submission_notes_ux_09.txt) · [PDF Report](./FlyRank_UX09_Usability_Test_Report.pdf) |
 | **Week 7** | **UX-10** | **Accessibility and Polish Pass** | **Submit** | ✅ **Completed** | [UX-10 Dossier](./UX-10_ACCESSIBILITY_AND_POLISH_PASS.md) · [Submission Notes](./submission_notes_ux_10.txt) · [PDF Report](./FlyRank_UX10_Accessibility_Polish_Report.pdf) |
 | **Week 8** | **UX-11** | **Case Study Writeup & Capstone Showcase** | **Submit** | ✅ **Completed** | [UX-11 Case Study](./UX-11_CAPSTONE_CASE_STUDY.md) · [Submission Notes](./submission_notes_ux_11.txt) · [PDF Report](./FlyRank_UX11_Capstone_Case_Study_Report.pdf) |
+| **Week 8** | **UX-12** | **Developer Hand-off Package & Final Capstone** | **Submit** | ✅ **Completed** | [UX-12 Package](./UX-12_HANDOFF_PACKAGE_AND_FINAL_SUBMISSION.md) · [Submission Notes](./submission_notes_ux_12.txt) · [PDF Report](./FlyRank_UX12_Developer_Handoff_Report.pdf) |
 
 ---
 
 ## 🛠️ Assignment Highlights
+
+### Week 8 (UX-12): Developer Hand-off Package & Final Capstone
+- Built the dedicated **`06_Developer Hand-off & Redlines`** Figma workspace with interactive behavior redlines, CSS token mappings, keyboard focus specs, and animation curves.
+- Documented specific engineering edge cases: 56px structural skeleton placeholders for API latency >3000ms, negative CSV row validations, and dynamic safety interlocks for AI rebalancing.
+- Exported production-ready vector assets (SVG, 1x/2x/3x high-DPI bitmaps) for multi-channel logos and WCAG status glyphs.
+- Completed and signed off the **40.0 Total Verified Internship Hours Log** matching all commit timestamps and module workloads.
 
 ### Week 8 (UX-11): Case Study Writeup & Capstone Showcase
 - Published the comprehensive **NN/g-structured Capstone Case Study** for **FlyCommerce OS**, covering the complete 8-week design arc from initial research to tested prototype.
