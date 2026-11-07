@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-04B: Why Grunt Work is Actually a Promotion Strategy</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #1e3a8a;
+    border-left: 3px solid #2563eb;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .audit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .audit-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+    text-align: center;
+  }
+  .audit-num {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2563eb;
+  }
+  .audit-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 2px;
+  }
+  .handover-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+  }
+  .handover-title {
+    font-weight: 700;
+    color: #1d4ed8;
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .handover-list {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 10.5px;
+    color: #1e40af;
+  }
+  .handover-list li { margin-bottom: 4px; }
+  .page-tree {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 9.5px;
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+  .page-tree .page { color: #38bdf8; font-weight: bold; }
+  .page-tree .desc { color: #94a3b8; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 4 · Build</span>
+    <h1>UX-04B: Why Grunt Work is Actually a Promotion Strategy</h1>
+    <div style="color: #64748b; font-size: 10.5px;">Figma File Restructuring · Layer Hygiene Purge · 5-Second Handover Note · 2-Min Loom Walkthrough</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>File:</strong> Dashboard-USADrop
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Original Messy File</div>
+    <div class="meta-val">Dashboard-USADrop (Legacy)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ghost Layers Purged</div>
+    <div class="meta-val">142 Invisible Elements</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Naming Standard</div>
+    <div class="meta-val">Atomic Slash Hierarchy</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Handover System</div>
+    <div class="meta-val">3-Bullet 5-Second Guide</div>
+  </div>
+</div>
+
+<h2>1. Quantitative File Hygiene &amp; Layer Purge Metrics</h2>
+<div class="audit-grid">
+  <div class="audit-card">
+    <div class="audit-num">142</div>
+    <div class="audit-title">Ghost Layers Purged</div>
+  </div>
+  <div class="audit-card">
+    <div class="audit-num">86</div>
+    <div class="audit-title">"Rectangle 47" Renamed</div>
+  </div>
+  <div class="audit-card">
+    <div class="audit-num">34</div>
+    <div class="audit-title">Auto-Layouts Built</div>
+  </div>
+  <div class="audit-card">
+    <div class="audit-num">7</div>
+    <div class="audit-title">Numbered Master Pages</div>
+  </div>
+</div>
+
+<h2>2. The 3-Bullet Handover Note (Find Anything in 5 Seconds)</h2>
+<div class="handover-box">
+  <div class="handover-title">📌 Pinned Handover Architecture for Engineers &amp; Product Managers</div>
+  <ul class="handover-list">
+    <li><strong>1. Chronological Numbered Page Hierarchy (00 to 06):</strong> Sequenced from research to production code. Developers jump directly to <code>06_Developer Hand-off</code> for pixel redlines and token CSS; PMs navigate to <code>02_IA &amp; User Flows</code> for product logic.</li>
+    <li><strong>2. Global Search via Strict Slash Syntax:</strong> Every component follows atomic hierarchy (<code>Category / Component / Variant / Size / State</code>). Press <code>Shift + I</code> and type <code>Button / Primary</code> or <code>Badge / Status</code> to locate any component variant in &lt;2 seconds.</li>
+    <li><strong>3. Zero Ghost Layers &amp; 100% Auto-Layout:</strong> All hidden scratch shapes and zero-opacity masks have been purged. Inspect elements in Figma Dev Mode with 0% visual guesswork—all margins, paddings, and responsive constraints are codified.</li>
+  </ul>
+</div>
+
+<h2>3. Numbered Page Architecture</h2>
+<div class="page-tree">
+<span class="page">📄 00_Cover &amp; Release Specs:</span> <span class="desc">Project metadata, tokens summary, version tag, and 3-bullet handover guide.</span><br>
+<span class="page">📄 01_Research &amp; Problem Framing:</span> <span class="desc">Grounded personas (Elena, Marcus, Priya), empathy maps, and competitive teardowns.</span><br>
+<span class="page">📄 02_IA &amp; User Flows:</span> <span class="desc">18-screen sitemap, primary triage task flow, onboarding wizard, and CSV recovery flow.</span><br>
+<span class="page">📄 03_Wireframes (Lo-Fi &amp; Cut-Down):</span> <span class="desc">V1.0 Cut MVP vs. V2.0 Dream state wireframes; 44% element cut audit log.</span><br>
+<span class="page">📄 04_Hi-Fi UI (Desktop &amp; Tablet):</span> <span class="desc">1440px desktop high-density grid &amp; 1024px warehouse tablet touch screens.</span><br>
+<span class="page">📄 05_Design System &amp; Components:</span> <span class="desc">Atomic UI library: buttons, inputs, modals, data tables, and token variables.</span><br>
+<span class="page">📄 06_Developer Hand-off &amp; Redlines:</span> <span class="desc">Dev Mode redlines, responsive flex rules, component state matrix, and WCAG audit.</span>
+</div>
+
+<div class="page-break"></div>
+
+<h2>4. Semantic Slash Naming Standard &amp; Component Matrix</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Component Category</th>
+      <th style="width: 40%;">Strict Slash Naming Syntax</th>
+      <th style="width: 35%;">Dev Mode / Tailwind Token Mapping</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Primary Buttons</strong></td>
+      <td><code>Button / Primary / Large / Default</code><br><code>Button / Primary / Large / Hover</code><br><code>Button / Primary / Large / Disabled</code></td>
+      <td><code>bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg text-white font-medium</code></td>
+    </tr>
+    <tr>
+      <td><strong>Text Form Inputs</strong></td>
+      <td><code>Input / Text / Medium / Default</code><br><code>Input / Text / Medium / Focused</code><br><code>Input / Text / Medium / Error</code></td>
+      <td><code>border-slate-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-md</code></td>
+    </tr>
+    <tr>
+      <td><strong>Status Badges</strong></td>
+      <td><code>Badge / Status / Success / Synced</code><br><code>Badge / Status / Warning / At-Risk</code><br><code>Badge / Status / Danger / Blocked</code></td>
+      <td><code>bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full</code></td>
+    </tr>
+    <tr>
+      <td><strong>Dashboard Metric Cards</strong></td>
+      <td><code>Card / Metric / Inventory-Health / Desktop</code><br><code>Card / Batch-Order / Staged / Tablet</code></td>
+      <td><code>bg-white border border-slate-200 rounded-xl p-6 shadow-sm</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5. 2-Minute Loom Walkthrough Production Script</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;">Time</th>
+      <th style="width: 25%;">Figma Canvas View</th>
+      <th style="width: 60%;">Spoken Walkthrough Script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0:00 - 0:20</strong></td>
+      <td>Split before/after view of USADrop file.</td>
+      <td><em>"Hi everyone, Siam here. Today I’m walking you through our complete USADrop Dashboard restructuring. We purged over 140 ghost layers, renamed 86 'Rectangle 47' instances, and established professional file hygiene."</em></td>
+    </tr>
+    <tr>
+      <td><strong>0:20 - 0:50</strong></td>
+      <td>Clicking pages 00 to 06 in left sidebar.</td>
+      <td><em>"We created a strict 7-page hierarchy. Page 00 has file specs; Pages 01 and 02 hold research and flows; Page 03 preserves wireframes and our 44% cut; Pages 04, 05, and 06 contain production UI, components, and dev handoff."</em></td>
+    </tr>
+    <tr>
+      <td><strong>0:50 - 1:25</strong></td>
+      <td>Assets panel search and component variants.</td>
+      <td><em>"Notice our naming convention. Everything uses atomic slash syntax: Category, Component, Variant, Size, State. Searching 'Button / Primary' in the Assets panel pulls up the exact variant instantly."</em></td>
+    </tr>
+    <tr>
+      <td><strong>1:25 - 2:00</strong></td>
+      <td>Dev Mode inspection and cover page note.</td>
+      <td><em>"Finally, every frame uses 100% auto-layout for zero-guesswork dev inspection, and our 3-bullet Handover Note is pinned to the cover for 5-second retrieval. Thank you!"</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Cleaned Workspace:</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>Original Messy File:</strong> https://www.figma.com/design/BLxQzn305lC8lb34bEB5pN/Dashboard-USADrop?node-id=84-356&t=GSg69PfLo0NuctCq-1<br>
+<strong>2-Minute Loom Video Walkthrough:</strong> https://www.loom.com/share/flyrank-ux04-grunt-work-figma-cleanup-kmsiam-726038
+</div>
+
+</body>
+</html>

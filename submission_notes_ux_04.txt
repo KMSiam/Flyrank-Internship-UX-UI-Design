@@ -1,0 +1,45 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 4 ASSIGNMENT SUBMISSION
+The "Kill Your Darlings" Cut-Down (Assignment UX-04 · Build Phase · 4h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-04_KILL_YOUR_DARLINGS_CUT_DOWN.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX04_Kill_Your_Darlings_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-04 (The "Kill Your Darlings" Cut-Down) Week 4 Build Phase Summary:
+
+1. THE SPRINT CONSTRAINT & SUBJECT SCREEN:
+   - Constraint: "Developer has 50% less time than planned; cut screen UI elements by 40% without destroying the core user goal."
+   - Subject Screen: SCR-04 / MOD-02 ("Emergency Multi-Channel Stockout Triage & Rebalance Modal").
+   - Core User Goal: Elena (Solo Founder) must reallocate buffer stock from wholesale reserve to active channels (TikTok Shop & Shopify) in under 90 seconds with full XAI transparency to prevent overselling and marketplace listing penalties.
+
+2. QUANTITATIVE ELEMENT AUDIT & 44% CUT:
+   - V2.0 (Dream State): 25 interactive UI elements (over-scoped with conversational AI, 30-day velocity charts, live TikTok viewer counters, competitor pricing, and multi-currency tickers).
+   - V1.0 (Cut MVP): 14 focused UI elements.
+   - Net Cut: 11 interactive elements eliminated (44% reduction, exceeding the 40% mandate).
+
+3. DEFENSE & CHANGELOG OF WHAT WAS REMOVED (Why it was safe to cut):
+   - Cut 1: Natural Language Chatbot -> Safe because typing open prompts during a panic adds latency; deterministic sliders with quick-snaps are 5x faster (Hick's Law).
+   - Cut 2: Interactive 30-Day Velocity Chart -> Safe because a 48-hour emergency buffer requires only current 7-day velocity; saved ~25h of charting frontend integration.
+   - Cut 3: Live TikTok Viewers & Sentiment Gauges -> Safe because vanity marketing numbers do not alter physical warehouse inventory counts.
+   - Cut 4: Competitor Price Tracking -> Safe because dynamic pricing belongs in merchandising, not emergency stock triage.
+   - Cut 5: 6-Channel International Sub-Split -> Safe because 92% of sales and 100% of viral crises are US domestic; international splits deferred to post-incident.
+   - Cut 6: Dynamic Carrier Rate Calculator -> Safe because freight rates are pre-negotiated under annual contracts.
+   - Cut 7: Triplicate Export Formats (XLSX, PDF, Print) -> Safe because a single "Export Audit CSV" satisfies all data audit requirements.
+   - Cut 8: Monte Carlo Simulation Graph -> Safe because operators need a clear lead-time buffer statement, not stochastic probability curves.
+   - Cut 9: In-Modal Email/SMS Composer -> Safe because customer delay notifications trigger automatically in the background via webhooks.
+
+4. WHAT WAS PRESERVED & SACROSANCT:
+   - Persistent Sync Health Indicator (Doherty Threshold).
+   - Core Source (Wholesale) & Target (TikTok) selectors.
+   - Physical Tactile Slider with 25%/50%/Fill Deficit Quick-Snaps.
+   - Explainable AI (XAI) Formula Breakdown (UX-02 non-negotiable requirement).
+   - Supplier Factory Blackout Warning.
+   - 48px Touch Target "Confirm & Lock Buffer" CTA.
+
+Side-by-side wireframe layouts, element audit matrix, and printable executive report PDF available in the GitHub repository and master Figma file.
+================================================================================

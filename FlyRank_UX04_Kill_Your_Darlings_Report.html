@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-04: The Kill Your Darlings Cut-Down</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #ea580c;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ffedd5;
+    color: #c2410c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #7c2d12;
+    border-left: 3px solid #ea580c;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .wire-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .wire-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #0f172a;
+    color: #f1f5f9;
+    padding: 10px 12px;
+    font-family: monospace;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+  .wire-box.dream { border-top: 3px solid #94a3b8; }
+  .wire-box.cut { border-top: 3px solid #10b981; }
+  .wire-title {
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .badge-cut {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 9px;
+  }
+  .badge-keep {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 9px;
+  }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 4 · Build</span>
+    <h1>UX-04A: The "Kill Your Darlings" Cut-Down</h1>
+    <div style="color: #64748b; font-size: 10.5px;">Ruthless MVP Prioritization · 44% UI Element Reduction · Engineering Speed Optimization</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Subject Screen</div>
+    <div class="meta-val">MOD-02 Rebalance Modal</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Original Elements</div>
+    <div class="meta-val">25 Elements (V2.0 Dream)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Cut Reduction</div>
+    <div class="meta-val">11 Elements Cut (-44%)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Core Goal Status</div>
+    <div class="meta-val">100% Preserved (&lt;90s)</div>
+  </div>
+</div>
+
+<h2>1. Side-by-Side Wireframe Architecture: V2.0 (Dream) vs. V1.0 (Cut MVP)</h2>
+
+<div class="wire-compare">
+  <!-- V2.0 Dream -->
+  <div class="wire-box dream">
+    <div class="wire-title">
+      <span style="color: #cbd5e1;">V2.0 (Dream State)</span>
+      <span style="color: #f87171;">25 Elements (Bloated)</span>
+    </div>
+    [● Sync: Live] [TikTok Viewers: 14k] [USD/EUR: 1.08]<br>
+    [Competitor Price: $28] [Barcode Scanner]<br>
+    ────────────────────────────────────────<br>
+    [SKU: Vitamin C Serum] ── [30-Day Historical Chart]<br>
+    │ / \     /\    [Scrub Date Range Picker]<br>
+    │/   \___/  \__ (Brush Selector)<br>
+    ────────────────────────────────────────<br>
+    💬 Conversational AI Assistant:<br>
+    [ "Ask AI to calculate buffer..." ] ⚡ [Send]<br>
+    ────────────────────────────────────────<br>
+    Source: [Wholesale ▼]  │ Target: [TikTok ▼]<br>
+    Available: 650u        │ Current: 12u (Deficit)<br>
+    Rebalance: [◄───●───►] 150u [25%] [50%] [Max]<br>
+    ────────────────────────────────────────<br>
+    [International Matrix: US/UK/CA/EU Sliders]<br>
+    [Monte Carlo Lead Time Simulation: 11.4d]<br>
+    [Dynamic Carrier Shipping Rate Estimator]<br>
+    [Notification Preview Drawer: Email/SMS/Slack]<br>
+    ────────────────────────────────────────<br>
+    [i] XAI Math: (Velocity × Lead Time) + Buffer<br>
+    ⚠️ Factory Blackout: 18 days (Lunar New Year)<br>
+    [Export XLSX] [Export PDF] [Export CSV]<br>
+    [Cancel]                      [LOCK BUFFER]
+  </div>
+
+  <!-- V1.0 Cut -->
+  <div class="wire-box cut">
+    <div class="wire-title">
+      <span style="color: #34d399;">V1.0 (Cut MVP)</span>
+      <span style="color: #34d399;">14 Elements (Lean)</span>
+    </div>
+    [● Channel Sync: Live]     SKU: Vitamin C Serum<br>
+    ────────────────────────────────────────<br>
+    1. SOURCE INVENTORY POOL<br>
+    Select Source: [ Wholesale Reserve ▼ ]<br>
+    Available in Reserve: 650 units<br>
+    <br>
+    2. TARGET SALES CHANNEL<br>
+    Select Target: [ TikTok Shop US ▼ ]<br>
+    Active Deficit: -138 units (Oversold)<br>
+    ────────────────────────────────────────<br>
+    3. REALLOCATION QUANTITY<br>
+    [◄──────────────●───────────────►]  [ 150 ] Units<br>
+    Quick Snaps: [ 25% (162u) ] [ 50% (325u) ] [ Fill (138u) ]<br>
+    ────────────────────────────────────────<br>
+    4. EXPLAINABLE AI (XAI) &amp; SAFEGUARDS<br>
+    • Formula: (Hourly Velocity [14.2u] × 48h) = 136u<br>
+    • Supplier: Factory Blackout in 18d (Buffer added)<br>
+    ────────────────────────────────────────<br>
+    <br>
+    [ Export Audit CSV ]<br>
+    [ Cancel ]                  [ CONFIRM &amp; LOCK ]
+  </div>
+</div>
+
+<h2>2. Defense &amp; Changelog of Eliminated UI Elements (-44% Cut)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Eliminated UI Element</th>
+      <th style="width: 15%;">Action</th>
+      <th style="width: 45%;">Why It Was Safe to Remove (Written Defense)</th>
+      <th style="width: 20%;">Law of UX Cited</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Conversational AI Chatbox</strong></td>
+      <td><span class="badge-cut">CUT #1</span></td>
+      <td>Typing open-ended text during a panic introduces high cognitive latency and non-deterministic LLM response delays. Tactile sliders with quick-snaps are 5x faster.</td>
+      <td>Hick's Law &amp; Doherty Threshold</td>
+    </tr>
+    <tr>
+      <td><strong>30-Day Velocity Scrubber Chart</strong></td>
+      <td><span class="badge-cut">CUT #2</span></td>
+      <td>Emergency stock reallocation requires only a 48-hour stopgap. Historical multi-week trends do not alter immediate warehouse deficits; saved 25h of charting dev.</td>
+      <td>Miller's Law (Chunking)</td>
+    </tr>
+    <tr>
+      <td><strong>Live TikTok Views &amp; Sentiment</strong></td>
+      <td><span class="badge-cut">CUT #3</span></td>
+      <td>Vanity metrics that create emotional dread without offering logistics utility. Physical shelf stock is fixed regardless of live stream viewer counts.</td>
+      <td>Visual Noise Reduction</td>
+    </tr>
+    <tr>
+      <td><strong>Competitor Price Tracker</strong></td>
+      <td><span class="badge-cut">CUT #4</span></td>
+      <td>Dynamic repricing belongs in offline merchandising, not high-stakes out-of-stock crisis triage.</td>
+      <td>Mental Model Separation</td>
+    </tr>
+    <tr>
+      <td><strong>6-Channel International Matrix</strong></td>
+      <td><span class="badge-cut">CUT #5</span></td>
+      <td>92% of sales and 100% of viral events occur in the US domestic market. International sub-allocations can be configured post-crisis.</td>
+      <td>Pareto Principle (80/20)</td>
+    </tr>
+    <tr>
+      <td><strong>Carrier Shipping Rate Calculator</strong></td>
+      <td><span class="badge-cut">CUT #6</span></td>
+      <td>Freight rates are fixed under annual 3PL contracts. Calculating shipping postage inside an inventory buffer reservation modal conflates fulfillment with triage.</td>
+      <td>Separation of Concerns</td>
+    </tr>
+    <tr>
+      <td><strong>Monte Carlo Simulation Curve</strong></td>
+      <td><span class="badge-cut">CUT #7</span></td>
+      <td>Academic bloat. Operators need an actionable buffer number (14d + 4d safety), not stochastic probability density curves.</td>
+      <td>Occam's Razor</td>
+    </tr>
+    <tr>
+      <td><strong>In-Modal Email &amp; SMS Composer</strong></td>
+      <td><span class="badge-cut">CUT #8</span></td>
+      <td>Customer delay notices are automated via background Klaviyo webhooks; composing messages inside an emergency modal induces operational delay.</td>
+      <td>Automation of Routine Tasks</td>
+    </tr>
+    <tr>
+      <td><strong>Triplicate Export Formats (XLSX/PDF)</strong></td>
+      <td><span class="badge-cut">CUT #9</span></td>
+      <td>Consolidating down to a single "Export Audit CSV" satisfies all data verification requirements while cleaning the button bar.</td>
+      <td>Hick's Law</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Figma File (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>

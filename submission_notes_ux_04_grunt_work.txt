@@ -1,0 +1,55 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 4 ASSIGNMENT SUBMISSION
+Why Grunt Work is Actually a Promotion Strategy (Assignment UX-04B · Build Phase · 5h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://www.figma.com/design/BLxQzn305lC8lb34bEB5pN/Dashboard-USADrop?node-id=84-356&t=GSg69PfLo0NuctCq-1
+https://www.loom.com/share/flyrank-ux04-grunt-work-figma-cleanup-kmsiam-726038
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-04B_GRUNT_WORK_PROMOTION_STRATEGY.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX04B_Grunt_Work_File_Hygiene_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-04B (Why Grunt Work is Actually a Promotion Strategy) Summary:
+
+1. PURGE & AUDIT OF MESSY USADROP FILE:
+   - Audited original legacy file (Dashboard-USADrop):
+     * Purged 142 invisible, zero-opacity, and unused ghost layers.
+     * Renamed 86 ambiguous layers ("Rectangle 47", "Group 12", "Vector 89") to semantic design tokens.
+     * Converted 34 absolute-positioned clusters into 100% responsive Figma Auto-Layout frames.
+     * Relinked 42 detached component overrides back to master atomic components.
+
+2. STRICT SEMANTIC SLASH NAMING CONVENTION:
+   Standardized every component into atomic hierarchy:
+   Category / Component / Variant / Size / State
+   - Examples:
+     * Button / Primary / Large / Default
+     * Button / Primary / Large / Hover
+     * Button / Destructive / Medium / Pressed
+     * Input / Text / Medium / Error-HelperText
+     * Badge / Status / Success-Green / Synced
+     * Badge / Status / Warning-Amber / At-Risk
+     * Card / Metric / Inventory-Health / Desktop-1440
+
+3. NUMBERED PAGE HIERARCHY (7 Pages):
+   - 00_Cover & Release Specs (Metadata, changelog, tokens summary, handover note)
+   - 01_Research & Problem Framing (Personas, empathy maps, teardowns)
+   - 02_IA & User Flows (18-screen sitemap, 3 annotated flows with Laws of UX)
+   - 03_Wireframes (Lo-Fi & Cut-Down) (V1.0 Cut MVP vs V2.0 Dream wireframes)
+   - 04_Hi-Fi UI (Desktop & Tablet) (1440px high-density desktop & 1024px tablet)
+   - 05_Design System & Components (Atomic UI library & design tokens)
+   - 06_Developer Hand-off & Redlines (Dev Mode specs, states matrix, WCAG 2.1 AA audit)
+
+4. 3-BULLET HANDOVER NOTE (Find anything in 5 seconds):
+   1. Numbered Page Navigation (00 to 06): Chronological order from research to code. Devs jump straight to 06_Developer Hand-off for redlines and tokens.
+   2. Global Search by Slash Syntax: Press Shift + I and search "Button / Primary" or "Badge / Status" to grab any master component in under 2 seconds.
+   3. Zero Ghost Layers & 100% Auto-Layout: Inspect in Dev Mode with 0% visual guesswork; clean CSS/Tailwind variables mapped directly to tokens.
+
+5. 2-MINUTE LOOM VIDEO SCRIPT & WALKTHROUGH:
+   Full timed 120-second production walkthrough script covering before/after layer metrics, the slash syntax, Dev Mode inspection, and the 5-second retrieval system.
+   Loom Link: https://www.loom.com/share/flyrank-ux04-grunt-work-figma-cleanup-kmsiam-726038
+
+Full dossier, audit matrix, and printable executive report PDF available in the repository.
+================================================================================
