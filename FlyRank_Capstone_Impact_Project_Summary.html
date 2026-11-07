@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyCommerce OS: Capstone Impact Project Summary (UX) · K. M. Siam</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 11mm 13mm 11mm 13mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.4;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5px;
+  }
+  .header {
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 16px;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 8px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ede9fe;
+    color: #4338ca;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+  .meta-item { font-size: 9px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 7.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  
+  h2 {
+    font-size: 11px;
+    color: #312e81;
+    border-left: 3px solid #4f46e5;
+    padding-left: 5px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+    letter-spacing: -0.2px;
+  }
+  
+  .metric-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .stat-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 6px 8px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .stat-title { font-size: 8px; color: #64748b; font-weight: 700; text-transform: uppercase; }
+  .stat-value { font-size: 15px; font-weight: 800; color: #4338ca; margin-top: 1px; }
+  .stat-desc { font-size: 7.5px; color: #64748b; margin-top: 1px; }
+  
+  .card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  th {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    text-align: left;
+    padding: 3px 5px;
+    border: 1px solid #cbd5e1;
+  }
+  td {
+    padding: 3px 5px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: #f8fafc; }
+  
+  .prompt-box {
+    background: #f8fafc;
+    border-left: 2px solid #4f46e5;
+    padding: 4px 6px;
+    font-size: 8px;
+    color: #334155;
+    margin: 3px 0;
+    font-style: italic;
+  }
+  .link-box {
+    background: #f8fafc;
+    border-left: 3px solid #4f46e5;
+    padding: 5px 8px;
+    margin-top: 6px;
+    font-size: 8.5px;
+  }
+  .link-box a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+  
+  .footer {
+    margin-top: 8px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 3px;
+    font-size: 7.5px;
+    color: #94a3b8;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>FlyCommerce OS: Capstone Impact Project Summary</h1>
+    <div style="font-size: 9px; color: #475569; margin-top: 1px;">8-Week Intensive Product Design Sprint · Track: UX/UI Design · Candidate: K. M. Siam</div>
+  </div>
+  <div>
+    <span class="badge">24h Capstone Impact Package</span>
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Candidate</div>
+    <div class="meta-val">K. M. Siam (@KMSiam)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Capstone Focus</div>
+    <div class="meta-val">Omnichannel Inventory Hub</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Primary Tooling</div>
+    <div class="meta-val">Figma, Claude 3.5, DeepSeek</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Total Verified Hours</div>
+    <div class="meta-val">40.0 Program Hours Logged</div>
+  </div>
+</div>
+
+<div class="metric-stat-grid">
+  <div class="stat-card">
+    <div class="stat-title">System Usability Score</div>
+    <div class="stat-value">89.0 <span style="font-size:9px; color:#15803d;">(+17.5)</span></div>
+    <div class="stat-desc">Top 5% percentile (Grade A+ Excellent)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">Time on Task</div>
+    <div class="stat-value">54 sec <span style="font-size:9px; color:#15803d;">(-72%)</span></div>
+    <div class="stat-desc">Stock triage dropped from 3m 12s</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">Task Completion</div>
+    <div class="stat-value">96.7%</div>
+    <div class="stat-desc">Tested across 5 enterprise operations leads</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">WCAG 2.1 AA/AAA</div>
+    <div class="stat-value">100% Pass</div>
+    <div class="stat-desc">Zero detached tokens; 7.3:1 text contrast</div>
+  </div>
+</div>
+
+<h2>1. Project Snapshot (Honest Reality for Incoming Designers)</h2>
+<div class="card">
+  <p style="margin: 0 0 4px 0; font-size: 8.5px; color: #334155;">
+    <b>Core Problem:</b> Multi-channel DTC brands scaling on Shopify, TikTok Shop, and Amazon FBA suffer a 42-minute batch inventory sync lag. Viral demand spikes deplete stock on one channel while others oversell phantom units, causing $180,000+ in annual fines and stockouts.<br>
+    <b>What We Built:</b> An AI-native inventory operating system combining high-density real-time data grids with an explainable AI stock rebalancing governor (60s undo window + dynamic safety interlock) and 54px touch-friendly warehouse tablet modes.
+  </p>
+</div>
+
+<h2>2. Week-by-Week Journey Map (Deliverables &amp; AI Integration)</h2>
+<div class="card" style="padding: 4px 6px;">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 8%;">Week</th>
+        <th style="width: 10%;">Code</th>
+        <th style="width: 32%;">Key Shipped Deliverable</th>
+        <th style="width: 25%;">AI Tools Used</th>
+        <th style="width: 25%;">Role of AI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Wk 1</td><td>UX-01</td><td>Capstone Brief &amp; AI Design Toolkit</td><td>Claude 3.5, Figma AI</td><td>Problem scoping &amp; workflow setup</td></tr>
+      <tr><td>Wk 2</td><td>UX-02</td><td>Persona, Journey Map &amp; 5 Interviews</td><td>Claude 3.5, ChatGPT-4o</td><td>Qualitative thematic interview synthesis</td></tr>
+      <tr><td>Wk 3</td><td>UX-03</td><td>Information Architecture &amp; User Flows</td><td>Claude 3.5 (Mermaid)</td><td>Algorithmic state branching &amp; flow maps</td></tr>
+      <tr><td>Wk 4</td><td>UX-04</td><td>Kill Your Darlings (3D Pivot) &amp; Wireframes</td><td>First Draft, Relume</td><td>Comparative low-fidelity wireframing</td></tr>
+      <tr><td>Wk 5</td><td>UX-05</td><td>FlyCore Design System: Tokens &amp; Variables</td><td>Claude 3.5, Tokens Studio</td><td>Semantic variable token architecture</td></tr>
+      <tr><td>Wk 6</td><td>UX-06/08</td><td>15+ Hi-Fi Screens, Variants &amp; Prototype</td><td>DeepSeek-R1, Recraft.ai</td><td>36-variant matrix &amp; 10 edge cases</td></tr>
+      <tr><td>Wk 7</td><td>UX-07/09</td><td>AI Surface (HAX), Usability (5 Ops) &amp; WCAG</td><td>Claude 3.5, WebAIM, Stark</td><td>HAX trust audit, testing &amp; token fixes</td></tr>
+      <tr><td>Wk 8</td><td>UX-11/12</td><td>NN/g Case Study &amp; Dev Hand-off Package</td><td>Claude 3.5, Playwright</td><td>Full portfolio report &amp; 40h verified log</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>3. AI Integration Log (Top 3 Prompts &amp; 1 Failed Prompt Lesson)</h2>
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 8.5px; margin-bottom: 2px;">Top 3 Time-Saving Prompts (Saved 13+ Hours)</div>
+    <div style="font-size: 8px; color: #4338ca; font-weight: 600;">1. Component Variant Matrix Generator:</div>
+    <div class="prompt-box">"Output a full markdown table listing every unique combination of Button [Hierarchy] × [Size] × [State] with exact auto-layout padding, corner radii, and token bindings."</div>
+    <div style="font-size: 8px; color: #4338ca; font-weight: 600;">2. DeepSeek Edge Case Generator:</div>
+    <div class="prompt-box">"Brainstorm 10 realistic supply-chain edge cases (API timeout, negative CSV quantities) with plain-English user recovery copy."</div>
+    <div style="font-size: 8px; color: #4338ca; font-weight: 600;">3. Microsoft HAX Compliance Audit:</div>
+    <div class="prompt-box">"Audit our AI stock drawer against HAX guidelines G1, G8, G9, G11. Suggest concrete Shape of AI patterns for failures."</div>
+  </div>
+  <div class="card">
+    <div style="font-weight: 700; color: #b91c1c; font-size: 8.5px; margin-bottom: 2px;">The 1 Failed Prompt Lesson (Where AI Failed)</div>
+    <div style="font-size: 8px; color: #b91c1c; font-weight: 600;">Automated WCAG Color Palette Generation:</div>
+    <p style="font-size: 7.5px; color: #334155; margin: 2px 0;">
+      We prompted LLMs to generate a high-contrast accessible color palette. The model outputted <code>#64748B</code> on white and claimed it passed WCAG AA. In reality, actual contrast checkers measured <b>4.4:1 (Fail)</b>, and alert text measured <b>2.1:1 (Fail)</b>.
+    </p>
+    <div style="background: #fef2f2; border-left: 2px solid #ef4444; padding: 4px; font-size: 7.5px; color: #991b1b; font-weight: 600;">
+      Lesson: Never trust LLMs with math, color luminance, or physics calculations. Mandatory human verification using WebAIM tools is required. We manually hardened tokens to #475569 (7.3:1 AAA Pass).
+    </div>
+  </div>
+</div>
+
+<h2>4. Tangible Assets Shipped for FlyCommerce OS</h2>
+<div class="card">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8px; color: #4338ca;">1. Master Figma File</div>
+      <div style="font-size: 7.5px; color: #64748b; margin-top: 1px;">6 structured pages: Tokens, Variables, 15+ Hi-Fi Screens, and Dev Redlines.</div>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8px; color: #4338ca;">2. Tested Prototype</div>
+      <div style="font-size: 7.5px; color: #64748b; margin-top: 1px;">3 named user journeys with Smart Animate and dynamic safety interlocks.</div>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8px; color: #4338ca;">3. NN/g Case Study</div>
+      <div style="font-size: 7.5px; color: #64748b; margin-top: 1px;">Full public portfolio writeup with AI workflow logs and critical reflections.</div>
+    </div>
+  </div>
+</div>
+
+<h2>5. Reflections: Top 3 Learnings &amp; 1 Major Challenge Overcome</h2>
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 8.5px; margin-bottom: 2px;">Top 3 Learnings</div>
+    <ul style="margin: 0; padding-left: 12px; font-size: 7.5px; color: #334155;">
+      <li><b>Tokens Over Pixels:</b> Semantic variables allowed remediating 12 contrast bugs in 20 minutes across 15+ screens.</li>
+      <li><b>AI is a Synthesizer, Not an Architect:</b> AI excels at combinatorial matrices, but lacks human restraint and empathy.</li>
+      <li><b>Enterprise Users Crave Density:</b> E-commerce operators reject spacious whitespace in favor of monospace tabular data rows.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 8.5px; margin-bottom: 2px;">Major Challenge Overcome</div>
+    <p style="font-size: 7.5px; color: #334155; margin: 0;">
+      <b>Overcoming the AI "Black-Box" Trust Barrier:</b> Operators initially feared auto-rebalance tools would silently deplete stock. We introduced the <b>3-Tier AI Governor</b> (inline formula transparency, physical slider safety locks when reserve &lt;15%, and a 60s reversible undo toast), increasing SUS from 71.5 to 89.0 (Grade A+).
+    </p>
+  </div>
+</div>
+
+<div class="link-box">
+  <div style="font-weight: 700; margin-bottom: 1px;">Master Deliverable Links (View-Only &amp; Logged-Out Access Tested):</div>
+  <div>Figma Workspace: <a href="https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access" target="_blank">Figma Master File</a> · Interactive Prototype: <a href="https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access" target="_blank">Live Prototype</a> · Case Study: <a href="https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-11_CAPSTONE_CASE_STUDY.md" target="_blank">NN/g Case Study</a> · GitHub Repo: <a href="https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design" target="_blank">Flyrank-Internship-UX-UI-Design</a></div>
+</div>
+
+<div class="footer">
+  FlyRank UX/UI Design Capstone Impact Project · Candidate K. M. Siam · 24h Capstone Workload · 40.0 Program Hours Logged
+</div>
+
+</body>
+</html>

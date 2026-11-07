@@ -41,10 +41,17 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 7** | **UX-10** | **Accessibility and Polish Pass** | **Submit** | ✅ **Completed** | [UX-10 Dossier](./UX-10_ACCESSIBILITY_AND_POLISH_PASS.md) · [Submission Notes](./submission_notes_ux_10.txt) · [PDF Report](./FlyRank_UX10_Accessibility_Polish_Report.pdf) |
 | **Week 8** | **UX-11** | **Case Study Writeup & Capstone Showcase** | **Submit** | ✅ **Completed** | [UX-11 Case Study](./UX-11_CAPSTONE_CASE_STUDY.md) · [Submission Notes](./submission_notes_ux_11.txt) · [PDF Report](./FlyRank_UX11_Capstone_Case_Study_Report.pdf) |
 | **Week 8** | **UX-12** | **Developer Hand-off Package & Final Capstone** | **Submit** | ✅ **Completed** | [UX-12 Package](./UX-12_HANDOFF_PACKAGE_AND_FINAL_SUBMISSION.md) · [Submission Notes](./submission_notes_ux_12.txt) · [PDF Report](./FlyRank_UX12_Developer_Handoff_Report.pdf) |
+| **Capstone** | **UX** | **UX/UI Design · Capstone Impact Project** | **Capstone** | ✅ **Completed** | [Impact Project Summary](./CAPSTONE_IMPACT_PROJECT_SUMMARY.md) · [Submission Notes](./submission_notes_capstone_impact.txt) · [PDF Report](./FlyRank_Capstone_Impact_Project_Summary.pdf) |
 
 ---
 
 ## 🛠️ Assignment Highlights
+
+### Capstone Impact Project (Code: UX · 24h Workload)
+- Synthesized the full 8-week product design journey into a structured, artifact-heavy onboarding summary for future incoming designers and team reference.
+- Cataloged key outcomes: **SUS score 89.0 (Grade A+)**, **72% reduction in stock rebalance execution time**, and **100% WCAG 2.1 AA/AAA compliance**.
+- Documented the **AI Integration Log** including the Top 3 high-leverage prompts (Component Matrix Generator, DeepSeek-R1 Edge Case Stress-Tester, Microsoft HAX Auditor) and the **1 Failed Prompt Lesson** (WCAG contrast hallucination requiring strict human verification).
+- Provided direct, view-only links to the Master Figma Workspace, Interactive Prototype, and NN/g Case Study.
 
 ### Week 8 (UX-12): Developer Hand-off Package & Final Capstone
 - Built the dedicated **`06_Developer Hand-off & Redlines`** Figma workspace with interactive behavior redlines, CSS token mappings, keyboard focus specs, and animation curves.

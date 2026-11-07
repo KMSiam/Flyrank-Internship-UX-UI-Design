@@ -1,0 +1,58 @@
+================================================================================
+FLYRANK INTERNSHIP SUBMISSION PORTAL: CAPSTONE IMPACT PROJECT
+Assignment: UX/UI Design · Impact Project (Code: UX · Week 7–8 · Workload: 24h)
+Candidate: K. M. Siam (GitHub: @KMSiam · LinkedIn: linkedin.com/in/kmsiam)
+Capstone: FlyCommerce OS (Predictive Multi-Channel E-Commerce Fulfillment & Inventory Hub)
+================================================================================
+
+[FIELD 1: DELIVERABLE LINK]
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/CAPSTONE_IMPACT_PROJECT_SUMMARY.md
+
+(Figma Master Project File):
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+
+(Interactive Usability-Tested Prototype Link):
+https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access
+
+--------------------------------------------------------------------------------
+
+[FIELD 2: ATTACHED PDF REPORT]
+File: e:\FlyRank\UX-UI-Design\FlyRank_Capstone_Impact_Project_Summary.pdf
+
+--------------------------------------------------------------------------------
+
+[FIELD 3: NOTES / CONTEXT FOR REVIEWER]
+Hi Team,
+
+Here is my submission for the Capstone Impact Project (Code: UX · 24h Workload) summarizing the entire 8-week product design journey for FlyCommerce OS.
+
+Key Sections in the Impact Summary:
+1. Project Snapshot:
+   - Problem: 42-minute batch inventory sync lag between Shopify, TikTok Shop, and Amazon FBA costs merchants $180k/year in stockout and overselling penalties.
+   - Solution: Predictive inventory operating system with real-time velocity balancing and an explainable AI governor drawer.
+   - 3 Key Outcomes:
+     • System Usability Scale (SUS) score jumped from 71.5 to 89.0 (Grade A+ Excellent / Top 5% percentile).
+     • Time-to-Execute Stock Balancing dropped by 72% (from 3m 12s to 54s).
+     • 100% WCAG 2.1 AA/AAA compliance across all screens with zero detached tokens.
+
+2. Week-by-Week Journey Map (W1 to W8):
+   - Mapped all 12 key deliverables and specific AI tooling (Claude 3.5 Sonnet, DeepSeek-R1, Recraft, Relume, Playwright).
+
+3. AI Integration Log (Top 3 Prompts & 1 Failed Prompt):
+   - Prompt 1: Combinatorial Component Variant Matrix Generator (Saved ~6 hours).
+   - Prompt 2: DeepSeek-R1 Supply Chain Edge Case Stress-Tester (Saved ~4 hours).
+   - Prompt 3: Microsoft HAX Compliance Auditor (Saved ~3 hours).
+   - Failed Prompt: Automated WCAG color generation hallucinated that #64748B passed AA; real contrast checkers measured 4.4:1 (Fail). Lesson learned: never trust LLMs for math/luminance; enforced mandatory WebAIM human audits.
+
+4. Key Shipped Assets Catalog:
+   - Master Figma File: 6 organized pages (Tokens, Variables, Components, 15+ Hi-Fi Screens, Redlines).
+   - Interactive Prototype: 3 named user journeys with Smart Animate and dynamic safety interlocks.
+   - Developer Hand-Off Redlines: Detailed spacing, box model, focus rings, and production SVGs.
+
+5. Reflections:
+   - Top 3 Learnings: Tokens over pixels; AI is a synthesizer not an architect; enterprise users crave high density over whitespace.
+   - Major Challenge Overcome: Overcoming the "black-box AI trust barrier" by engineering the 3-Tier AI Governor (formula disclosure, 15% safety stock lock, and 60s reversible undo toast).
+
+All files, prototypes, and artifacts are verified and publicly accessible.
+GitHub Repository: https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+================================================================================
