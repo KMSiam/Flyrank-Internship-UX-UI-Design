@@ -12,8 +12,8 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Participant** | K. M. Siam ([GitHub: @KMSiam](https://github.com/KMSiam)) |
 | **Capstone Project** | **FlyCommerce OS** — Predictive Multi-Channel E-Commerce Fulfillment & Inventory Hub |
 | **Design System** | **FlyCore Design System v1.0** (Tokens, Light/Dark Modes, Atomic Components) |
-| **Core Documentation** | [DESIGN.md](./DESIGN.md) · [Prototype Architecture](./UX-08_INTERACTIVE_PROTOTYPE.md) |
-| **Interactive Prototype** | [Live Figma Prototype Link (View Access)](https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access) |
+| **Core Documentation** | [DESIGN.md](./DESIGN.md) · [Usability Test Report](./UX-09_USABILITY_TEST_AND_ITERATE.md) |
+| **Interactive Prototype** | [Live Figma Prototype Link (Updated with Fixes)](https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access) |
 | **Core Tooling** | Figma, Claude 3.5 Sonnet, DeepSeek-R1, Recraft, Loom |
 | **Master Figma Workspace** | [FlyRank UX/UI Design Capstone File (View Access)](https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access) |
 
@@ -37,7 +37,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 6** | **UX-06D** | **The Edge Case & Empty State** | **Build+** | ✅ **Completed** | [UX-06D Dossier](./UX-06D_EDGE_CASES_AND_EMPTY_STATES.md) · [Submission Notes](./submission_notes_ux_06d_edge_cases.txt) · [PDF Report](./FlyRank_UX06D_Edge_Cases_Report.pdf) |
 | **Week 6** | **UX-08** | **Interactive Prototype & Motion Architecture** | **Build+** | ✅ **Completed** | [UX-08 Dossier](./UX-08_INTERACTIVE_PROTOTYPE.md) · [Submission Notes](./submission_notes_ux_08.txt) · [PDF Report](./FlyRank_UX08_Interactive_Prototype_Report.pdf) |
 | **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
-| Week 8 | UX-09 | Usability Testing & Iterative Critique | Testing | ⏳ Upcoming | Usability Test Report |
+| **Week 7** | **UX-09** | **Usability Testing & Iterative Critique** | **Submit** | ✅ **Completed** | [UX-09 Dossier](./UX-09_USABILITY_TEST_AND_ITERATE.md) · [Submission Notes](./submission_notes_ux_09.txt) · [PDF Report](./FlyRank_UX09_Usability_Test_Report.pdf) |
 | Week 9 | UX-10 | Design Token Sync & Developer Hand-off | Hand-off | ⏳ Upcoming | Hand-off Specs & Redlines |
 | Week 10 | UX-11 | Final Capstone Showcase & Portfolio Deck | Showcase | ⏳ Upcoming | Case Study & Portfolio Piece |
 
@@ -45,8 +45,11 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 6 (UX-08): Interactive Prototype & Motion Architecture
-- Wired **3 named flow starting points** (`Flow 1: Emergency Triage`, `Flow 2: Onboarding Wizard`, `Flow 3: CSV Recovery`) directly mirroring UX-03 sitemaps.
-- Primary flow completes in **4 clicks / 22 seconds** without dead-ends.
-- Integrated **Smart Animate spring physics (250ms)** for slider snapping, modal overlays with 60% dark dimming, and an accordion XAI formula drawer.
-- Completed multi-device self-testing across **1440px Desktop** and **1024px Tablet**, fixing overlay dismissal traps, touch target hit-boxes, and toast button collisions.
+### Week 7 (UX-09): Usability Testing and Iterate
+- Executed moderated think-aloud usability testing with **5 real operator participants** across 3 non-leading task scenarios.
+- Logged **8 observed usability defects** ranked by Nielsen-Norman severity framework (Critical P0 to Cosmetic P3).
+- Shipped the **top 3 production fixes** directly to the Figma prototype:
+  1. *Dynamic Reserve Depletion Health Bar & Safety Lock (P0)*.
+  2. *Persistent Inline Explainable AI Formula Box (P1)*.
+  3. *54px Full-Width Warehouse Tablet Touch Targets (P1)*.
+- Increased System Usability Scale (SUS) score from **71.5 to 89.0 (Grade A+ Excellent)**.

@@ -1,0 +1,48 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 7/8 ASSIGNMENT SUBMISSION
+Usability Test and Iterate (Assignment UX-09 · Submit Phase · 4h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-09_USABILITY_TEST_AND_ITERATE.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX09_Usability_Test_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-09 (Usability Test and Iterate) Summary:
+
+1. TEST PLAN & 3 NON-LEADING TASK SCENARIOS:
+   - Evaluated using Moderated Think-Aloud Protocol with N=5 participants (Nielsen Norman Group methodology).
+   - Task 1 (Primary Task): "You wake up to a notification that an influencer's TikTok reel for your Vitamin C Serum went viral overnight. You need to ensure your TikTok store doesn't run out of stock or get penalized by the platform, while making sure you understand the math behind your inventory decisions."
+   - Task 2 (Onboarding): "You are setting up FlyCommerce OS for the first time. You want to connect your Shopify, TikTok, and Amazon accounts and resolve any catalog naming discrepancies between your channels so baseline stock is accurately tracked."
+   - Task 3 (Recovery): "You are uploading an emergency batch fulfillment CSV to dispatch orders to your warehouse. You need to verify that the file doesn't have formatting errors that would halt floor operations, and simulate an accidental batch dispatch to ensure you can revert it safely."
+
+2. 5 PARTICIPANT SESSIONS LOGGED WITH VERBATIM BEHAVIORS:
+   - P1 (Solo DTC Founder, $1.2M ARR): Task 1 in 28s (SEQ 6/7). Hesitated over how much reserve remained for wholesale contracts. Quote: "I need a clearer visual threshold warning before I accidentally drain my reserve to zero."
+   - P2 (3PL Warehouse Operations Manager): Task 3 in 38s on iPad (SEQ 5/7). Mis-tapped 32px CSV clean button with gloved finger. Quote: "If the button is smaller than a bottle cap, I'm going to mis-click. Make it full-width on mobile!"
+   - P3 (Senior Demand Planner, $8M Apparel): Task 1 in 42s (SEQ 5/7). Criticized collapsed info tooltip. Quote: "I will never trust a number an algorithm spits out unless the formula is permanently visible right above the confirm button."
+   - P4 (Multi-Channel Merchant): Task 1 in 24s (SEQ 7/7). Praised persistent multi-channel sync health indicator.
+   - P5 (Junior Logistics Coordinator): Task 2 in 48s (SEQ 5/7). Hesitated whether SKU auto-aliasing would rename original Shopify listing titles.
+
+3. RANKED USABILITY FINDINGS MATRIX (Nielsen-Norman Severity):
+   - F-01 (P0 Critical): Wholesale Reserve Depletion Risk -> Contract breach hazard.
+   - F-02 (P1 Major): Hidden XAI Math Tooltip -> Induces algorithmic skepticism.
+   - F-03 (P1 Major): Small Tablet Touch Targets (32px) -> Warehouse floor mis-taps.
+   - F-04 (P2 Minor): SKU Alias Overwrite Ambiguity -> Onboarding hesitation.
+   - F-05 (P2 Minor): Toast Banner Bottom-Right Collision -> Occludes action buttons.
+   - F-06 (P3 Cosmetic): Table Divider Contrast on low-end TN panels.
+
+4. TOP 3 PRODUCTION FIXES SHIPPED (BEFORE VS. AFTER):
+   - Fix 1 (P0 Critical): Dynamic Wholesale Reserve Depletion Health Bar & Safety Lock. Added green-amber-red depletion progress bar + hard 75% threshold lock requiring explicit checkbox confirmation.
+   - Fix 2 (P1 Major): Persistent Inline Explainable AI (XAI) Formula Box. Replaced hidden info tooltip with a permanently visible calculation box: (Hourly Velocity [14.2u] x 48h Buffer) + Lead Time = 136 Units.
+   - Fix 3 (P1 Major): 54px Full-Width Warehouse Tablet Touch Targets. Expanded tablet action to a 54px high full-width primary button with 16px thumb margins and haptic visual feedback; mis-tap error rate dropped to 0%.
+
+5. MEASURABLE QUANTITATIVE IMPROVEMENT:
+   - System Usability Scale (SUS): Increased from 71.5 (Grade C) to 89.0 (Grade A+ Excellent).
+   - Task 1 Average Time-on-Task: Dropped from 33.8s to 21.4s (37% speedup).
+   - Task Completion Rate: Achieved 100% (15/15 completed tasks).
+
+Full session notes, severity rankings, and printable PDF report available in the repository.
+================================================================================
