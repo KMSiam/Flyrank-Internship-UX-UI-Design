@@ -39,11 +39,18 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
 | **Week 7** | **UX-09** | **Usability Testing & Iterative Critique** | **Submit** | ✅ **Completed** | [UX-09 Dossier](./UX-09_USABILITY_TEST_AND_ITERATE.md) · [Submission Notes](./submission_notes_ux_09.txt) · [PDF Report](./FlyRank_UX09_Usability_Test_Report.pdf) |
 | **Week 7** | **UX-10** | **Accessibility and Polish Pass** | **Submit** | ✅ **Completed** | [UX-10 Dossier](./UX-10_ACCESSIBILITY_AND_POLISH_PASS.md) · [Submission Notes](./submission_notes_ux_10.txt) · [PDF Report](./FlyRank_UX10_Accessibility_Polish_Report.pdf) |
-| Week 9 | UX-11 | Final Capstone Showcase & Portfolio Deck | Showcase | ⏳ Upcoming | Case Study & Portfolio Piece |
+| **Week 8** | **UX-11** | **Case Study Writeup & Capstone Showcase** | **Submit** | ✅ **Completed** | [UX-11 Case Study](./UX-11_CAPSTONE_CASE_STUDY.md) · [Submission Notes](./submission_notes_ux_11.txt) · [PDF Report](./FlyRank_UX11_Capstone_Case_Study_Report.pdf) |
 
 ---
 
 ## 🛠️ Assignment Highlights
+
+### Week 8 (UX-11): Case Study Writeup & Capstone Showcase
+- Published the comprehensive **NN/g-structured Capstone Case Study** for **FlyCommerce OS**, covering the complete 8-week design arc from initial research to tested prototype.
+- Detailed the **AI Collaboration Workflow**: specific tools used (Claude 3.5, DeepSeek-R1, Recraft), two concrete AI failures (WCAG contrast deficiencies and wireframe dashboard bloat), and what remained 100% human (empathy, restraint, and usability observation).
+- Documented key metrics: **SUS improved from 71.5 to 89.0 (Grade A+)**, **time-to-rebalance reduced by 72%**, and **96.7% task completion**.
+- Outlined critical reflections: defending the data-dense table layout vs. modern card tiles, and what would be done differently (testing warehouse lighting/tablet grips earlier).
+- Authored the accompanying LinkedIn portfolio post and compiled an executive PDF showcase.
 
 ### Week 7 (UX-10): Accessibility and Polish Pass
 - Conducted an exhaustive **12-point WCAG 2.1 AA/AAA Accessibility Audit** across all key screens.

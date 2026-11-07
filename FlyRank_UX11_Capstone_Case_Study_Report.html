@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyCommerce OS: Capstone Portfolio Case Study · K. M. Siam</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 12mm 14mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 10.5px;
+  }
+  .header {
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 18px;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ede9fe;
+    color: #4338ca;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+  }
+  .meta-item { font-size: 10px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  
+  h2 {
+    font-size: 12px;
+    color: #312e81;
+    border-left: 3px solid #4f46e5;
+    padding-left: 6px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+  
+  .metric-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .stat-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 9px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .stat-title { font-size: 8.5px; color: #64748b; font-weight: 700; text-transform: uppercase; }
+  .stat-value { font-size: 16px; font-weight: 800; color: #4338ca; margin-top: 2px; }
+  .stat-desc { font-size: 8px; color: #64748b; margin-top: 1px; }
+  
+  .card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  th {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    text-align: left;
+    padding: 4px 6px;
+    border: 1px solid #cbd5e1;
+  }
+  td {
+    padding: 4px 6px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: #f8fafc; }
+  
+  .quote-box {
+    border-left: 3px solid #6366f1;
+    background: #f8fafc;
+    padding: 6px 10px;
+    font-style: italic;
+    font-size: 9.5px;
+    color: #334155;
+    margin: 6px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .link-box {
+    background: #f8fafc;
+    border-left: 3px solid #4f46e5;
+    padding: 6px 10px;
+    margin-top: 8px;
+    font-size: 9.5px;
+  }
+  .link-box a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+  
+  .tag {
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 8px;
+    font-weight: 700;
+    background: #e2e8f0;
+    color: #475569;
+  }
+  .tag-green { background: #dcfce7; color: #15803d; }
+  .tag-purple { background: #ede9fe; color: #4338ca; }
+  
+  .footer {
+    margin-top: 12px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8px;
+    color: #94a3b8;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>FlyCommerce OS: Capstone Portfolio Case Study</h1>
+    <div style="font-size: 10px; color: #475569; margin-top: 1px;">Predictive Multi-Channel E-Commerce Fulfillment &amp; Inventory Hub · UX/UI Track · Final Submission</div>
+  </div>
+  <div>
+    <span class="badge">NN/g Structured Case Study</span>
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Role</div>
+    <div class="meta-val">Lead Product Designer</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Duration &amp; Track</div>
+    <div class="meta-val">8-Week Sprint · UX/UI Design</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Primary Tooling</div>
+    <div class="meta-val">Figma, Claude 3.5, DeepSeek</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Author</div>
+    <div class="meta-val">K. M. Siam (@KMSiam)</div>
+  </div>
+</div>
+
+<div class="metric-stat-grid">
+  <div class="stat-card">
+    <div class="stat-title">Usability SUS Score</div>
+    <div class="stat-value">89.0 <span style="font-size:10px; color:#15803d;">(+17.5)</span></div>
+    <div class="stat-desc">Top 5% percentile (Grade A+ Excellent)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">Time on Task</div>
+    <div class="stat-value">54 sec <span style="font-size:10px; color:#15803d;">(-72%)</span></div>
+    <div class="stat-desc">Triage &amp; rebalance dropped from 3m 12s</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">Task Completion</div>
+    <div class="stat-value">96.7%</div>
+    <div class="stat-desc">Verified across 5 operations leads</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-title">Accessibility</div>
+    <div class="stat-value">100% AAA</div>
+    <div class="stat-desc">Lowest body text contrast is 7.3:1</div>
+  </div>
+</div>
+
+<h2>1. The Problem &amp; User Discovery</h2>
+<div class="card">
+  <p style="margin: 0 0 6px 0;">
+    Direct-to-Consumer (DTC) brands scaling from $2M to $20M GMV across <b>Shopify, TikTok Shop, and Amazon FBA</b> suffer from a catastrophic 42-minute batch inventory sync lag. When viral spikes occur on TikTok Shop, inventory runs dry; yet Shopify and Amazon continue accepting orders for phantom stock. This triggers stockouts, customer churn, seller rating bans, and over $180,000 in annual emergency freight penalties.
+  </p>
+  <div class="quote-box">
+    "I don't need a black-box AI that silently re-routes $50,000 of stock behind my back. I need transparent velocity metrics, 60-second reversible safeguards, and touch-friendly actions I can execute on an iPad cart in a loud warehouse."
+    <div style="font-size: 8.5px; font-weight: 700; color: #475569; margin-top: 2px;">— Maya Lin, Head of E-Commerce Supply Chain Operations (Primary Persona)</div>
+  </div>
+</div>
+
+<h2>2. The Strategic Pivot &amp; IA Flow Architecture</h2>
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 10px; margin-bottom: 4px;">Strategic Pivot ("Kill Your Darlings")</div>
+    <p style="font-size: 9px; margin: 0 0 4px 0; color: #334155;">
+      In early wireframes (UX-04A), we designed a complex 3D interactive warehouse bin visualizer. User testing proved operators found it slow, distracting, and unviable under poor warehouse Wi-Fi.
+    </p>
+    <div style="font-size: 9px; color: #15803d; font-weight: 600;">
+      Pivot: Cut the 3D visualizer in favor of a high-density, sub-second data table paired with a 1-click predictive rebalance drawer.
+    </div>
+  </div>
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 10px; margin-bottom: 4px;">End-to-End User Flow Arc</div>
+    <p style="font-size: 9px; margin: 0 0 4px 0; color: #334155;">
+      <b>Trigger:</b> Automated velocity detector flags TikTok spike (6.2h runway remaining).<br>
+      <b>Inspect:</b> Operator opens AI governor drawer with live formula transparency.<br>
+      <b>Act:</b> 1-click approval creates warehouse transfer slips with a 60-second undo countdown.
+    </p>
+  </div>
+</div>
+
+<h2>3. Design System Foundations: FlyCore v1.0</h2>
+<div class="card">
+  <p style="font-size: 9px; margin: 0 0 6px 0;">
+    Built on Figma Variables across Light and Dark modes. Zero detached components; 100% adherence to scalable production standards:
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8.5px; color: #4338ca;">8pt Geometric Scale</div>
+      <div style="font-size: 8px; color: #64748b;">4px, 8px, 16px, 24px, 32px, 48px, 64px auto-layouts</div>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8.5px; color: #4338ca;">Major Third (1.250)</div>
+      <div style="font-size: 8px; color: #64748b;">Display (32), H1 (24), H2 (20), Body (14), tnum figures</div>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8.5px; color: #4338ca;">36 Component Matrix</div>
+      <div style="font-size: 8px; color: #64748b;">Buttons, inputs, cards, modals across all interaction states</div>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px; border-radius: 4px;">
+      <div style="font-weight: 700; font-size: 8.5px; color: #4338ca;">WCAG 1.4.1 Shapes</div>
+      <div style="font-size: 8px; color: #64748b;">Hexagon (⬡), Triangle (△), Square (▢) paired with color</div>
+    </div>
+  </div>
+</div>
+
+<h2>4. Designing the AI Surface: Trust &amp; Human Governance</h2>
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Shape of AI Pattern</th>
+        <th style="width: 35%;">Implementation in FlyCommerce OS</th>
+        <th style="width: 40%;">User Trust &amp; Safety Mechanism</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Reversible Action Plan (Governor)</b></td>
+        <td>Stock transfer drawer displays before/after balances across all channels prior to execution.</td>
+        <td>60-second visual countdown with instant 1-click cancellation to prevent remorse.</td>
+      </tr>
+      <tr>
+        <td><b>Formula Disclosure (Trust Builder)</b></td>
+        <td>Inline card explicating calculation: <code>(TikTok Velocity × 1.4) - Transit Lag</code>.</td>
+        <td>No black-box opacity; operators understand exactly which historical sales window was parsed.</td>
+      </tr>
+      <tr>
+        <td><b>Graceful Degradation (Failure Mode)</b></td>
+        <td>Ambiguity banner when marketplace APIs lag or experience rate limits.</td>
+        <td>System expands safety stock buffers by +15% automatically and flags reduced confidence.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>5. Usability Testing &amp; Top 3 Iterations (UX-09)</h2>
+<div class="card">
+  <p style="font-size: 9px; margin: 0 0 4px 0;">Moderated think-aloud sessions with 5 enterprise operations leads surfaced 8 defects; top 3 were remediated immediately:</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Observed Friction</th>
+        <th style="width: 15%;">Severity</th>
+        <th style="width: 40%;">Prototype Iteration Shipped</th>
+        <th style="width: 25%;">Post-Iteration Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Excess Reserve Rebalance</b></td>
+        <td><span class="tag" style="background:#fee2e2; color:#b91c1c;">P0 Critical</span></td>
+        <td>Added dynamic depletion gauge; turns amber &lt;15% and locks transfer if buffer hits 0.</td>
+        <td>0 over-depletions across re-tests.</td>
+      </tr>
+      <tr>
+        <td><b>Hidden Formula Logic</b></td>
+        <td><span class="tag" style="background:#fef3c7; color:#b45309;">P1 Major</span></td>
+        <td>Elevated formula from hover tooltip into a persistent inline card with confidence score.</td>
+        <td>Hesitation dropped from 48s to 6s.</td>
+      </tr>
+      <tr>
+        <td><b>Warehouse Tablet Mis-Taps</b></td>
+        <td><span class="tag" style="background:#fef3c7; color:#b45309;">P1 Major</span></td>
+        <td>Enlarged action targets to 54px full-width touch areas on warehouse tablet view.</td>
+        <td>100% first-tap accuracy achieved.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>6. AI Workflow Reflection: What Worked, What Failed &amp; What Stayed Human</h2>
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 9.5px; margin-bottom: 2px;">Where AI Failed (Required Human Fixes)</div>
+    <ul style="margin: 0; padding-left: 14px; font-size: 8.5px; color: #334155;">
+      <li><b>Contrast Hallucinations:</b> Claude suggested color tokens that failed WCAG AA (4.4:1). Human remediation was required to achieve 7.3:1 AAA.</li>
+      <li><b>Dashboard Bloat:</b> AI wireframes defaulted to 14 useless visual charts, missing the core triage workflow.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div style="font-weight: 700; color: #1e1b4b; font-size: 9.5px; margin-bottom: 2px;">What Stayed 100% Human</div>
+    <ul style="margin: 0; padding-left: 14px; font-size: 8.5px; color: #334155;">
+      <li><b>Empathy with Operator Panic:</b> Understanding the terror of Amazon seller rating penalties cannot be simulated.</li>
+      <li><b>Moderating Usability Nuance:</b> Detecting subtle sighs, hesitation pauses, and unspoken user uncertainty.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>7. Critical Reflections</h2>
+<div class="card">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+    <div>
+      <div style="font-weight: 700; color: #15803d; font-size: 9px;">One Decision I Would Defend</div>
+      <div style="font-size: 8.5px; color: #334155; margin-top: 2px;">
+        <b>High-Density Data Grid over "Spacious Card Tiles":</b> While modern Dribbble shots favor cards with massive padding, operators triaging 4,000 SKUs need immediate vertical scanability and tabular numbers. This choice cut task time by 72%.
+      </div>
+    </div>
+    <div>
+      <div style="font-weight: 700; color: #b45309; font-size: 9px;">One Thing I Would Do Differently</div>
+      <div style="font-size: 8.5px; color: #334155; margin-top: 2px;">
+        <b>Simulate Warehouse Environmental Friction Earlier:</b> Testing on quiet desktops masked touch-target and glare issues until Week 6. In the future, I will simulate noisy warehouse conditions and tablet grips during initial low-fi wireframing.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="link-box">
+  <div style="font-weight: 700; margin-bottom: 2px;">Deliverable Links &amp; Portfolio Verification:</div>
+  <div>Interactive Prototype: <a href="https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access" target="_blank">Figma Prototype Link</a> · Master Project File: <a href="https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access" target="_blank">Figma Design File</a> · GitHub Repository: <a href="https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design" target="_blank">FlyRank Internship UX/UI Track</a></div>
+</div>
+
+<div class="footer">
+  FlyRank UX/UI Design Track · Capstone Case Study (UX-11) · Candidate: K. M. Siam · Published &amp; Maintained on GitHub
+</div>
+
+</body>
+</html>
