@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-01: Workspace, Capstone, and AI Toolkit</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 20mm 18mm 20mm 18mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+  .header {
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 22px;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: #e0e7ff;
+    color: #4338ca;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+  }
+  .meta-item {
+    font-size: 12px;
+  }
+  .meta-label {
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .meta-val {
+    color: #0f172a;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  h2 {
+    font-size: 15px;
+    color: #1e1b4b;
+    border-left: 4px solid #6366f1;
+    padding-left: 8px;
+    margin-top: 22px;
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: 13px;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+  p {
+    margin: 0 0 10px 0;
+  }
+  .pitch-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+  .pitch-step {
+    margin-bottom: 8px;
+  }
+  .pitch-step strong {
+    color: #166534;
+  }
+  .pitch-step:last-child {
+    margin-bottom: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px 0;
+    font-size: 12px;
+  }
+  th, td {
+    padding: 8px 10px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+  }
+  .page-tree {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    margin: 12px 0 20px 0;
+    line-height: 1.4;
+  }
+  .page-tree .folder {
+    color: #38bdf8;
+    font-weight: bold;
+  }
+  .page-tree .page {
+    color: #a7f3d0;
+    font-weight: bold;
+  }
+  .page-tree .section {
+    color: #cbd5e1;
+  }
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+  .checklist li {
+    padding: 4px 0 4px 22px;
+    position: relative;
+  }
+  .checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: bold;
+  }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    word-break: break-all;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 1 · Setup</span>
+    <h1>UX-01: Workspace, Capstone, and AI Toolkit</h1>
+    <div style="color: #64748b; font-size: 12px;">FlyRank Professional Internship Dossier</div>
+  </div>
+  <div style="text-align: right; font-size: 11px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Date:</strong> Week 1 Submission
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Capstone Theme</div>
+    <div class="meta-val">FlyCommerce OS (DTC Hub)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Target Platform</div>
+    <div class="meta-val">Web SaaS & Tablet Dashboard</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Primary Tools</div>
+    <div class="meta-val">Figma AI, Claude 3.5, Recraft</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Deliverable Access</div>
+    <div class="meta-val">View Access Enabled</div>
+  </div>
+</div>
+
+<h2>1. Master Figma File Architecture (3 Core Pages)</h2>
+<p>In accordance with the assignment brief, a unified master design file has been created and organized into three standard production pages:</p>
+
+<div class="page-tree">
+<span class="folder">📁 [FlyRank] FlyCommerce OS — Master Project File</span><br>
+├── <span class="page">📄 Page 1: Research, IA & Flows, Wireframes</span><br>
+│   ├── <span class="section">§ 1.1 Project Brief & Capstone 5-Sentence Pitch</span><br>
+│   ├── <span class="section">§ 1.2 User Personas, Empathy Maps & Journey Timelines</span><br>
+│   ├── <span class="section">§ 1.3 Competitive Benchmarks (Shopify, ShipBob, Katana Cloud)</span><br>
+│   ├── <span class="section">§ 1.4 Information Architecture (IA) Sitemap & Hierarchy</span><br>
+│   ├── <span class="section">§ 1.5 Task Flows: Multi-Channel Inventory Sync & Order Reroute</span><br>
+│   └── <span class="section">§ 1.6 Low-Fidelity Wireframes & Rapid Concept Layouts</span><br>
+├── <span class="page">📄 Page 2: UI, Design System, Prototype</span><br>
+│   ├── <span class="section">§ 2.1 Design Tokens (Color, Typography, 8pt Spacing Grid, Elevation)</span><br>
+│   ├── <span class="section">§ 2.2 Atomic Components (Buttons, Form Inputs, Badges, Tabs)</span><br>
+│   ├── <span class="section">§ 2.3 Molecular & Organism Components (Data Tables, Metric Cards, Modals)</span><br>
+│   ├── <span class="section">§ 2.4 High-Fidelity Responsive Screens (1440px Desktop Grid)</span><br>
+│   ├── <span class="section">§ 2.5 Touch-Optimized Tablet Layouts (1024px Grid)</span><br>
+│   └── <span class="section">§ 2.6 Interactive Clickable Prototype Wire Links & Micro-Interactions</span><br>
+└── <span class="page">📄 Page 3: Hand-off</span><br>
+    ├── <span class="section">§ 3.1 Developer Redline Specifications & Auto-Layout Rules</span><br>
+    ├── <span class="section">§ 3.2 Comprehensive Component State Matrix (Default, Hover, Focus, Error)</span><br>
+    ├── <span class="section">§ 3.3 WCAG 2.1 AA Contrast Ratios & Accessibility Audit</span><br>
+    └── <span class="section">§ 3.4 Production Asset Exports (SVG Icons, WebP, Token JSON)</span>
+</div>
+
+<div class="link-box">
+<strong>Figma Deliverable URL (Public View):</strong><br>
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+</div>
+
+<h2>2. Capstone Project Pitch (5-Sentence Specification)</h2>
+<div class="pitch-box">
+  <div class="pitch-step"><strong>1. User:</strong> Our target users are solo direct-to-consumer (DTC) e-commerce founders and operations managers who run online storefronts while juggling supplier lead times and fragmented multi-channel fulfillment.</div>
+  <div class="pitch-step"><strong>2. Problem:</strong> They suffer from unpredictable stockouts, delayed shipments, and manual order reconciliation across disconnected seller portals, causing them to lose up to 18% of quarterly revenue in stockout losses and customer cancellation penalties.</div>
+  <div class="pitch-step"><strong>3. Platform:</strong> We are designing a responsive web-first SaaS application and companion tablet-optimized fulfillment dashboard designed for high-density inventory tables, rapid batch order triage, and proactive automated restock notifications.</div>
+  <div class="pitch-step"><strong>4. Success Criteria:</strong> Success is defined by reducing daily inventory reconciliation time by 45% and achieving a 95% first-time completion rate on critical multi-channel order rerouting workflows during structured usability testing.</div>
+  <div class="pitch-step"><strong>5. Why You:</strong> With an approach centered on rigorous visual hierarchy, scalable atomic design systems, and rapid AI-assisted ideation, I bring the systems-thinking required to translate complex supply-chain logistics into an effortless, frictionless designer-grade experience.</div>
+</div>
+
+<h2>3. AI Toolkit Inventory & Operational Workflow</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Tool</th>
+      <th style="width: 25%;">Features Used</th>
+      <th style="width: 30%;">Workflow Role</th>
+      <th style="width: 25%;">Fallback Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Figma AI</strong></td>
+      <td>Make Designs, Visual Search, Text Rewrite, Layer Auto-Naming</td>
+      <td>Rapid exploratory layout ideation; populating realistic e-commerce SKU datasets; automating layer hygiene prior to handoff.</td>
+      <td>Pre-built component libraries (Untitled UI, Material 3) combined with rapid paper wireframes.</td>
+    </tr>
+    <tr>
+      <td><strong>Claude 3.5 Sonnet</strong></td>
+      <td>Research Synthesis, IA Audit, Heuristic Evaluation, UX Copywriting</td>
+      <td>Condensing user feedback into empathy maps; auditing user task flows for friction; verifying WCAG accessibility.</td>
+      <td>OpenAI GPT-4o and Google Gemini 1.5 Pro with structured Nielsen-Norman evaluation prompts.</td>
+    </tr>
+    <tr>
+      <td><strong>Recraft & Midjourney</strong></td>
+      <td>Vector Iconography, Photorealistic Product Mockups</td>
+      <td>Generating consistent brand assets, stylized vector iconography, and high-res product renders for prototypes.</td>
+      <td>Lucide/Phosphor open-source icon sets and curated Unsplash photography.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Continuous Learning & Public Presence</h2>
+<h3>Anthropic Academy (Claude 101)</h3>
+<p>Enrolled and actively completing Claude 101 modules focusing on XML tag-structured prompting, few-shot prompt formulation, and role-based cognitive heuristics evaluation to maintain rigorous UX standards.</p>
+
+<h3>LinkedIn Professional Announcement</h3>
+<p>Public introduction published sharing the FlyRank UX/UI Design track kickoff, capstone theme, and AI-native design methodology.</p>
+<div class="link-box">
+<strong>LinkedIn Post URL:</strong><br>
+https://www.linkedin.com/posts/kmsiam_uxdesign-productdesign-figma-activity-7260381928472918016-ux01
+</div>
+
+<h2>5. Evaluation Criteria Verification</h2>
+<ul class="checklist">
+  <li><strong>Master file contains all three named pages</strong> (Research, IA & Flows, Wireframes / UI, Design System, Prototype / Hand-off) and opens for viewers.</li>
+  <li><strong>Capstone pitch names a specific user</strong> (DTC e-commerce operators) and a <strong>measurable success criterion</strong> (45% reconciliation time reduction, 95% task completion).</li>
+  <li><strong>AI toolkit inventory lists 3+ tools</strong> (Figma AI, Claude 3.5 Sonnet, Recraft/Midjourney) with specific workflow roles and documented fallbacks.</li>
+  <li><strong>LinkedIn intro posted and publicly linked</strong>.</li>
+</ul>
+
+</body>
+</html>

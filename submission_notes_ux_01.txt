@@ -1,0 +1,51 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 1 ASSIGNMENT SUBMISSION
+Workspace, Capstone, and AI Toolkit (Assignment UX-01 · Setup Phase · 3h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-01_WORKSPACE_CAPSTONE_AI_TOOLKIT.md
+https://www.linkedin.com/posts/kmsiam_uxdesign-productdesign-figma-activity-7260381928472918016-ux01
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-01 completion summary for Week 1 (Setup Phase):
+
+1. MASTER FIGMA FILE ARCHITECTURE (3 Core Pages Configured):
+   - Page 1: "Research, IA & Flows, Wireframes"
+     Includes project brief, persona canvases, competitive audits, IA site architecture, and wireframe explorations.
+   - Page 2: "UI, Design System, Prototype"
+     Includes design token foundations (color, typography, 8pt spacing grid), atomic UI components, desktop/tablet responsive layouts, and prototype wire links.
+   - Page 3: "Hand-off"
+     Includes developer redlines, responsive flex behaviors, component state matrices, accessibility contrast checks, and asset exports.
+   Figma File Link (Public View Access enabled):
+   https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+
+2. CAPSTONE PROJECT PITCH (FlyCommerce OS - DTC Inventory & Fulfillment Hub):
+   - User: Solo direct-to-consumer (DTC) e-commerce founders and operations managers running multi-channel stores.
+   - Problem: Costly stockouts and manual order reconciliation across Shopify, Amazon, and TikTok Shop causing an estimated 18% revenue loss.
+   - Platform: Responsive web application and companion tablet-optimized fulfillment dashboard.
+   - Measurable Success Criterion: 45% reduction in daily inventory reconciliation time and a 95% first-time completion rate on order rerouting workflows during usability testing.
+   - Why You: A systems-first design methodology combining high-density data clarity, scalable atomic design systems, and rapid AI-assisted iteration.
+
+3. AI TOOLKIT INVENTORY & FALLBACK STRATEGY:
+   - Tool 1: Figma AI (Make Designs, Text Rewrite, Visual Search, Layer Auto-Naming)
+     Role: Speeds up exploratory page layouts, generates realistic SKU/inventory data, and automates layer maintenance.
+     Fallback: Standard UI libraries (Untitled UI / Material 3) + pen-and-paper sketching.
+   - Tool 2: Claude 3.5 Sonnet (Anthropic Claude)
+     Role: Qualitative research synthesis, persona development, IA logic audits, and WCAG accessibility critique.
+     Fallback: GPT-4o / Gemini 1.5 Pro with tailored persona critique prompts.
+   - Tool 3: Midjourney & Recraft AI
+     Role: Photorealistic e-commerce product staging, custom vector iconography, and marketing hero visuals.
+     Fallback: Phosphor / Lucide icon sets and curated Unsplash photography.
+
+4. ANTHROPIC ACADEMY:
+   - Enrolled in and commenced Claude 101 modules covering prompt structure, XML context demarcation, and UX heuristic evaluation loops.
+
+5. LINKEDIN INTRO POST:
+   - Published track kick-off announcement detailing the capstone vision and AI-augmented design stack:
+   https://www.linkedin.com/posts/kmsiam_uxdesign-productdesign-figma-activity-7260381928472918016-ux01
+
+Full dossier and printable portfolio report available in the GitHub repository.
+================================================================================
