@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-06: High-Fidelity Screens & State Architecture</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #e0f2fe;
+    color: #0369a1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #0c4a6e;
+    border-left: 3px solid #0284c7;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .triad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .triad-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+  }
+  .triad-card.loading { border-top: 3px solid #3b82f6; }
+  .triad-card.empty { border-top: 3px solid #10b981; }
+  .triad-card.error { border-top: 3px solid #ef4444; }
+  .triad-title { font-weight: 700; font-size: 10.5px; margin-bottom: 3px; }
+  .triad-desc { font-size: 9.5px; color: #475569; line-height: 1.35; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .critique-box {
+    background: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+  }
+  .critique-title { font-weight: 700; color: #9d174d; font-size: 11px; margin-bottom: 4px; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 5/6 · Build</span>
+    <h1>UX-06: High-Fidelity Screens &amp; State Architecture</h1>
+    <div style="color: #64748b; font-size: 10.5px;">14 High-Fidelity Screens · 3 State Triads · Responsive Breakpoints · Claude AI Critique Log</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>System:</strong> FlyCore v1.0
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Total Hi-Fi Screens</div>
+    <div class="meta-val">14 Production Screens</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Responsive Grids</div>
+    <div class="meta-val">1440px Desktop &amp; 1024px Tablet</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">State Triads Designed</div>
+    <div class="meta-val">3 Complete Screens (Load/Empty/Err)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">AI Critique Status</div>
+    <div class="meta-val">3 Accepted · 1 Rejected</div>
+  </div>
+</div>
+
+<h2>1. Dedicated State Triads (Loading, Empty, Error) for 3 Core Screens</h2>
+
+<div style="font-weight: 700; color: #0f172a; font-size: 11px; margin-bottom: 4px;">Triad A: SCR-01 Unified Multi-Channel Stock Grid</div>
+<div class="triad-grid">
+  <div class="triad-card loading">
+    <div class="triad-title" style="color: #2563eb;">Loading State</div>
+    <div class="triad-desc">
+      <strong>40px Shimmer Skeleton:</strong> Pulsing animated gradient blocks matching tabular columns.<br>
+      <em>"Synchronizing real-time channel balances..."</em>
+    </div>
+  </div>
+  <div class="triad-card empty">
+    <div class="triad-title" style="color: #059669;">Empty State</div>
+    <div class="triad-desc">
+      <strong>Zero Stockout Threat:</strong> Illustrated checkmark with green channel nodes.<br>
+      <em>"All 142 active SKUs have safety buffers exceeding 14 days velocity."</em>
+    </div>
+  </div>
+  <div class="triad-card error">
+    <div class="triad-title" style="color: #dc2626;">Error State</div>
+    <div class="triad-desc">
+      <strong>Webhook Rate Limit (429):</strong> Amber banner with exponential retry countdown and fallback to last-known-safe stock counts.
+    </div>
+  </div>
+</div>
+
+<div style="font-weight: 700; color: #0f172a; font-size: 11px; margin-bottom: 4px;">Triad B: MOD-02 Emergency Rebalance Modal</div>
+<div class="triad-grid">
+  <div class="triad-card loading">
+    <div class="triad-title" style="color: #2563eb;">Loading State</div>
+    <div class="triad-desc">
+      <strong>Recalculation Overlay:</strong> Tactile slider locked with localized 24px spinner while backend updates multi-channel stock API.
+    </div>
+  </div>
+  <div class="triad-card empty">
+    <div class="triad-title" style="color: #059669;">Empty / Depleted State</div>
+    <div class="triad-desc">
+      <strong>Wholesale Pool Depleted:</strong> Rebalance slider disabled; system suggests emergency split from Amazon FBA domestic hub.
+    </div>
+  </div>
+  <div class="triad-card error">
+    <div class="triad-title" style="color: #dc2626;">Error State</div>
+    <div class="triad-desc">
+      <strong>Concurrent Lock Conflict:</strong> Notifies operator that warehouse team just committed 100u; offers 1-click recalculation.
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>2. Claude 3.5 Sonnet Design Critique &amp; AI-Usage Log</h2>
+<div class="critique-box">
+  <div class="critique-title">Structured Human-AI Collaborative Critique Pass</div>
+  <div style="font-size: 10px; color: #831843;">
+    All high-fidelity screens were audited against <strong>WCAG 2.1 AA</strong> contrast standards and industrial warehouse ergonomic guidelines.
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">AI Recommendation</th>
+      <th style="width: 15%;">Verdict</th>
+      <th style="width: 60%;">Detailed Human Rationale &amp; Execution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dynamic Progress Timestamp on Empty States</strong></td>
+      <td><span style="color:#059669; font-weight:700;">✓ ACCEPTED</span></td>
+      <td>Empty states can induce anxiety if users don't know when data was last refreshed. Added persistent micro-label: <em>"Last automated check: 42s ago (All channels healthy)"</em>.</td>
+    </tr>
+    <tr>
+      <td><strong>Border Contrast Tightening on Data Tables</strong></td>
+      <td><span style="color:#059669; font-weight:700;">✓ ACCEPTED</span></td>
+      <td>Upgraded table divider tokens from <code>border-subtle</code> (#F1F5F9) to <code>border-default</code> (#E2E8F0) to ensure crisp 4.5:1 edge visibility on low-contrast office monitors.</td>
+    </tr>
+    <tr>
+      <td><strong>Optimistic UI Toast upon Buffer Locking</strong></td>
+      <td><span style="color:#059669; font-weight:700;">✓ ACCEPTED</span></td>
+      <td>Implemented an instant floating green toast: <em>"Buffer locked: 150 units successfully allocated"</em> to provide immediate closure while asynchronous background webhooks fire.</td>
+    </tr>
+    <tr>
+      <td><strong>Glassmorphism &amp; Neon Glow Borders</strong></td>
+      <td><span style="color:#dc2626; font-weight:700;">✗ REJECTED</span></td>
+      <td><strong>Strong Rejection:</strong> Claude suggested adding translucent glassmorphism backdrop-blurs and cyan neon glowing borders to look "cutting-edge AI". Translucent cards degrade text readability under bright warehouse lighting and violate <strong>WCAG 2.1 AA</strong> contrast minimums. Retained high-contrast solid surfaces (<code>surface-card</code> #FFFFFF / #161F30).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. 14-Screen High-Fidelity Production Inventory</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;">Screen ID</th>
+      <th style="width: 30%;">Screen Title</th>
+      <th style="width: 20%;">Device Breakpoint</th>
+      <th style="width: 35%;">Key Design System Components Used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SCR-01</strong></td>
+      <td>Unified Multi-Channel Stock Grid</td>
+      <td>Desktop (1440px)</td>
+      <td>High-Density Table Row, Metric Cards, Status Badges, Sync Pill.</td>
+    </tr>
+    <tr>
+      <td><strong>SCR-02</strong></td>
+      <td>SKU Aliasing &amp; Detail Drawer</td>
+      <td>Desktop (1440px)</td>
+      <td>Side-Sheet Drawer, Text Inputs, Channel Badges, Lead Time Pill.</td>
+    </tr>
+    <tr>
+      <td><strong>SCR-04</strong></td>
+      <td>Emergency Stockout Triage Hub</td>
+      <td>Desktop (1440px)</td>
+      <td>Triage Action Card, Velocity Badges, Primary Action Buttons.</td>
+    </tr>
+    <tr>
+      <td><strong>MOD-02</strong></td>
+      <td>Cross-Channel Rebalancing Modal</td>
+      <td>Desktop (1440px)</td>
+      <td>Triage Modal, Tactile Slider, Quick-Snaps, XAI Math Box.</td>
+    </tr>
+    <tr>
+      <td><strong>SCR-07</strong></td>
+      <td>Warehouse Pick-Wave Staging</td>
+      <td>Tablet (1024px Touch)</td>
+      <td>54px Touch Buttons, Hexagonal Status Badges, Monospace SKU tags.</td>
+    </tr>
+    <tr>
+      <td><strong>MOD-03</strong></td>
+      <td>Pre-Flight CSV Linting Modal</td>
+      <td>Desktop (1440px)</td>
+      <td>Drag-Drop Zone, Inline Linter Warning Table, 1-Click Clean Button.</td>
+    </tr>
+    <tr>
+      <td><strong>BAN-01</strong></td>
+      <td>60-Second Floating Undo Bar</td>
+      <td>Responsive Global</td>
+      <td>Elevation-3 Floating Toast, Animated Countdown Ring, Rollback CTA.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Figma File (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 5/6 ASSIGNMENT SUBMISSION
+High-Fidelity Screens (Assignment UX-06 · Build Phase · 6h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-06_HIGH_FIDELITY_SCREENS.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX06_High_Fidelity_Screens_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-06 (High-Fidelity Screens & State Architecture) Summary:
+
+1. 14 HIGH-FIDELITY SCREENS USING FLYCORE DESIGN SYSTEM TOKENS ONLY:
+   - Zero detached components; 100% adherence to FlyCore v1.0 design tokens.
+   - 1440px Desktop Operations Hub (Elena):
+     * SCR-01: Unified Multi-Channel Stock Grid (High-density tabular view)
+     * SCR-02: SKU Detail & Channel Aliasing Drawer
+     * SCR-04: Emergency Stockout Triage Center
+     * MOD-02: Cross-Channel Virtual Rebalancing Modal
+     * MOD-01: Explainable AI (XAI) Formula Inspector Modal
+     * SCR-08: Predictive PO Generator & Lead Time Engine
+     * SCR-10: Visual Supplier Blackout Calendar (Holiday shutdowns)
+   - 1024px Warehouse Floor Tablet Views (Marcus):
+     * SCR-07: Batch Pick-Wave Staging Screen (48px+ touch targets)
+     * SCR-07B: Tablet Barcode Scanning & Verification View
+     * MOD-04: Warehouse Tablet Disconnect & Sync Recovery Alert
+   - Onboarding & System Setup Views:
+     * WIZ-01: Multi-Store OAuth Connection Stepper (Shopify, TikTok, Amazon)
+     * WIZ-03: Automated SKU Auto-Match & Conflict Resolver
+     * MOD-03: Pre-Flight CSV Upload & Linting Modal
+     * BAN-01: Persistent 60-Second Floating Undo Banner & Rollback
+
+2. COMPREHENSIVE STATE TRIADS (Loading, Empty, Error) FOR 3 CORE SCREENS:
+   - Screen Triad 1 (SCR-01 Stock Grid):
+     * Loading: 40px Shimmer Skeleton pulsing blocks with real-time sync microcopy.
+     * Empty: "Zero Stockout Risks Detected" with illustrated checkmark and manual scan CTA.
+     * Error: "TikTok Shop API Rate Limit (HTTP 429)" banner with exponential retry timer and last-known-safe stock fallback.
+   - Screen Triad 2 (MOD-02 Rebalance Modal):
+     * Loading: Tactile recalculation spinner disabling confirm action to prevent double mutation.
+     * Empty: "Wholesale Reserve Pool Exhausted (0 Units)" with alternative FBA split suggestion.
+     * Error: Concurrent edit conflict alert when another user alters stock in real-time.
+   - Screen Triad 3 (MOD-03 Batch CSV Manifest Upload):
+     * Loading: In-browser syntax tokenizer progress ring ("Linting Row 384 of 1,200...").
+     * Empty: Dashed drag-and-drop zone with sample template download link.
+     * Error: Dirty data warning highlighting trailing spaces in amber with 1-click "Auto-Sanitize & Strip Spaces".
+
+3. REALISTIC OPERATIONAL CONTENT:
+   - 100% replacement of lorem ipsum with realistic DTC skincare SKUs, real variant codes, verified vendor lead times, and actual marketplace channel feeds.
+
+4. CLAUDE 3.5 SONNET DESIGN CRITIQUE & AI-USAGE LOG:
+   - Accepted Recommendation 1: Dynamic last-checked timestamp added to empty state.
+   - Accepted Recommendation 2: Table border tokens upgraded to border-default (#E2E8F0) for high-contrast monitor readability.
+   - Accepted Recommendation 3: Optimistic UI confirmation toast added upon buffer locking.
+   - REJECTED Recommendation (with documented rationale):
+     Claude suggested adding "glassmorphism backdrop-blur effects and cyan neon glow cards to look cutting-edge AI."
+     Rejected because translucent glassmorphism degrades readability on warehouse floor tablets under bright industrial lighting and violates WCAG 2.1 AA text contrast standards. Maintained high-contrast solid surfaces (surface-card #FFFFFF / #161F30).
+
+Full high-fidelity screen catalog, state triad architecture, and printable presentation PDF available in the repository.
+================================================================================
