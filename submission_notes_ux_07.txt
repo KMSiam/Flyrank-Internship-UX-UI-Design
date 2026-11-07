@@ -1,0 +1,48 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 5/7 ASSIGNMENT SUBMISSION
+Designing the AI Surface: Chat, Agents, and Trust (Assignment UX-07 · Build+ Phase · 5h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-07_DESIGNING_THE_AI_SURFACE.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX07_Designing_AI_Surface_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-07 (Designing the AI Surface: Chat, Agents, and Trust) Summary:
+
+1. INTERACTION MODEL CHOICE & JUSTIFICATION:
+   - Selected Model: Proactive Autonomous Agent with Staged Human-in-the-Loop Review.
+   - Argued Against Conversational Chatbots: Typing natural language during an inventory crisis adds cognitive friction, prompt ambiguity, and high response latency (>2,000ms). Operators need glanceable tables and tactile sliders, not wordy text chat.
+   - Argued Against Full Autopilot: Unconstrained background automation risks catastrophic over-ordering or contract breach when anomalous viral surges hit; operators explicitly refuse black-box automation without human verification.
+
+2. 4 NAMED PATTERNS FROM "THE SHAPE OF AI" LIBRARY:
+   - Governor 1: Action Plan
+     Decomposes the recommendation into an explicit 3-step execution plan (Step 1: Reserve 150u from Wholesale; Step 2: Push TikTok lock; Step 3: Transmit 3PL pick manifest) with individual step checkboxes.
+   - Governor 2: Interactive Verification & Controls
+     Tactile reallocation slider with hard threshold safety locks requiring explicit confirmation before draining wholesale reserve below 25%.
+   - Trust Builder 1: Explainable Formula Disclosure
+     Inspectable math drawer exposing: (Hourly Velocity [14.2u] x 48h Buffer) + Lead Time = 136 Units, eliminating black-box distrust.
+   - Trust Builder 2: Telemetry Citations & Environmental Caveats
+     Explicit data recency citations (Shopify sync 42s ago, TikTok 7d velocity) paired with supplier holiday blackout warnings (Lunar New Year shutdown in 18d).
+
+3. AI FAILURE & UNCERTAINTY MODE (Not just an error toast!):
+   - High-volatility anomaly modal triggered when sales spike 16x (Confidence drops to 48%).
+   - Displays Split-Scenario Branch Modeling:
+     * Scenario A (Transient Flash Spike): 150 buffer units shifted internally ($0 capital risk).
+     * Scenario B (Sustained Surge): 300 units shifted + emergency PO issued ($24,500 capital risk).
+   - Requires human operator to declare marketing context before state execution.
+
+4. MICROSOFT HAX GUIDELINES AUDIT (8 Guidelines Evaluated):
+   - G1 (What system can do): PASS - Scoped strictly to inventory monitoring.
+   - G2 (How well it can do it): PASS - Explicit confidence % on recommendations.
+   - G4 (Contextual info): PASS - Telemetry displayed directly inside triage modals.
+   - G8 (Efficient dismissal): PASS - Single-click 4-hour snooze on all AI alerts.
+   - G9 (Efficient correction): PASS - Tactile slider allows instant manual override in <2s.
+   - G11 (Why system acted): PASS - Mathematical formula transparency.
+   - G10 (Scope services when in doubt): HONEST FAIL -> Planned Fix: Split-Scenario Uncertainty Modal prevents exaggerated reorders when confidence <70%.
+   - G13 (Learn from behavior): HONEST FAIL -> Planned Fix: Adaptive Memory Token Engine prompts to adopt custom buffers after 3 consecutive manual overrides.
+
+Full architectural schematics, HAX scorecard, and printable presentation PDF available in the repository.
+================================================================================

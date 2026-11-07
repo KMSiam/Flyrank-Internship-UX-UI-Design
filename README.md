@@ -30,7 +30,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 4** | **UX-04C** | **Wireframes: AI Draft vs Hand-Built** | **Build** | ✅ **Completed** | [UX-04C Dossier](./UX-04_WIREFRAMES_AI_VS_HANDBUILT.md) · [Submission Notes](./submission_notes_ux_04_wireframes.txt) · [PDF Report](./FlyRank_UX04_Wireframes_Experiment_Report.pdf) |
 | **Week 5** | **UX-05** | **Design System Foundations: Tokens & Components** | **UI System** | ✅ **Completed** | [UX-05 Dossier](./UX-05_DESIGN_SYSTEM_FOUNDATIONS.md) · [Submission Notes](./submission_notes_ux_05.txt) · [PDF Report](./FlyRank_UX05_Design_System_Tokens_Report.pdf) |
 | **Week 6** | **UX-06** | **High-Fidelity Screens & State Architecture** | **Build (core)** | ✅ **Completed** | [UX-06 Dossier](./UX-06_HIGH_FIDELITY_SCREENS.md) · [Submission Notes](./submission_notes_ux_06.txt) · [PDF Report](./FlyRank_UX06_High_Fidelity_Screens_Report.pdf) |
-| Week 7 | UX-07 | Interactive Prototyping & Micro-Interactions | Prototype | ⏳ Upcoming | Clickable Prototype |
+| **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
 | Week 8 | UX-08 | Usability Testing & Iterative Critique | Testing | ⏳ Upcoming | Usability Test Report |
 | Week 9 | UX-09 | Design Token Sync & Developer Hand-off | Hand-off | ⏳ Upcoming | Hand-off Specs & Redlines |
 | Week 10 | UX-10 | Final Capstone Showcase & Portfolio Deck | Showcase | ⏳ Upcoming | Case Study & Portfolio Piece |
@@ -39,8 +39,10 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 6 (UX-06): High-Fidelity Screens & State Architecture
-- Built **14 high-fidelity production screens** on Page `04_Hi-Fi UI` without detaching a single FlyCore system component.
-- Implemented **responsive layouts**: 1440px Desktop Operations Hub and 1024px Warehouse Floor Tablet touch interface.
-- Designed comprehensive **state triads (Loading, Empty, Error)** for SCR-01 (Stock Grid), MOD-02 (Rebalance Modal), and MOD-03 (CSV Linter).
-- Documented **Claude 3.5 Sonnet design critique pass** with 3 accepted ergonomic enhancements and 1 rejected suggestion (glassmorphism/neon glow rejected for WCAG 2.1 AA warehouse accessibility).
+### Week 7 (UX-07): Designing the AI Surface: Chat, Agents, and Trust
+- Architected the AI surface for **FlyCommerce OS**: justified a **Proactive Autonomous Agent with Staged Human Review** over conversational chat and unconstrained autopilot.
+- Implemented **4 named patterns from The Shape of AI**:
+  - *Action Plan* (3-step staged execution) & *Interactive Verification Controls* (Sliders with 75% safety lock).
+  - *Explainable Formula Disclosure* (Transparent math) & *Telemetry Citations/Caveats* (Data recency and supplier blackout warnings).
+- Designed a dedicated **AI Failure & Uncertainty Surface**: Split-Scenario Branch Modeling (Transient Spike vs. Sustained Surge) triggered when confidence drops below 70%.
+- Audited against **8 Microsoft HAX Guidelines** with transparent evaluation of honest failures (G10, G13) and planned architectural mitigations.

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-07: Designing the AI Surface — Chat, Agents, and Trust</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #8b5cf6;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ede9fe;
+    color: #6d28d9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #3b0764;
+    border-left: 3px solid #8b5cf6;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .pattern-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+  }
+  .pattern-card.gov { border-top: 3px solid #6366f1; }
+  .pattern-card.trust { border-top: 3px solid #10b981; }
+  .pattern-tag {
+    font-size: 8.5px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  .tag-gov { background: #e0e7ff; color: #4338ca; }
+  .tag-trust { background: #dcfce7; color: #15803d; }
+  .pattern-title { font-weight: 700; font-size: 10.5px; color: #0f172a; margin-bottom: 3px; }
+  .pattern-desc { font-size: 9.5px; color: #475569; line-height: 1.35; }
+  .uncertainty-box {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .scenario-card {
+    border: 1px solid #fef3c7;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 6px 8px;
+    font-size: 9.5px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .badge-pass { background: #dcfce7; color: #15803d; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+  .badge-fail { background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 5/7 · Build+</span>
+    <h1>UX-07: Designing the AI Surface (Chat, Agents, and Trust)</h1>
+    <div style="color: #64748b; font-size: 10.5px;">Proactive Agent Architecture · 4 Shape of AI Patterns · Uncertainty Failure Mode · Microsoft HAX Audit</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Interaction Model</div>
+    <div class="meta-val">Autonomous Agent + Human Loop</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Shape of AI Patterns</div>
+    <div class="meta-val">2 Governors · 2 Trust Builders</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Failure Mode</div>
+    <div class="meta-val">Split-Scenario Anomaly Branching</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">HAX Audit Score</div>
+    <div class="meta-val">6 Passes · 2 Honest Fails (Fixed)</div>
+  </div>
+</div>
+
+<h2>1. Interaction Model Justification (Agent vs. Chatbot vs. Autopilot)</h2>
+<p style="margin-top:-4px; margin-bottom:8px; font-size:10px; color:#475569;">
+  <strong>Selected Model: Proactive Surveillance Agent with Staged Human Review.</strong><br>
+  • <em>Why Chatbots Were Rejected:</em> Natural language typing during a high-stakes stockout crisis adds cognitive latency (&gt;2,000ms), ambiguity in SKU syntax, and buries multi-channel numbers in wordy chat bubbles.<br>
+  • <em>Why Full Autopilot Was Rejected:</em> 68% of operators abandon automated tools that reallocate stock or issue purchase orders without explicit consent (UX-02 Finding 2).
+</p>
+
+<h2>2. Four Named Patterns from "The Shape of AI" Library</h2>
+<div class="pattern-grid">
+  <div class="pattern-card gov">
+    <span class="pattern-tag tag-gov">Governor Pattern</span>
+    <div class="pattern-title">1. Action Plan (Staged Execution)</div>
+    <div class="pattern-desc">
+      Decomposes AI proposals into an explicit 3-step execution plan (Step 1: Reserve 150u from Wholesale; Step 2: Push TikTok lock; Step 3: Transmit 3PL pick manifest). Operators can toggle individual steps before execution.
+    </div>
+  </div>
+  <div class="pattern-card gov">
+    <span class="pattern-tag tag-gov">Governor Pattern</span>
+    <div class="pattern-title">2. Interactive Verification Slider</div>
+    <div class="pattern-desc">
+      Tactile reallocation slider with hard safety locks. If the user drags past 75% of total wholesale reserve, the system stops and requires an explicit checkbox confirmation to prevent accidental stock depletion.
+    </div>
+  </div>
+  <div class="pattern-card trust">
+    <span class="pattern-tag tag-trust">Trust Builder</span>
+    <div class="pattern-title">3. Explainable Formula Disclosure</div>
+    <div class="pattern-desc">
+      Replaces black-box "Smart AI" badges with an inspectable math formula: <code>(Velocity [14.2u/h] × 48h Buffer) + Lead Time = 136 Units</code>, directly addressing operator skepticism.
+    </div>
+  </div>
+  <div class="pattern-card trust">
+    <span class="pattern-tag tag-trust">Trust Builder</span>
+    <div class="pattern-title">4. Telemetry Citations &amp; Caveats</div>
+    <div class="pattern-desc">
+      Cites data recency for every number (Shopify sync 42s ago, TikTok 7d velocity) alongside active supplier caveats: <em>"⚠️ Factory Blackout in 18 days for Lunar New Year (14d buffer appended)"</em>.
+    </div>
+  </div>
+</div>
+
+<h2>3. AI Failure &amp; Uncertainty Mode: Split-Scenario Branching</h2>
+<div class="uncertainty-box">
+  <div style="font-weight: 700; color: #92400e; font-size: 10.5px;">
+    ⚠️ Anomaly Detected: 16x Viral Sales Surge (Confidence: 48% — Below Automated Action Threshold)
+  </div>
+  <div style="font-size: 9.5px; color: #78350f; margin-top: 2px;">
+    The AI cannot determine if this surge is transient or permanent. Rather than failing silently or throwing a red error toast, it surfaces two divergent scenario models:
+  </div>
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <strong style="color: #0369a1;">Scenario A: Transient Flash Spike</strong><br>
+      • Rebalance 150 buffer units from wholesale pool.<br>
+      • Do NOT issue international supplier PO.<br>
+      <strong>Capital at Risk: $0 (Internal Buffer Shift)</strong>
+    </div>
+    <div class="scenario-card">
+      <strong style="color: #047857;">Scenario B: Sustained Demand Shift</strong><br>
+      • Rebalance 300 units from FBA hub.<br>
+      • Issue emergency Air-Freight Supplier PO.<br>
+      <strong>Capital at Risk: $24,500 (Production Commit)</strong>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>4. Microsoft HAX Guidelines Audit (Human-AI Interaction)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 28%;">HAX Guideline</th>
+      <th style="width: 12%;">Status</th>
+      <th style="width: 35%;">Implementation Evidence in FlyCommerce OS</th>
+      <th style="width: 25%;">Audit Finding &amp; Planned Fix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>G1: Make clear what system can do</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Onboarding modal scopes jurisdiction strictly to inventory monitoring and buffer planning.</td>
+      <td>Clear system mental model.</td>
+    </tr>
+    <tr>
+      <td><strong>G2: Make clear how well it can do it</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Every recommendation explicitly displays its confidence score (e.g. <em>"94% Confidence"</em>).</td>
+      <td>Prevents over-reliance on AI.</td>
+    </tr>
+    <tr>
+      <td><strong>G4: Show contextually relevant info</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Telemetry (velocity, lead times, factory blackouts) shown directly adjacent to interaction.</td>
+      <td>Eliminates menu navigation.</td>
+    </tr>
+    <tr>
+      <td><strong>G8: Support efficient dismissal</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Proactive warning toasts have an instant single-click 4-hour snooze button.</td>
+      <td>Preserves user attention.</td>
+    </tr>
+    <tr>
+      <td><strong>G9: Support efficient correction</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Tactile allocation slider enables instant override of AI-suggested units in &lt;2s.</td>
+      <td>Zero friction correction.</td>
+    </tr>
+    <tr>
+      <td><strong>G11: Make clear why system acted</strong></td>
+      <td><span class="badge-pass">PASS</span></td>
+      <td>Pattern 3 (Explainable Formula Drawer) exposes exact arithmetic formula.</td>
+      <td>Full algorithmic transparency.</td>
+    </tr>
+    <tr>
+      <td><strong>G10: Scope services when in doubt</strong></td>
+      <td><span class="badge-fail">HONEST FAIL</span></td>
+      <td>Early prototypes computed exaggerated reorders during viral spikes, confusing users.</td>
+      <td><strong>Planned Fix Implemented:</strong> Split-Scenario Uncertainty Modal triggered when confidence &lt;70%.</td>
+    </tr>
+    <tr>
+      <td><strong>G13: Learn from user behavior</strong></td>
+      <td><span class="badge-fail">HONEST FAIL</span></td>
+      <td>If Elena repeatedly overrides the 15% buffer to 25%, the system forgot her preference.</td>
+      <td><strong>Planned Fix Implemented:</strong> Adaptive Memory Token prompts default update after 3 overrides.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Figma Workspace (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>
