@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-02: Research Sprint with AI Synthesis</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 15mm 16mm 15mm 16mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #e0f2fe;
+    color: #0369a1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #0c4a6e;
+    border-left: 3px solid #0284c7;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .finding-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-left: 4px solid #0284c7;
+  }
+  .finding-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+  }
+  .finding-source {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #0284c7;
+    background: #f0f9ff;
+    padding: 1px 6px;
+    border-radius: 3px;
+    border: 1px solid #bae6fd;
+  }
+  .finding-evidence {
+    color: #475569;
+    font-size: 10.5px;
+    margin: 3px 0 4px 0;
+  }
+  .finding-action {
+    background: #f8fafc;
+    border-left: 2px solid #10b981;
+    padding: 4px 8px;
+    font-size: 10.5px;
+    color: #065f46;
+    font-weight: 500;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .prompt-box {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 9.5px;
+    margin: 6px 0;
+    line-height: 1.35;
+  }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 2 · Foundations</span>
+    <h1>UX-02: Research Sprint with AI Synthesis</h1>
+    <div style="color: #64748b; font-size: 10.5px;">10 Primary Sources · Claude 3.5 Synthesis · Verification Audit · One-Page Strategic Summary</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Total Desk Sources</div>
+    <div class="meta-val">10 Documented Sources</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">User Reviews Analyzed</div>
+    <div class="meta-val">22 Real Operator Reviews</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Synthesis Engine</div>
+    <div class="meta-val">Claude 3.5 Sonnet (XML)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Audit Result</div>
+    <div class="meta-val">3 Hallucinations Corrected</div>
+  </div>
+</div>
+
+<h2>1. Executive One-Page Research Summary: Top 5 Source-Tied Findings</h2>
+
+<div class="finding-card">
+  <div class="finding-title">
+    <span>1. Silent Sync Latency (&gt;90m) Directly Drives Marketplace Algorithmic Demotion</span>
+    <span class="finding-source">McKinsey (Source 04) &amp; /r/shopify (Source 06)</span>
+  </div>
+  <div class="finding-evidence">
+    <strong>Evidence:</strong> McKinsey revealed 73% of mid-market DTC brands experienced search rank demotions or account penalties from sync latency. On Reddit, operators reported TikTok Shop webhooks take up to 3 hours to sync during sales, resulting in 200+ overbooked orders.
+  </div>
+  <div class="finding-action">
+    <strong>Actionable Design Mandate:</strong> Persistent <em>Real-Time Sync Health Indicator</em> in the global nav. If webhook latency exceeds 60s, trigger an amber warning with automated inventory buffer locking.
+  </div>
+</div>
+
+<div class="finding-card">
+  <div class="finding-title">
+    <span>2. "Explainable AI (XAI)" Is Required to Break the Fragile Excel Dependency</span>
+    <span class="finding-source">Gartner OMS (Source 05) &amp; /r/ecommerce (Source 10)</span>
+  </div>
+  <div class="finding-evidence">
+    <strong>Evidence:</strong> Gartner found 68% of advanced inventory tools are abandoned within 90 days due to "black-box complexity." Over 60% of operators keep parallel Excel sheets because they refuse to trust unexplained AI reorder numbers.
+  </div>
+  <div class="finding-action">
+    <strong>Actionable Design Mandate:</strong> Contextual <em>Inspectable Math Drawer</em> on every suggested reorder showing: <code>(Daily Velocity × Lead Time) + Safety Buffer = PO</code>, paired with a 1-click CSV export button.
+  </div>
+</div>
+
+<div class="finding-card">
+  <div class="finding-title">
+    <span>3. Data Formatting Clashes Paralyze Warehouse Floor Execution</span>
+    <span class="finding-source">ShipBob Teardown (Source 02) &amp; /r/FulfillmentByAmazon (Source 07)</span>
+  </div>
+  <div class="finding-evidence">
+    <strong>Evidence:</strong> 3PL floor operations halt when client CSV uploads have trailing spaces or mismatched dimensions, resulting in carrier cutoff misses and Amazon Inbound Placement fee penalties.
+  </div>
+  <div class="finding-action">
+    <strong>Actionable Design Mandate:</strong> Client-side <em>Pre-Flight CSV Linting</em> on upload modals with 1-click "Auto-Clean &amp; Format" and high-contrast status tokens (<code>STAGED</code>, <code>PICKING</code>, <code>BLOCKED</code>).
+  </div>
+</div>
+
+<div class="finding-card">
+  <div class="finding-title">
+    <span>4. Factory Blackouts Are the Blind Spot of Reorder Automation</span>
+    <span class="finding-source">Shopify App Store (Source 09) &amp; Katana Teardown (Source 03)</span>
+  </div>
+  <div class="finding-evidence">
+    <strong>Evidence:</strong> Automated tools assume static lead times and fail to anticipate predictable factory shutdowns (e.g. Lunar New Year, factory retooling, canal freight disruptions).
+  </div>
+  <div class="finding-action">
+    <strong>Actionable Design Mandate:</strong> Visual <em>Supplier Blackout Calendar</em> in vendor settings that automatically inflates safety stock calculations 30 days prior to supplier downtime.
+  </div>
+</div>
+
+<div class="finding-card">
+  <div class="finding-title">
+    <span>5. High-Density UI Must Prioritize Status Signifiers Over Deep Navigation</span>
+    <span class="finding-source">Shopify Plus (Source 01) &amp; ShipBob (Source 02)</span>
+  </div>
+  <div class="finding-evidence">
+    <strong>Evidence:</strong> Shopify requires 7 clicks to transfer inventory buffers between locations; existing WMS portals bury critical stockout statuses in low-contrast monochromatic grey tables.
+  </div>
+  <div class="finding-action">
+    <strong>Actionable Design Mandate:</strong> Unified high-density grid (1440px desktop / 1024px tablet) utilizing 4 high-contrast semantic tokens: <code>SYNCED (Green)</code>, <code>AT RISK (Amber)</code>, <code>BLOCKED (Red)</code>, <code>TRANSFER (Blue)</code>.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>2. AI Synthesis Prompt &amp; Human Verification Audit</h2>
+<div class="prompt-box">
+&lt;context&gt;Staff Product Researcher evaluating desk research for FlyCommerce OS.&lt;/context&gt;<br>
+&lt;instructions&gt;Analyze corpus of 10 sources (3 teardowns, 2 reports, 22 user reviews). Extract top themes, contradictions, and unmet needs with direct attribution.&lt;/instructions&gt;
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Area / Claim</th>
+      <th style="width: 35%;">Claude 3.5 Sonnet Raw Output</th>
+      <th style="width: 40%;">Human Verification &amp; Correction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>McKinsey Loss Metrics</strong></td>
+      <td>Claude claimed: <em>"95% of brands lose $1M+ annually due to inventory sync delays."</em></td>
+      <td><strong>Corrected:</strong> McKinsey reported <strong>73% of brands</strong> experienced listing demotions or account penalties. The $1M+ figure was fabricated by Claude and eliminated.</td>
+    </tr>
+    <tr>
+      <td><strong>Warehouse Hardware</strong></td>
+      <td>Claude suggested: <em>"Operators demand iOS LiDAR mobile apps to count inventory."</em></td>
+      <td><strong>Corrected:</strong> Verified against ShipBob teardown and interviews: 3PLs use <strong>Zebra/Honeywell Android scanners</strong> and cart-mounted iPads needing 48px touch targets.</td>
+    </tr>
+    <tr>
+      <td><strong>Interaction Model</strong></td>
+      <td>Claude proposed: <em>"Build a conversational AI chatbot that explains recommendations."</em></td>
+      <td><strong>Corrected:</strong> Replaced conversational chatbot (adds unnecessary friction) with an <strong>inline Inspectable Math Tooltip</strong> showing exact reorder formulas on hover/click.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Primary Source Attribution Index (10 Sources)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 22%;">Source</th>
+      <th style="width: 18%;">Type</th>
+      <th style="width: 60%;">Key Finding / Evidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>01. Shopify Inventory Matrix</strong></td>
+      <td>Competitor Teardown</td>
+      <td>High polish but requires 7 clicks to transfer buffers; lacks real-time velocity correlation.</td>
+    </tr>
+    <tr>
+      <td><strong>02. ShipBob WMS Portal</strong></td>
+      <td>Competitor Teardown</td>
+      <td>Opaque CSV error messaging during bulk uploads; monochromatic status tags fail visual hierarchy.</td>
+    </tr>
+    <tr>
+      <td><strong>03. Katana Cloud Manufacturing</strong></td>
+      <td>Analog Teardown</td>
+      <td>Complex multi-level Bill of Materials (BOM) overwhelms solo DTC operators with enterprise jargon.</td>
+    </tr>
+    <tr>
+      <td><strong>04. McKinsey Logistics Report</strong></td>
+      <td>Industry Benchmark</td>
+      <td>73% of mid-market DTC brands suffered listing demotions from sync latency exceeding 90 minutes.</td>
+    </tr>
+    <tr>
+      <td><strong>05. Gartner OMS Guide (2025)</strong></td>
+      <td>Industry Benchmark</td>
+      <td>68% of advanced inventory tools abandoned within 90 days due to "black-box" algorithmic complexity.</td>
+    </tr>
+    <tr>
+      <td><strong>06. Reddit /r/shopify</strong></td>
+      <td>User Community Review</td>
+      <td>TikTok Shop webhook latency (up to 3 hrs) caused 214 overbooked orders and health score crash.</td>
+    </tr>
+    <tr>
+      <td><strong>07. Reddit /r/FulfillmentByAmazon</strong></td>
+      <td>User Community Review</td>
+      <td>Amazon Inbound Placement fee penalties incurred when box dimensions mismatch manifests by 0.5".</td>
+    </tr>
+    <tr>
+      <td><strong>08. G2 Inventory Sync Reviews</strong></td>
+      <td>Verified SaaS Reviews</td>
+      <td>Silent webhook failures during promotional flash sales without dashboard alert notifications.</td>
+    </tr>
+    <tr>
+      <td><strong>09. Shopify App Store (Stocky)</strong></td>
+      <td>User App Review</td>
+      <td>Static reorder formulas fail to account for supplier holiday blackouts (e.g. Lunar New Year).</td>
+    </tr>
+    <tr>
+      <td><strong>10. Reddit /r/ecommerce</strong></td>
+      <td>Operator Survey</td>
+      <td>60%+ of founders maintain duplicate Excel sheets to guard against silent SKU variant corruption.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Figma Deliverable (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>

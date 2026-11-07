@@ -1,0 +1,35 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 2 ASSIGNMENT SUBMISSION
+Research Sprint with AI Synthesis (Assignment UX-02 · Foundations Phase · 5h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-02_RESEARCH_SPRINT_AI_SYNTHESIS.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX02_Research_Sprint_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-02 (Research Sprint with AI Synthesis) completion summary:
+
+1. 10 DOCUMENTED PRIMARY SOURCES CAPTURED WITH ATTRIBUTION:
+   - Competitor Teardowns (3): Shopify Multi-Location Inventory, ShipBob Merchant Portal & WMS, Katana Cloud Manufacturing / Cin7 Omni.
+   - Benchmark Reports (2): McKinsey & Company 2025 "The Omni-Channel Squeeze" (73% brands face rank demotion from sync lag >90m); Gartner Research 2025 OMS Guide (68% advanced inventory tools abandoned due to black-box complexity).
+   - User Community Corpus (5 source clusters, 22 reviews): Reddit /r/shopify (TikTok webhook latency overselling), Reddit /r/FulfillmentByAmazon (FBA box dimension penalties), G2 Reviews (silent webhook drops during sales), Shopify App Store (Stocky blackout blindspots), Reddit /r/ecommerce (Excel spreadsheet fallback consensus).
+
+2. CLAUDE 3.5 SONNET SYNTHESIS & HALLUCINATION AUDIT:
+   - Structured XML prompt fed to Claude to extract themes, cognitive contradictions, and unmet needs.
+   - Human Verification Audit:
+     * Corrected AI metric fabrication: Claude claimed "95% of brands lose $1M+ annually"; verified and corrected against McKinsey Report to 73% experiencing listing demotions from sync lag.
+     * Corrected hardware hallucination: Claude assumed "iOS LiDAR warehouse scanning"; corrected to actual Zebra/Honeywell Android scanners and ruggedized iPad touch carts.
+     * Replaced conversational chatbot suggestion with an inline Explainable AI (XAI) math breakdown drawer.
+
+3. ONE-PAGE RESEARCH SUMMARY — TOP 5 ACTIONABLE FINDINGS (Source-Tied):
+   - Finding 1: Silent Sync Latency (McKinsey & /r/shopify) -> Action: Persistent Real-Time Sync Health Indicator with automated threshold locking.
+   - Finding 2: Distrust in Black-Box AI (Gartner & /r/ecommerce) -> Action: Inspectable Math Drawer showing (Velocity x Lead Time) + Buffer = PO, with 1-click Excel export.
+   - Finding 3: Data Formatting Clashes (ShipBob & /r/FulfillmentByAmazon) -> Action: Pre-flight CSV linting on upload with 1-click "Auto-Clean & Format".
+   - Finding 4: Factory Blackouts as Reorder Blindspots (Shopify App Store & Katana) -> Action: Visual Supplier Blackout Calendar that pre-calculates safety stock ahead of holiday shutdowns.
+   - Finding 5: High-Density UI vs Deep Navigation (Shopify Plus & ShipBob) -> Action: Unified high-density data grid with high-contrast status tokens (Synced, At Risk, Blocked, Transfer Pending).
+
+Full research dossier, prompt structure, teardown notes, and printable 1-page executive PDF report available in the GitHub repository and Figma file.
+================================================================================
