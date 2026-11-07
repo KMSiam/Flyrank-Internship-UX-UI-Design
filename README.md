@@ -23,7 +23,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 1** | **UX-01** | **Workspace, Capstone, and AI Toolkit** | **Setup** | ✅ **Completed** | [UX-01 Dossier](./UX-01_WORKSPACE_CAPSTONE_AI_TOOLKIT.md) · [Submission Notes](./submission_notes_ux_01.txt) · [PDF Report](./FlyRank_UX01_Workspace_Capstone_Report.pdf) |
 | **Week 2** | **UX-02A** | **The "Persona & Journey Map Fleshing"** | **Foundations** | ✅ **Completed** | [UX-02A Dossier](./UX-02_PERSONA_JOURNEY_MAP_FLESHING.md) · [Submission Notes](./submission_notes_ux_02.txt) · [PDF Report](./FlyRank_UX02_Persona_Journey_Map_Report.pdf) |
 | **Week 2** | **UX-02B** | **Research Sprint with AI Synthesis** | **Foundations** | ✅ **Completed** | [UX-02B Dossier](./UX-02_RESEARCH_SPRINT_AI_SYNTHESIS.md) · [Submission Notes](./submission_notes_ux_02_research.txt) · [PDF Report](./FlyRank_UX02_Research_Sprint_Report.pdf) |
-| Week 3 | UX-03 | Information Architecture & User Flows | Definition | ⏳ Upcoming | Site Maps & Flow Diagrams |
+| **Week 3** | **UX-03** | **Users, Jobs, and Flows** | **Foundations** | ✅ **Completed** | [UX-03 Dossier](./UX-03_USERS_JOBS_AND_FLOWS.md) · [Submission Notes](./submission_notes_ux_03.txt) · [PDF Report](./FlyRank_UX03_IA_and_Flows_Report.pdf) |
 | Week 4 | UX-04 | Low-Fidelity Wireframes & Rapid Prototyping | Ideation | ⏳ Upcoming | Wireframes & AI Layouts |
 | Week 5 | UX-05 | Design System Foundations (Tokens & Atomic UI) | UI System | ⏳ Upcoming | Component Library |
 | Week 6 | UX-06 | High-Fidelity Responsive UI | UI Design | ⏳ Upcoming | Desktop & Tablet Views |
@@ -43,6 +43,9 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ### Week 2 (UX-02): Research Sprint with AI Synthesis
 - Assembled **10 primary desk research sources** (Shopify, ShipBob, Katana teardowns; McKinsey & Gartner reports; 22 Reddit/G2/Shopify App Store user reviews).
-- Fed raw corpus into Claude 3.5 Sonnet using an XML prompt, extracting themes, contradictions, and unmet needs.
-- Executed an explicit **Human Verification Audit** correcting AI metric exaggerations, hardware hallucinations, and interaction model pitfalls.
-- Formulated a strategic **One-Page Research Summary** with 5 source-tied findings and concrete, developer-ready UI/UX mandates.
+- Conducted human verification audit correcting AI hallucinations and synthesized 5 actionable findings.
+
+### Week 3 (UX-03): Users, Jobs, and Flows
+- Defined 2 primary Jobs-to-be-Done (JTBD) statements for Elena (Solo Founder) and Marcus (3PL Warehouse Lead) directly traced to UX-02 findings.
+- Mapped product Information Architecture (IA) with 18 screens grouped in a flat task/object hybrid model.
+- Created 3 fully annotated flow diagrams (Primary Task, Onboarding, Recovery) with diamond decision points, unhappy paths, and explicit Laws of UX annotations (Fitts, Hick, Jakob, Miller, Tesler, Doherty, Postel, Poka-Yoke).

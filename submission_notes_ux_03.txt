@@ -1,0 +1,48 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 3 ASSIGNMENT SUBMISSION
+Users, Jobs, and Flows (Assignment UX-03 · Foundations Phase · 5h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-03_USERS_JOBS_AND_FLOWS.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX03_IA_and_Flows_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-03 (Users, Jobs, and Flows) Week 3 Foundations Summary:
+
+1. JTBD STATEMENTS TRACING DIRECTLY TO UX-02 RESEARCH:
+   - Primary User 1 (Elena Rostova - Solo Founder):
+     "When my hero product goes viral on TikTok Shop and stock depletes rapidly, I want to reallocate safety buffer units from wholesale reserve to my active sales channels in under 90 seconds with full visibility into the math, so I can prevent catastrophic stockouts, eliminate customer cancellations, and protect my Amazon and TikTok marketplace seller ratings without spending hours firefighting in spreadsheets."
+     -> Traces directly to UX-02 Finding 1 (Silent Sync Latency) & Finding 2 (Black-box AI Distrust).
+   - Primary User 2 (Marcus Chen - Warehouse Operations Lead):
+     "When client brand owners push emergency batch fulfillment orders close to the 5:00 PM carrier cutoff, I want our tablet portal to automatically validate and clean CSV formatting errors and display unambiguous color-coded batch statuses, so I can direct floor pickers immediately without work stoppages, barcode scanning failures, or missed carrier cutoffs."
+     -> Traces directly to UX-02 Finding 3 (Data Formatting Clashes) & Finding 5 (High-Density Status UI).
+
+2. COMPREHENSIVE INFORMATION ARCHITECTURE (IA) SITEMAP:
+   - Grouping Logic: Task-Based and Object-Centric Hybrid Model designed to eliminate deep navigation nesting (the #1 friction point identified in Shopify/Katana teardowns).
+   - 18 Screen Inventory organized into 5 primary functional domains + Persistent System Monitor:
+     * Global Persistent Frame: Real-time Channel Sync Health Monitor (Shopify/TikTok/Amazon) & Stockout Alert Drawer.
+     * 1.0 Inventory Matrix: Unified Multi-Channel Stock Grid, SKU Detail & Aliasing Drawer, Explainable AI (XAI) Math Inspector Modal.
+     * 2.0 Triage & Rebalance Engine: Emergency Stockout Board, Cross-Channel Rebalancing Modal, Automated Buffer Rules.
+     * 3.0 Orders & 3PL Warehouse Hub: Batch Manifests, Tablet-Optimized Floor Pick List (48px touch targets), Pre-Flight CSV Linting Modal.
+     * 4.0 Demand Forecasting & Vendors: Predictive PO Generator, Supplier Blackout Calendar (Holiday shutdowns).
+     * 5.0 Onboarding & First-Run Wizard: Store OAuth Stepper, SKU Auto-Match & Conflict Resolver, Baseline Calibration.
+
+3. 3 ANNOTATED USER FLOWS (With Decision Points, Unhappy Paths & Laws of UX):
+   - Flow 1 (Primary Task Flow): "Emergency Multi-Channel Stockout Triage & Rebalance"
+     * Happy Path: Urgent push alert -> Live Sync Monitor check -> Triage Center -> 150-unit wholesale reserve rebalance -> XAI math verification -> Buffer locked.
+     * Unhappy Paths: Sync latency delay warning (4m lag) with force refresh; Insufficient wholesale reserve pool (<50 units) triggering emergency split suggestion; API 429 rate limit with exponential retry.
+     * Laws of UX Applied: Doherty Threshold (<400ms latency feedback), Tesler's Law (absorbing allocation complexity), Fitts's & Hick's Laws (slider snap targets), Jakob's Law (inspectable XAI math).
+   - Flow 2 (Onboarding / First-Run): "Zero-Friction Multi-Store Setup & SKU Auto-Mapping"
+     * Happy Path: Channel OAuth selection -> automated catalog ingestion progress -> 1-click SKU auto-alias mapping -> default 15% safety buffer activation.
+     * Unhappy Paths: Amazon developer key OAuth drop with inline helper; Variant syntax mismatch (GLOW-01 vs GLOW_01) with inline visual difference resolver.
+     * Laws of UX Applied: Postel's Law (Robustness Principle), Miller's Law (chunked 5-item SKU cards), Default Effect (pre-configured 15% safety buffer).
+   - Flow 3 (Recovery / Error Flow): "Corrupted 3PL CSV Import Linter & Instant Undo Reallocation"
+     * Happy Path: Drag-and-drop CSV -> Instant browser-side linting -> 1-click auto-sanitize -> dispatch to Marcus with STAGED status.
+     * Unhappy Paths: Missing mandatory header (Tracking ID) with sample template download; Trailing spaces / dirty formatting flagged in amber with 1-click auto-clean; Accidental batch overwrite triggering 60-second floating Undo Banner for instant state rollback.
+     * Laws of UX Applied: Poka-Yoke (Mistake-Proofing), Nielsen's User Control & Freedom (60s Undo), Peak-End Rule, WCAG 2.1 AA Contrast Ratios.
+
+Full flow diagrams, decision logic annotations, and printable executive presentation PDF available in the GitHub repository and master Figma file.
+================================================================================
