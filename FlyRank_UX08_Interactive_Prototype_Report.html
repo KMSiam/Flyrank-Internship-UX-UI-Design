@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-08: Interactive Prototype & Motion Architecture</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #e0f2fe;
+    color: #0369a1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #0c4a6e;
+    border-left: 3px solid #0284c7;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .flow-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background: #ffffff;
+    margin-bottom: 8px;
+  }
+  .flow-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 11px;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+  .flow-tag {
+    font-size: 9px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    background: #e0e7ff;
+    color: #4338ca;
+  }
+  .step-pills {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 9.5px;
+    font-family: monospace;
+    margin-bottom: 4px;
+  }
+  .pill {
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .p-start { background: #e0e7ff; color: #4338ca; }
+  .p-action { background: #dcfce7; color: #15803d; }
+  .p-overlay { background: #fef3c7; color: #b45309; }
+  .p-end { background: #ede9fe; color: #6d28d9; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 6 · Build+</span>
+    <h1>UX-08: Interactive Prototype &amp; Motion Architecture</h1>
+    <div style="color: #64748b; font-size: 10.5px;">3 Named Flow Starting Points · Smart Animate Spring Physics · Device Self-Testing Audit</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Flow Starting Points</div>
+    <div class="meta-val">3 Named User Journeys</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Primary Flow Speed</div>
+    <div class="meta-val">4 Clicks / 22s Complete</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Motion Engine</div>
+    <div class="meta-val">Smart Animate Spring (250ms)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Target Devices</div>
+    <div class="meta-val">Desktop 1440px &amp; Tablet 1024px</div>
+  </div>
+</div>
+
+<h2>1. Three Named Prototype Flow Starting Points</h2>
+
+<!-- Flow 1 -->
+<div class="flow-box">
+  <div class="flow-header">
+    <span>Flow 1: Emergency Stockout Triage &amp; Rebalance (Primary Flow)</span>
+    <span class="flow-tag">Elena (Solo Founder)</span>
+  </div>
+  <div class="step-pills">
+    <span class="pill p-start">SCR-01 Grid</span> → 
+    <span class="pill p-action">SCR-04 Triage</span> → 
+    <span class="pill p-overlay">MOD-02 Overlay</span> → 
+    <span class="pill p-action">Smart Animate Slider</span> → 
+    <span class="pill p-end">BAN-01 Toast</span>
+  </div>
+  <div style="font-size: 10px; color: #475569;">
+    <strong>End-to-End Task:</strong> Taps amber <code>[ TRIAGE ]</code> badge on Vitamin C Serum → Opens centered modal overlay with 60% backdrop dimming → Snaps slider to 150 units with live numeric counter animation → Inspects XAI formula drawer → Commits buffer. Completes in <strong>4 clicks / 22 seconds</strong> with zero dead-ends.
+  </div>
+</div>
+
+<!-- Flow 2 -->
+<div class="flow-box">
+  <div class="flow-header">
+    <span>Flow 2: Multi-Store Onboarding &amp; SKU Auto-Mapping</span>
+    <span class="flow-tag">First-Run Setup</span>
+  </div>
+  <div class="step-pills">
+    <span class="pill p-start">WIZ-01 OAuth</span> → 
+    <span class="pill p-action">WIZ-02 Ingestion (1.2s)</span> → 
+    <span class="pill p-action">WIZ-03 Conflict Resolver</span> → 
+    <span class="pill p-end">SCR-01 Dashboard</span>
+  </div>
+  <div style="font-size: 10px; color: #475569;">
+    <strong>End-to-End Task:</strong> Connects Shopify, TikTok, and Amazon → Watches animated progress ingestion stepper → Reviews 4 conflicting SKU variants (`GLOW-01` vs `GLOW_01`) and applies 1-click auto-mapping → Launches calibrated dashboard.
+  </div>
+</div>
+
+<!-- Flow 3 -->
+<div class="flow-box">
+  <div class="flow-header">
+    <span>Flow 3: Corrupted CSV Linting &amp; Undo Rollback (Recovery Flow)</span>
+    <span class="flow-tag">Marcus (3PL Ops)</span>
+  </div>
+  <div class="step-pills">
+    <span class="pill p-start">MOD-03 CSV Drop</span> → 
+    <span class="pill p-overlay">MOD-04 Error Drawer</span> → 
+    <span class="pill p-action">1-Click Auto-Clean</span> → 
+    <span class="pill p-end">BAN-01 60s Undo</span>
+  </div>
+  <div style="font-size: 10px; color: #475569;">
+    <strong>End-to-End Task:</strong> Simulates upload of malformed CSV → Amber drawer highlights trailing spaces → Clicks <code>[ 1-Click Auto-Sanitize ]</code> → Dispatches clean pick manifest → Triggers floating 60s Undo Banner allowing instant state rollback.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>2. Advanced Motion &amp; Interaction Choreography</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Interaction</th>
+      <th style="width: 25%;">Figma Trigger &amp; Action</th>
+      <th style="width: 25%;">Motion Curve &amp; Timing</th>
+      <th style="width: 25%;">Heuristic Payoff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tactile Slider Quick-Snap</strong></td>
+      <td><code>On Click</code> [ 50% ] → Swap Variant (325 Units)</td>
+      <td><strong>Smart Animate Spring:</strong> Mass: 1, Stiff: 180, Damp: 24 (250ms)</td>
+      <td>Tactile physical weight; eliminates abrupt visual jumps.</td>
+    </tr>
+    <tr>
+      <td><strong>Centered Modal Overlay</strong></td>
+      <td><code>On Click</code> [ Rebalance ] → Open Overlay MOD-02</td>
+      <td><strong>Ease-Out Quintic:</strong> 300ms entry; 60% slate backdrop</td>
+      <td>Focuses 100% of attention on emergency triage (Von Restorff).</td>
+    </tr>
+    <tr>
+      <td><strong>Explainable AI Drawer</strong></td>
+      <td><code>On Click</code> [ ℹ️ XAI Math ] → Expand Accordion</td>
+      <td><strong>Ease-In-Out Quadratic:</strong> 180ms height transition</td>
+      <td>Progressive Disclosure; reveals formula without leaving modal.</td>
+    </tr>
+    <tr>
+      <td><strong>Persistent 60s Undo Ring</strong></td>
+      <td><code>After Delay</code> (200ms) → Display Floating BAN-01</td>
+      <td><strong>Linear 60s Countdown:</strong> SVG stroke offset ring</td>
+      <td>Eliminates fear of accidental commit; user control &amp; freedom.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Multi-Device Self-Testing &amp; Bug Fixes Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Device Class</th>
+      <th style="width: 35%;">Interaction Breakdown Detected</th>
+      <th style="width: 45%;">Implemented Layout / Prototype Fix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Desktop (1440px)</strong></td>
+      <td>Modal overlay was locked; clicking outside or pressing <code>Esc</code> failed to close, trapping the user.</td>
+      <td>Enabled <strong>"Close when clicking outside"</strong> and mapped keyboard shortcut <code>Esc</code> as an explicit overlay close trigger.</td>
+    </tr>
+    <tr>
+      <td><strong>Tablet Touch (1024px)</strong></td>
+      <td>Quick-snap pills were too thin (30px), causing finger mis-taps on the adjacent slider thumb.</td>
+      <td>Enlarged hit-boxes to <strong>44px × 48px touch targets</strong> with 8px thumb spacing (Fitts's Law).</td>
+    </tr>
+    <tr>
+      <td><strong>All Viewports</strong></td>
+      <td>The 60s Undo Toast rendered at bottom-right, colliding with the primary action button bar.</td>
+      <td>Re-anchored toast to floating <strong>Bottom-Center (+24px offset)</strong>, ensuring zero visual overlap with critical buttons.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Interactive Prototype Share Link (View Access):</strong><br>
+https://www.figma.com/proto/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=102-450&scaling=scale-down&page-id=0%3A1&starting-point-node-id=102%3A450&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>
