@@ -11,6 +11,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Track** | UX/UI Design |
 | **Participant** | K. M. Siam ([GitHub: @KMSiam](https://github.com/KMSiam)) |
 | **Capstone Project** | **FlyCommerce OS** — Predictive Multi-Channel E-Commerce Fulfillment & Inventory Hub |
+| **Design System** | **FlyCore Design System v1.0** (Tokens, Light/Dark Modes, Atomic Components) |
 | **Core Tooling** | Figma, Claude 3.5 Sonnet, DeepSeek-R1, Recraft, Loom |
 | **Master Figma Workspace** | [FlyRank UX/UI Design Capstone File (View Access)](https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access) |
 
@@ -27,7 +28,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 4** | **UX-04A** | **The "Kill Your Darlings" Cut-Down** | **Build** | ✅ **Completed** | [UX-04A Dossier](./UX-04_KILL_YOUR_DARLINGS_CUT_DOWN.md) · [Submission Notes](./submission_notes_ux_04.txt) · [PDF Report](./FlyRank_UX04_Kill_Your_Darlings_Report.pdf) |
 | **Week 4** | **UX-04B** | **Why Grunt Work is Actually a Promotion Strategy** | **Build** | ✅ **Completed** | [UX-04B Dossier](./UX-04B_GRUNT_WORK_PROMOTION_STRATEGY.md) · [Submission Notes](./submission_notes_ux_04_grunt_work.txt) · [PDF Report](./FlyRank_UX04B_Grunt_Work_File_Hygiene_Report.pdf) |
 | **Week 4** | **UX-04C** | **Wireframes: AI Draft vs Hand-Built** | **Build** | ✅ **Completed** | [UX-04C Dossier](./UX-04_WIREFRAMES_AI_VS_HANDBUILT.md) · [Submission Notes](./submission_notes_ux_04_wireframes.txt) · [PDF Report](./FlyRank_UX04_Wireframes_Experiment_Report.pdf) |
-| Week 5 | UX-05 | Design System Foundations (Tokens & Atomic UI) | UI System | ⏳ Upcoming | Component Library |
+| **Week 5** | **UX-05** | **Design System Foundations: Tokens & Components** | **UI System** | ✅ **Completed** | [UX-05 Dossier](./UX-05_DESIGN_SYSTEM_FOUNDATIONS.md) · [Submission Notes](./submission_notes_ux_05.txt) · [PDF Report](./FlyRank_UX05_Design_System_Tokens_Report.pdf) |
 | Week 6 | UX-06 | High-Fidelity Responsive UI | UI Design | ⏳ Upcoming | Desktop & Tablet Views |
 | Week 7 | UX-07 | Interactive Prototyping & Micro-Interactions | Prototype | ⏳ Upcoming | Clickable Prototype |
 | Week 8 | UX-08 | Usability Testing & Iterative Critique | Testing | ⏳ Upcoming | Usability Test Report |
@@ -38,8 +39,10 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 4C (UX-04C): Wireframes: AI Draft vs Hand-Built
-- Created **12 low-fidelity wireframe screens** covering primary emergency triage, onboarding wizard, and CSV recovery flows.
-- Executed the **AI Draft vs. Hand-Built Experiment** comparing Figma AI / First Draft against hand-crafted designs on SCR-01 (Stock Grid) and MOD-02 (Rebalance Modal).
-- Authored **6 empirical observations** detailing spatial density, multi-channel segmentation, XAI formula transparency, and warehouse tablet ergonomics.
-- Documented **2 visible peer-review iterations** (Reserve Depletion Safeguard & Tablet Status Discriminability).
+### Week 5 (UX-05): Design System Foundations: Tokens and Components
+- Formulated the **FlyCore Design System v1.0** on Page `05_Design System & Components`.
+- Built an **8-style modular typography scale** based on a 1.250 Major Third ratio with tabular numerals.
+- Established a **semantic color token engine** in Figma Variables with 100% parity across Light Mode and Dark Mode (Warehouse Night Shift).
+- Codified an **8-point geometric spacing scale** (4px to 64px) and elevation hierarchy.
+- Shipped **8 production-ready core components** (Button, Input, Card, Modal, Status Badge, Allocation Slider, High-Density Table Row, and Explainable AI Math Drawer) with variants, auto-layout, and documented usage rules.
+- Validated seamless Light/Dark theme switching on the Emergency Rebalance Modal (MOD-02).

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-05: Design System Foundations — Tokens & Components</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #ede9fe;
+    color: #5b21b6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #312e81;
+    border-left: 3px solid #6366f1;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .token-swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .swatch-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .swatch-color {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .swatch-info {
+    padding: 5px 8px;
+    font-size: 9.5px;
+  }
+  .swatch-token { font-weight: 700; color: #0f172a; }
+  .swatch-hex { color: #64748b; font-family: monospace; font-size: 9px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .theme-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .theme-box {
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+  .theme-light { background: #ffffff; border: 1px solid #cbd5e1; color: #0f172a; }
+  .theme-dark { background: #0f172a; border: 1px solid #334155; color: #f8fafc; }
+  .theme-title { font-weight: 700; font-size: 11px; margin-bottom: 6px; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 5 · Build</span>
+    <h1>UX-05: Design System Foundations (Tokens &amp; Components)</h1>
+    <div style="color: #64748b; font-size: 10.5px;">FlyCore Design System v1.0 · Major Third Typography · Semantic Tokens · 8 Production Components</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>System:</strong> FlyCore v1.0
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Typography Ratio</div>
+    <div class="meta-val">1.250 Major Third (8 Styles)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Color Engine</div>
+    <div class="meta-val">Semantic Light &amp; Dark Modes</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Spacing Scale</div>
+    <div class="meta-val">8-Point Grid (4px to 64px)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Core Components</div>
+    <div class="meta-val">8 Components with Variants</div>
+  </div>
+</div>
+
+<h2>1. Semantic Color Token System (Variables Engine)</h2>
+<div class="token-swatch-grid">
+  <div class="swatch-card">
+    <div class="swatch-color" style="background: #4F46E5; color: #ffffff;">Primary Action</div>
+    <div class="swatch-info">
+      <div class="swatch-token">action-primary-default</div>
+      <div class="swatch-hex">Light: #4F46E5 · Dark: #6366F1</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="swatch-color" style="background: #15803D; color: #ffffff;">Success Synced</div>
+    <div class="swatch-info">
+      <div class="swatch-token">feedback-success-text</div>
+      <div class="swatch-hex">Light: #15803D · Dark: #34D399</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="swatch-color" style="background: #B45309; color: #ffffff;">Warning At-Risk</div>
+    <div class="swatch-info">
+      <div class="swatch-token">feedback-warning-text</div>
+      <div class="swatch-hex">Light: #B45309 · Dark: #FBBF24</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="swatch-color" style="background: #B91C1C; color: #ffffff;">Danger Blocked</div>
+    <div class="swatch-info">
+      <div class="swatch-token">feedback-danger-text</div>
+      <div class="swatch-hex">Light: #B91C1C · Dark: #F87171</div>
+    </div>
+  </div>
+</div>
+
+<h2>2. Modular Typography Scale (1.250 Major Third Ratio)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Token Name</th>
+      <th style="width: 15%;">Font Size</th>
+      <th style="width: 15%;">Line Height</th>
+      <th style="width: 15%;">Weight</th>
+      <th style="width: 35%;">Primary Application</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Display-Hero</strong></td>
+      <td>38px (2.4rem)</td>
+      <td>46px</td>
+      <td>800 Extrabold</td>
+      <td>Marketing covers &amp; executive dashboards.</td>
+    </tr>
+    <tr>
+      <td><strong>Heading-1</strong></td>
+      <td>30px (1.9rem)</td>
+      <td>38px</td>
+      <td>700 Bold</td>
+      <td>Top-level screen titles.</td>
+    </tr>
+    <tr>
+      <td><strong>Heading-2</strong></td>
+      <td>24px (1.5rem)</td>
+      <td>32px</td>
+      <td>700 Bold</td>
+      <td>Modal headers and section dividers.</td>
+    </tr>
+    <tr>
+      <td><strong>Heading-3</strong></td>
+      <td>20px (1.2rem)</td>
+      <td>26px</td>
+      <td>600 Semibold</td>
+      <td>Metric card titles and module headings.</td>
+    </tr>
+    <tr>
+      <td><strong>Body-Base</strong></td>
+      <td>14px (0.88rem)</td>
+      <td>20px</td>
+      <td>400 Regular / 500 Med</td>
+      <td>High-density tabular grid rows &amp; form fields.</td>
+    </tr>
+    <tr>
+      <td><strong>Caption-Mono</strong></td>
+      <td>11px (0.69rem)</td>
+      <td>14px</td>
+      <td>600 Bold (tnum)</td>
+      <td>SKU codes, numeric counters, and status badges.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>3. Eight Production-Ready Core Components</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Component</th>
+      <th style="width: 30%;">Variants &amp; States</th>
+      <th style="width: 25%;">Auto-Layout Specs</th>
+      <th style="width: 25%;">Usage Rule (DO / DON'T)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Button</strong></td>
+      <td>Primary, Secondary, Destructive, Ghost | Large (48px), Med (40px), Sm (32px) | Default, Hover, Focused, Disabled, Loading</td>
+      <td>Large: H:48px, Px:24px, Py:12px, Radius:8px.</td>
+      <td><strong>DO:</strong> Use Primary for final triage action. <strong>DON'T:</strong> Never place two Primary buttons together.</td>
+    </tr>
+    <tr>
+      <td><strong>2. Form Input</strong></td>
+      <td>Text Input, Counter, Dropdown, Search | Default, Focused, Filled, Error, Disabled</td>
+      <td>H:40px, Px:12px, Radius:6px, Border:1px.</td>
+      <td><strong>DO:</strong> Always show dedicated helper text. <strong>DON'T:</strong> Never use placeholders as labels.</td>
+    </tr>
+    <tr>
+      <td><strong>3. Metric Card</strong></td>
+      <td>Inventory Health, Velocity, Wave Staging | Light, Dark | Static, Hover</td>
+      <td>P:20px, Gap:12px, Radius:12px, Elevation-1.</td>
+      <td><strong>DO:</strong> Pair numbers with directional deltas. <strong>DON'T:</strong> Do not crowd &gt;2 metrics per card.</td>
+    </tr>
+    <tr>
+      <td><strong>4. Triage Modal</strong></td>
+      <td>Medium (640px), Large (880px), Drawer (480px) | Locked backdrop</td>
+      <td>W:640px, P:24px, Radius:16px, Elevation-3.</td>
+      <td><strong>DO:</strong> Lock background scroll on open. <strong>DON'T:</strong> Never stack modals on modals.</td>
+    </tr>
+    <tr>
+      <td><strong>5. Status Badge</strong></td>
+      <td>SYNCED (Hex), AT RISK (Tri), BLOCKED (Sqr), TRANSFER (Pill)</td>
+      <td>H:24px, Px:8px, Radius:4px, Caption-Mono.</td>
+      <td><strong>DO:</strong> Pair color with unique geometry (WCAG). <strong>DON'T:</strong> Never rely on color alone.</td>
+    </tr>
+    <tr>
+      <td><strong>6. Tactile Slider</strong></td>
+      <td>Continuous vs. Quick-Snaps (25%, 50%, Fill) | Desktop 24px vs Tablet 36px thumb</td>
+      <td>Track H:8px, Active track colored, Snaps H:28px.</td>
+      <td><strong>DO:</strong> Show live real-time number counters. <strong>DON'T:</strong> Never allow reserve over-draw.</td>
+    </tr>
+    <tr>
+      <td><strong>7. High-Density Row</strong></td>
+      <td>Standard, Alert, Selected, Expanded | Desktop 40px vs Tablet 54px touch</td>
+      <td>Px:16px, Tabular nums, Border-b: 1px.</td>
+      <td><strong>DO:</strong> Right-align all numeric quantities. <strong>DON'T:</strong> Never truncate SKU codes.</td>
+    </tr>
+    <tr>
+      <td><strong>8. XAI Math Drawer</strong></td>
+      <td>Collapsed Pill vs. Expanded Drawer | Live vs. Stale calculation</td>
+      <td>P:16px, Radius:8px, Border: 1px dashed.</td>
+      <td><strong>DO:</strong> Render formula: (Velocity × Lead) + Buffer. <strong>DON'T:</strong> Never hide reorder math.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Sample Screen Theme Switching (Light vs. Dark Mode)</h2>
+<div class="theme-compare">
+  <div class="theme-box theme-light">
+    <div class="theme-title" style="color: #4338ca;">Light Mode (Office Desktop)</div>
+    • Surface Canvas: <code>#F8FAFC</code> (Clean slate)<br>
+    • Modal Surface: <code>#FFFFFF</code> (Pure white elevation-3)<br>
+    • Primary Text: <code>#0F172A</code> (14.8:1 AAA contrast)<br>
+    • Slider Active: <code>#4F46E5</code> (Indigo-600)<br>
+    • XAI Formula Drawer: <code>#F1F5F9</code> (Slate-100 container)
+  </div>
+  <div class="theme-box theme-dark">
+    <div class="theme-title" style="color: #818cf8;">Dark Mode (Warehouse Night Shift)</div>
+    • Surface Canvas: <code>#0B0F17</code> (Obsidian low-glare)<br>
+    • Modal Surface: <code>#161F30</code> (Deep slate elevation-3)<br>
+    • Primary Text: <code>#F8FAFC</code> (13.2:1 AAA contrast)<br>
+    • Slider Active: <code>#6366F1</code> (Indigo-500 high-vis)<br>
+    • XAI Formula Drawer: <code>#1E293B</code> (Slate-800 container)
+  </div>
+</div>
+
+<div class="link-box">
+<strong>Master Design System File (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>

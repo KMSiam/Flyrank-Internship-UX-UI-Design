@@ -1,0 +1,45 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 5 ASSIGNMENT SUBMISSION
+Design System Foundations: Tokens and Components (Assignment UX-05 · Build Phase · 6h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-05_DESIGN_SYSTEM_FOUNDATIONS.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX05_Design_System_Tokens_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-05 (Design System Foundations: Tokens and Components) Summary:
+
+1. MATHEMATICAL MODULAR TYPOGRAPHY SCALE (1.250 Major Third Ratio):
+   - 8 Semantically named styles: Display-Hero (38px/800), Heading-1 (30px/700), Heading-2 (24px/700), Heading-3 (20px/600), Body-Large (16px/400-500), Body-Base (14px/400-500), Body-Small (12px/400), Caption-Mono (11px/600 tnum).
+   - Tabular figures (tnum) enabled for high-density inventory data alignment.
+
+2. SEMANTIC COLOR TOKENS WITH LIGHT & DARK MODE VARIABLE PARITY:
+   - Full semantic abstraction: surface-canvas, surface-default, surface-card, surface-raised, text-primary, text-secondary, text-tertiary, text-inverse, border-default, border-focus, action-primary-default (hover, active, disabled), and feedback tokens (success, warning, danger).
+   - Light Mode: Crisp clean desktop aesthetic (Canvas #F8FAFC, Card #FFFFFF, Text #0F172A).
+   - Dark Mode: Low-glare warehouse night shift aesthetic (Canvas #0B0F17, Card #161F30, Text #F8FAFC).
+   - 100% WCAG 2.1 AA & AAA compliance across all text/background pairs.
+
+3. 8-POINT SPACING & ELEVATION SCALE:
+   - Consistent spatial rhythm: space-050 (4px), space-100 (8px), space-150 (12px), space-200 (16px), space-300 (24px), space-400 (32px), space-600 (48px warehouse touch targets), space-800 (64px).
+   - Elevation levels codified: elevation-0 (flat borders), elevation-1 (hover/dropdowns), elevation-2 (drawers), elevation-3 (modals).
+
+4. 8 CORE PRODUCTION COMPONENTS WITH VARIANTS & USAGE RULES:
+   - Universal Core Components (4):
+     1. Button: Primary, Secondary, Destructive, Ghost | Large (48px), Medium (40px), Small (32px) | Default, Hover, Focused, Pressed, Disabled, Loading.
+     2. Form Input: Text, Counter, Dropdown Select, Search | Default, Focused, Filled, Error, Disabled.
+     3. Metric Card: Inventory Health, Velocity, Wave Staging | Light/Dark | Static, Hover.
+     4. Triage Modal: Medium (640px), Large (880px), Drawer (480px) | Auto-layout with locked backdrop.
+   - Capstone-Specific Components (4):
+     5. Status Badge / Token: Synced (Hexagon), At-Risk (Triangle), Blocked (Square), Transfer (Pill). Dual color + shape for color-blind accessibility.
+     6. Allocation Tactile Slider: Continuous vs. Quick-Snaps (25%, 50%, Fill Deficit) with real-time numeric counter.
+     7. High-Density Data Table Row: Standard, Alert, Selected, Expanded | 40px desktop vs. 54px warehouse tablet touch targets.
+     8. Explainable AI (XAI) Formula Inspector: Collapsed pill vs. expanded calculation drawer exposing (Velocity x Lead Time) + Buffer = PO.
+
+5. SEAMLESS THEME SWITCHING:
+   Sample screen (MOD-02 Rebalance Modal) verified in both Light Mode and Dark Mode via Figma Variable collections with zero manual color overrides.
+
+Full component token specifications, auto-layout rules, and printable design system PDF report available in the repository.
+================================================================================
