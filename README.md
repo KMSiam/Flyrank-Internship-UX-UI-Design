@@ -29,7 +29,8 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 4** | **UX-04B** | **Why Grunt Work is Actually a Promotion Strategy** | **Build** | ✅ **Completed** | [UX-04B Dossier](./UX-04B_GRUNT_WORK_PROMOTION_STRATEGY.md) · [Submission Notes](./submission_notes_ux_04_grunt_work.txt) · [PDF Report](./FlyRank_UX04B_Grunt_Work_File_Hygiene_Report.pdf) |
 | **Week 4** | **UX-04C** | **Wireframes: AI Draft vs Hand-Built** | **Build** | ✅ **Completed** | [UX-04C Dossier](./UX-04_WIREFRAMES_AI_VS_HANDBUILT.md) · [Submission Notes](./submission_notes_ux_04_wireframes.txt) · [PDF Report](./FlyRank_UX04_Wireframes_Experiment_Report.pdf) |
 | **Week 5** | **UX-05** | **Design System Foundations: Tokens & Components** | **UI System** | ✅ **Completed** | [UX-05 Dossier](./UX-05_DESIGN_SYSTEM_FOUNDATIONS.md) · [Submission Notes](./submission_notes_ux_05.txt) · [PDF Report](./FlyRank_UX05_Design_System_Tokens_Report.pdf) |
-| **Week 6** | **UX-06** | **High-Fidelity Screens & State Architecture** | **Build (core)** | ✅ **Completed** | [UX-06 Dossier](./UX-06_HIGH_FIDELITY_SCREENS.md) · [Submission Notes](./submission_notes_ux_06.txt) · [PDF Report](./FlyRank_UX06_High_Fidelity_Screens_Report.pdf) |
+| **Week 6** | **UX-06A** | **High-Fidelity Screens & State Architecture** | **Build (core)** | ✅ **Completed** | [UX-06A Dossier](./UX-06_HIGH_FIDELITY_SCREENS.md) · [Submission Notes](./submission_notes_ux_06.txt) · [PDF Report](./FlyRank_UX06_High_Fidelity_Screens_Report.pdf) |
+| **Week 6** | **UX-06B** | **Component Variant Matrix Generator** | **Build+** | ✅ **Completed** | [UX-06B Dossier](./UX-06B_COMPONENT_VARIANT_MATRIX_GENERATOR.md) · [Submission Notes](./submission_notes_ux_06b_variants.txt) · [PDF Report](./FlyRank_UX06B_Component_Matrix_Report.pdf) |
 | **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
 | Week 8 | UX-08 | Usability Testing & Iterative Critique | Testing | ⏳ Upcoming | Usability Test Report |
 | Week 9 | UX-09 | Design Token Sync & Developer Hand-off | Hand-off | ⏳ Upcoming | Hand-off Specs & Redlines |
@@ -39,10 +40,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 7 (UX-07): Designing the AI Surface: Chat, Agents, and Trust
-- Architected the AI surface for **FlyCommerce OS**: justified a **Proactive Autonomous Agent with Staged Human Review** over conversational chat and unconstrained autopilot.
-- Implemented **4 named patterns from The Shape of AI**:
-  - *Action Plan* (3-step staged execution) & *Interactive Verification Controls* (Sliders with 75% safety lock).
-  - *Explainable Formula Disclosure* (Transparent math) & *Telemetry Citations/Caveats* (Data recency and supplier blackout warnings).
-- Designed a dedicated **AI Failure & Uncertainty Surface**: Split-Scenario Branch Modeling (Transient Spike vs. Sustained Surge) triggered when confidence drops below 70%.
-- Audited against **8 Microsoft HAX Guidelines** with transparent evaluation of honest failures (G10, G13) and planned architectural mitigations.
+### Week 6B (UX-06B): Component Variant Matrix Generator
+- Defined multi-axis combinatorial attribute equations for **Button (72 vars)**, **Input Field (48 vars)**, and **Card (36 vars)** totaling **156 production variants**.
+- Specified auto-layout heights, paddings, radii, and design token bindings for every state permutation.
+- Codified a **1:1 Variant Naming Convention rule** mapping Figma slash syntax directly to TypeScript interfaces and Tailwind CSS utility classes.

@@ -1,0 +1,51 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 6 ASSIGNMENT SUBMISSION
+Component Variant Matrix Generator (Assignment UX-06B · Build+ Phase · 5h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-06B_COMPONENT_VARIANT_MATRIX_GENERATOR.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX06B_Component_Matrix_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-06B (Component Variant Matrix Generator) Summary:
+
+1. ATTRIBUTE AXES FOR 3 CORE COMPONENTS:
+   - Component 1 (Button):
+     [Hierarchy: 4 (Primary, Secondary, Destructive, Ghost)] 
+     x [Size: 3 (Large 48px, Medium 40px, Small 32px)] 
+     x [State: 6 (Default, Hover, Focused, Active/Pressed, Disabled, Loading)]
+     = 72 Foundational Permutations.
+   - Component 2 (Input Field):
+     [Type: 4 (Text Input, Number Counter, Dropdown Select, Search Bar)] 
+     x [Size: 2 (Medium 40px, Small 32px)] 
+     x [State: 6 (Default, Focused, Filled, Error w/ HelperText, Success, Disabled)]
+     = 48 Core Permutations.
+   - Component 3 (Card):
+     [Domain: 3 (Metric Inventory Card, Batch Order Staging Card, SKU Item Detail)] 
+     x [Breakpoint: 2 (Desktop 1440px, Tablet Touch 1024px)] 
+     x [Theme: 2 (Light Mode, Dark Mode)] 
+     x [State: 3 (Static, Hover Raised, Selected/Active)]
+     = 36 Production Permutations.
+
+2. COMBINATORIAL MATRIX & AUTO-LAYOUT TOKEN SPECIFICATIONS:
+   - Button Large (48px): H:48px, Px:24px, Py:12px, Radius:8px, Typography: Body-Large (16px, 500). Token: action-primary-default (#4F46E5) / text-inverse (#FFFFFF).
+   - Input Medium (40px): H:40px, Px:12px, Radius:6px, Border:1px border-default (#E2E8F0). Focus ring: 2px border-focus (#6366F1). Error state includes persistent helper text.
+   - Card Desktop vs. Tablet: Desktop cards use elevation-0/1 with 20px padding; Tablet cards feature 54px tactile touch targets with 16px thumb-accessible padding for warehouse pickers.
+
+3. VARIANT NAMING CONVENTION & CODE TRANSLATION RULES:
+   Direct 1:1 deterministic mapping from Figma slash syntax to React and Tailwind:
+   - Figma: Button / Primary / Large / Hover
+     -> React: <Button hierarchy="primary" size="lg" state="hover" />
+     -> Tailwind: className="btn btn-primary btn-lg hover:bg-indigo-700"
+   - Figma: Input / Text / Medium / Error
+     -> React: <Input type="text" size="md" state="error" helperText="..." />
+     -> Tailwind: className="input input-md border-red-500 bg-red-50"
+   - Figma: Card / Metric / Desktop / Dark / Hover
+     -> React: <Card domain="metric" breakpoint="desk" theme="dark" state="hover" />
+     -> Tailwind: className="card card-metric dark:bg-slate-900 hover:shadow-md"
+
+Full combinatorial matrices, TypeScript interface contracts, and printable presentation PDF available in the repository.
+================================================================================

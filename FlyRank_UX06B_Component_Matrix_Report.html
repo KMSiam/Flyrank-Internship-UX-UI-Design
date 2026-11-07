@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-06B: Component Variant Matrix Generator</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #059669;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #d1fae5;
+    color: #047857;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #064e3b;
+    border-left: 3px solid #059669;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .matrix-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .stat-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+    text-align: center;
+  }
+  .stat-num { font-size: 18px; font-weight: 800; color: #059669; }
+  .stat-title { font-size: 10px; font-weight: 600; color: #475569; margin-top: 2px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .code-box {
+    background: #0f172a;
+    color: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 9.5px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 6 · Build+</span>
+    <h1>UX-06B: Component Variant Matrix Generator</h1>
+    <div style="color: #64748b; font-size: 10.5px;">Combinatorial Attribute Axes · 156 Permutations · Auto-Layout Specs · Production Code Mapping</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>System:</strong> FlyCore v1.0
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Core Components</div>
+    <div class="meta-val">Button, Input, Card</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Total Permutations</div>
+    <div class="meta-val">156 Generated Variants</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Figma Plugin Logic</div>
+    <div class="meta-val">DeepSeek Combinatorial Engine</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Code Translation</div>
+    <div class="meta-val">Figma ↔ React ↔ Tailwind</div>
+  </div>
+</div>
+
+<h2>1. Attribute Axes &amp; Variant Counts</h2>
+<div class="matrix-stat-grid">
+  <div class="stat-card">
+    <div class="stat-num">72</div>
+    <div class="stat-title">Button Variants (4 × 3 × 6)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">48</div>
+    <div class="stat-title">Input Field Variants (4 × 2 × 6)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">36</div>
+    <div class="stat-title">Card Variants (3 × 2 × 2 × 3)</div>
+  </div>
+</div>
+
+<h2>2. Variant Naming Convention &amp; Code Translation Rules</h2>
+<div class="code-box">
+<strong>// Direct 1:1 Deterministic Mapping Contract:</strong><br>
+Figma Slash: Button / Primary / Large / Hover<br>
+React Prop:  &lt;Button hierarchy="primary" size="lg" state="hover" /&gt;<br>
+Tailwind:    className="btn btn-primary btn-lg hover:bg-indigo-700"<br>
+<br>
+Figma Slash: Input / Text / Medium / Error<br>
+React Prop:  &lt;Input type="text" size="md" state="error" helperText="Invalid SKU format" /&gt;<br>
+Tailwind:    className="input input-md border-red-500 bg-red-50 focus:ring-red-500"<br>
+<br>
+Figma Slash: Card / Metric / Desktop / Dark / Hover<br>
+React Prop:  &lt;Card domain="metric" breakpoint="desk" theme="dark" state="hover" /&gt;<br>
+Tailwind:    className="card card-metric dark:bg-slate-900 hover:shadow-md"
+</div>
+
+<h2>3. Button Variant Matrix (Sample of 72 Combinations)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;">Hierarchy</th>
+      <th style="width: 15%;">Size</th>
+      <th style="width: 15%;">State</th>
+      <th style="width: 25%;">Design Token (Fill / Text)</th>
+      <th style="width: 30%;">Figma Component Slash Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Primary</strong></td>
+      <td>Large (48px)</td>
+      <td>Default</td>
+      <td><code>action-primary-default</code> (#4F46E5) / White</td>
+      <td><code>Button / Primary / Large / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Primary</strong></td>
+      <td>Large (48px)</td>
+      <td>Hover</td>
+      <td><code>action-primary-hover</code> (#4338CA) / White</td>
+      <td><code>Button / Primary / Large / Hover</code></td>
+    </tr>
+    <tr>
+      <td><strong>Primary</strong></td>
+      <td>Large (48px)</td>
+      <td>Focused</td>
+      <td><code>action-primary-default</code> + 2px focus ring</td>
+      <td><code>Button / Primary / Large / Focused</code></td>
+    </tr>
+    <tr>
+      <td><strong>Primary</strong></td>
+      <td>Large (48px)</td>
+      <td>Disabled</td>
+      <td><code>action-primary-disabled</code> (#C7D2FE) / Muted</td>
+      <td><code>Button / Primary / Large / Disabled</code></td>
+    </tr>
+    <tr>
+      <td><strong>Secondary</strong></td>
+      <td>Large (48px)</td>
+      <td>Default</td>
+      <td><code>surface-default</code> (#FFFFFF) / Slate-200 border</td>
+      <td><code>Button / Secondary / Large / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Destructive</strong></td>
+      <td>Large (48px)</td>
+      <td>Default</td>
+      <td><code>feedback-danger-surface</code> (#DC2626) / White</td>
+      <td><code>Button / Destructive / Large / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Ghost</strong></td>
+      <td>Large (48px)</td>
+      <td>Default</td>
+      <td>Transparent (0% fill) / Slate-900 text</td>
+      <td><code>Button / Ghost / Large / Default</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>4. Input Field Variant Matrix (Sample of 48 Combinations)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 18%;">Input Type</th>
+      <th style="width: 15%;">Size</th>
+      <th style="width: 15%;">State</th>
+      <th style="width: 22%;">Border &amp; Background</th>
+      <th style="width: 30%;">Figma Component Slash Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Text Input</strong></td>
+      <td>Medium (40px)</td>
+      <td>Default</td>
+      <td><code>border-default</code> (#E2E8F0) / White</td>
+      <td><code>Input / Text / Medium / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Text Input</strong></td>
+      <td>Medium (40px)</td>
+      <td>Focused</td>
+      <td><code>border-focus</code> (#6366F1 2px ring)</td>
+      <td><code>Input / Text / Medium / Focused</code></td>
+    </tr>
+    <tr>
+      <td><strong>Text Input</strong></td>
+      <td>Medium (40px)</td>
+      <td>Error</td>
+      <td><code>feedback-danger-text</code> (#B91C1C) / Red-50</td>
+      <td><code>Input / Text / Medium / Error</code></td>
+    </tr>
+    <tr>
+      <td><strong>Counter</strong></td>
+      <td>Medium (40px)</td>
+      <td>Default</td>
+      <td><code>border-default</code> / Tabular figures</td>
+      <td><code>Input / Counter / Medium / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Dropdown</strong></td>
+      <td>Medium (40px)</td>
+      <td>Default</td>
+      <td><code>border-default</code> / Chevron-down icon</td>
+      <td><code>Input / Dropdown / Medium / Default</code></td>
+    </tr>
+    <tr>
+      <td><strong>Search Bar</strong></td>
+      <td>Medium (40px)</td>
+      <td>Default</td>
+      <td><code>border-default</code> / Search icon leading</td>
+      <td><code>Input / Search / Medium / Default</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5. Card Variant Matrix (36 Multi-Theme Combinations)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 18%;">Domain</th>
+      <th style="width: 15%;">Breakpoint</th>
+      <th style="width: 15%;">Theme</th>
+      <th style="width: 15%;">State</th>
+      <th style="width: 37%;">Figma Component Slash Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Metric Card</strong></td>
+      <td>Desktop (1440px)</td>
+      <td>Light Mode</td>
+      <td>Static</td>
+      <td><code>Card / Metric / Desktop / Light / Static</code></td>
+    </tr>
+    <tr>
+      <td><strong>Metric Card</strong></td>
+      <td>Desktop (1440px)</td>
+      <td>Light Mode</td>
+      <td>Hover</td>
+      <td><code>Card / Metric / Desktop / Light / Hover</code></td>
+    </tr>
+    <tr>
+      <td><strong>Metric Card</strong></td>
+      <td>Desktop (1440px)</td>
+      <td>Dark Mode</td>
+      <td>Static</td>
+      <td><code>Card / Metric / Desktop / Dark / Static</code></td>
+    </tr>
+    <tr>
+      <td><strong>Batch-Order</strong></td>
+      <td>Tablet (1024px)</td>
+      <td>Light Mode</td>
+      <td>Static (54px touch)</td>
+      <td><code>Card / Batch-Order / Tablet / Light / Static</code></td>
+    </tr>
+    <tr>
+      <td><strong>Batch-Order</strong></td>
+      <td>Tablet (1024px)</td>
+      <td>Dark Mode</td>
+      <td>Static (54px touch)</td>
+      <td><code>Card / Batch-Order / Tablet / Dark / Static</code></td>
+    </tr>
+    <tr>
+      <td><strong>SKU-Detail</strong></td>
+      <td>Desktop (1440px)</td>
+      <td>Light Mode</td>
+      <td>Static</td>
+      <td><code>Card / SKU-Detail / Desktop / Light / Static</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Design System File (View Access):</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>
