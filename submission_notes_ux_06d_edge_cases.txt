@@ -1,0 +1,43 @@
+================================================================================
+FLYRANK UX/UI DESIGN TRACK: WEEK 6 ASSIGNMENT SUBMISSION
+The Edge Case & Empty State (Assignment UX-06D · Build+ Phase · 6h)
+================================================================================
+
+1. DELIVERABLE LINKS:
+https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/UX-06D_EDGE_CASES_AND_EMPTY_STATES.md
+https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/FlyRank_UX06D_Edge_Cases_Report.pdf
+
+2. NOTES / CONTEXT FOR REVIEWERS:
+Assignment UX-06D (The Edge Case & Empty State) Summary:
+
+1. 10 "NIGHTMARE" OPERATIONAL SCENARIOS MAPPED:
+   - N-01: Marketplace Webhook Total Blackout (HTTP 503) -> Global persistent warning with automated buffer locking.
+   - N-02: Search Returns Zero Results -> Fuzzy-match suggestion ("Did you mean...") with 1-click filter reset.
+   - N-03: Notification Flooding (100+ unread alerts) -> Alert aggregation clustering 14 variants into an Executive Threat Card.
+   - N-04: 500-Character Title Overflow -> CSS text clamp with hover tooltip and 1-click clipboard copy.
+   - N-05: Wholesale Reserve Depletion (0u) -> Suggests alternative FBA domestic reservoir or expediting Supplier PO.
+   - N-06: Corrupted 3PL Batch CSV -> In-browser linter highlights faulty cells with 1-click auto-sanitize.
+   - N-07: Warehouse Wi-Fi Dead Zone (Offline) -> Offline mode banner caching 14 scans in local IndexedDB.
+   - N-08: Concurrent Mutex Editing Conflict -> Non-destructive merge notification with zero state overwriting.
+   - N-09: 404 Deep Link Broken URL -> Branded recovery screen with direct shortcuts to Live Stock Grid.
+   - N-10: 8-Digit Numeric Overflow -> Tabular numeric abbreviations (14.25M) expanding on hover.
+
+2. SIX MANDATORY PRODUCTION UI STATES DESIGNED:
+   1. Action-Oriented Empty State:
+      - Plain-English: "No Active SKUs Found matching 'SKU-UNKNOWN'."
+      - Action: [ Clear All Filters ] and [ Add New Product SKU ].
+   2. True Structural Loading Skeleton:
+      - 1:1 structural representation of the 40px high-density table row with pulsing shimmer blocks; zero layout shift.
+   3. Plain-English Error Toast:
+      - Replaces raw "Error 504" with: "Unable to Lock TikTok Buffer. TikTok servers didn't respond in time. Your wholesale inventory remains safe and unchanged." + [ Retry Allocation ].
+   4. Optimistic Success Confirmation with 60s Undo:
+      - Floating toast with animated SVG countdown ring: "Rebalanced 150 units to TikTok Shop" + [ Undo Allocation (58s) ].
+   5. Branded 404 Page:
+      - "This Inventory Route Does Not Exist" with embedded search bar and [ Return to Live Inventory Grid ] CTA.
+   6. Overflow Menu & Truncation:
+      - 220px text clamping with tooltip, 99+ notification badge with alert clustering, and 32px tactile (...) action menu.
+
+Full edge case matrix, state specifications, and printable executive PDF available in the repository.
+================================================================================

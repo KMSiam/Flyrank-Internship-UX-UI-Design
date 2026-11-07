@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-06D: The Edge Case & Empty State</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #dc2626;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #fee2e2;
+    color: #b91c1c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #991b1b;
+    border-left: 3px solid #dc2626;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .states-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .state-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .state-card.empty { border-top: 3px solid #10b981; }
+  .state-card.load { border-top: 3px solid #3b82f6; }
+  .state-card.err { border-top: 3px solid #ef4444; }
+  .state-card.succ { border-top: 3px solid #8b5cf6; }
+  .state-card.f04 { border-top: 3px solid #f59e0b; }
+  .state-card.over { border-top: 3px solid #64748b; }
+  .state-title { font-weight: 700; font-size: 10.5px; margin-bottom: 3px; }
+  .state-desc { font-size: 9.5px; color: #475569; line-height: 1.35; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 6 · Build+</span>
+    <h1>UX-06D: The Edge Case &amp; Empty State</h1>
+    <div style="color: #64748b; font-size: 10.5px;">10 Nightmare Scenarios · 6 Mandatory States · Plain-English Diagnostics · 60s Undo Rollback</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>Project:</strong> FlyCommerce OS
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Nightmare Scenarios</div>
+    <div class="meta-val">10 Operational Cases</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Mandatory UI States</div>
+    <div class="meta-val">6 Production Designs</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Error Copy Standard</div>
+    <div class="meta-val">Plain English (No 500s)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Loading Fidelity</div>
+    <div class="meta-val">True 40px Shimmer Skeleton</div>
+  </div>
+</div>
+
+<h2>1. Six Mandatory Production UI States</h2>
+<div class="states-grid">
+  <div class="state-card empty">
+    <div class="state-title" style="color: #059669;">1. Action-Oriented Empty State</div>
+    <div class="state-desc">
+      <em>"No Active SKUs Matching 'SKU-UNKNOWN'."</em><br>
+      Provides 2 concrete next steps:<br>
+      • <code>[ Clear All Filters ]</code><br>
+      • <code>[ Add New Product SKU ]</code>
+    </div>
+  </div>
+  <div class="state-card load">
+    <div class="state-title" style="color: #2563eb;">2. True Structural Skeleton</div>
+    <div class="state-desc">
+      Exact 1:1 geometry of 40px high-density table rows with pulsing gradient shimmer blocks; zero layout shift on data load.
+    </div>
+  </div>
+  <div class="state-card err">
+    <div class="state-title" style="color: #dc2626;">3. Plain-English Error Toast</div>
+    <div class="state-desc">
+      Replaces "Error 504" with: <em>"Unable to Lock TikTok Buffer. Wholesale inventory safe and unchanged."</em> + <code>[ Retry (Attempt 2) ]</code>.
+    </div>
+  </div>
+  <div class="state-card succ">
+    <div class="state-title" style="color: #7c3aed;">4. Success with 60s Undo</div>
+    <div class="state-desc">
+      Floating dark toast with animated SVG countdown: <em>"Rebalanced 150u to TikTok Shop"</em> + <code>[ Undo Allocation (58s) ]</code>.
+    </div>
+  </div>
+  <div class="state-card f04">
+    <div class="state-title" style="color: #d97706;">5. Branded 404 Recovery</div>
+    <div class="state-desc">
+      <em>"This Inventory Route Does Not Exist."</em> Embedded search bar + <code>[ Return to Live Stock Grid ]</code> CTA.
+    </div>
+  </div>
+  <div class="state-card over">
+    <div class="state-title" style="color: #475569;">6. Overflow &amp; Truncation</div>
+    <div class="state-desc">
+      220px text clamp with hover tooltip + 99+ alert aggregation grouping 14 variants into an Executive Threat Card.
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>2. The 10 "Nightmare" Operational Edge Cases</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;">Scenario</th>
+      <th style="width: 25%;">Trigger Event</th>
+      <th style="width: 30%;">Operational Risk</th>
+      <th style="width: 30%;">FlyCore UI Mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>N-01: API Blackout</strong></td>
+      <td>TikTok Shop webhook gateway HTTP 503 during sales.</td>
+      <td>Overselling stock; seller health score demotion.</td>
+      <td>Global persistent amber warning; 25 safety buffer units automatically locked.</td>
+    </tr>
+    <tr>
+      <td><strong>N-02: Zero Search Results</strong></td>
+      <td>User misspells SKU (<code>GLW-SERUM-01</code>).</td>
+      <td>Operator assumes SKU deleted; wasted time.</td>
+      <td>Fuzzy-match suggestion ("Did you mean...") with 1-click filter reset.</td>
+    </tr>
+    <tr>
+      <td><strong>N-03: Alert Flooding</strong></td>
+      <td>Viral surge triggers 14 variant alerts at once.</td>
+      <td>Cognitive overload and alert blindness.</td>
+      <td>Notification clustering: Bundles 14 items into an Executive Threat Card.</td>
+    </tr>
+    <tr>
+      <td><strong>N-04: 500-Char Title</strong></td>
+      <td>Supplier uploads keyword-stuffed title with emoji.</td>
+      <td>Table row explodes from 40px to 300px.</td>
+      <td>CSS clamp at 280px with hover tooltip and 1-click clipboard copy.</td>
+    </tr>
+    <tr>
+      <td><strong>N-05: Reserve Depletion</strong></td>
+      <td>Wholesale pool reaches 0 units.</td>
+      <td>Rebalance modal dead-end; stockout penalty.</td>
+      <td>AI suggests alternative reservoir: Amazon FBA split or expediting PO.</td>
+    </tr>
+    <tr>
+      <td><strong>N-06: Corrupted CSV</strong></td>
+      <td>Batch upload has trailing spaces in SKU names.</td>
+      <td>Crashes warehouse WMS database pipeline.</td>
+      <td>Pre-flight client-side linter flags rows with 1-click "Auto-Sanitize".</td>
+    </tr>
+    <tr>
+      <td><strong>N-07: Wi-Fi Dead Zone</strong></td>
+      <td>Picker tablet enters warehouse cold-storage.</td>
+      <td>Scanned orders lost in memory.</td>
+      <td>Offline Mode Banner: 14 scans saved in IndexedDB; auto-sync on Wi-Fi.</td>
+    </tr>
+    <tr>
+      <td><strong>N-08: Concurrency Lock</strong></td>
+      <td>Elena &amp; Marcus edit same SKU within 500ms.</td>
+      <td>Silent state overwrite.</td>
+      <td>Non-destructive merge alert: "Marcus updated stock 3s ago; merge or keep?".</td>
+    </tr>
+    <tr>
+      <td><strong>N-09: Broken 404 Link</strong></td>
+      <td>User clicks expired report URL from Slack.</td>
+      <td>User hits raw browser error screen.</td>
+      <td>Branded 404 recovery screen with direct shortcuts to Live Stock Grid.</td>
+    </tr>
+    <tr>
+      <td><strong>N-10: Numeric Overflow</strong></td>
+      <td>Stock quantity reaches 14,250,000 units.</td>
+      <td>Text overflows, pushing buttons off-screen.</td>
+      <td>Tabular numeric formatting (14.25M Units) expanding on hover.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="link-box">
+<strong>Master Figma Workspace:</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design
+</div>
+
+</body>
+</html>
