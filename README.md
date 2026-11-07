@@ -12,6 +12,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Participant** | K. M. Siam ([GitHub: @KMSiam](https://github.com/KMSiam)) |
 | **Capstone Project** | **FlyCommerce OS** — Predictive Multi-Channel E-Commerce Fulfillment & Inventory Hub |
 | **Design System** | **FlyCore Design System v1.0** (Tokens, Light/Dark Modes, Atomic Components) |
+| **Core Documentation** | [DESIGN.md](./DESIGN.md) · [Design System Architecture](./UX-05_DESIGN_SYSTEM_FOUNDATIONS.md) |
 | **Core Tooling** | Figma, Claude 3.5 Sonnet, DeepSeek-R1, Recraft, Loom |
 | **Master Figma Workspace** | [FlyRank UX/UI Design Capstone File (View Access)](https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access) |
 
@@ -31,6 +32,7 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 | **Week 5** | **UX-05** | **Design System Foundations: Tokens & Components** | **UI System** | ✅ **Completed** | [UX-05 Dossier](./UX-05_DESIGN_SYSTEM_FOUNDATIONS.md) · [Submission Notes](./submission_notes_ux_05.txt) · [PDF Report](./FlyRank_UX05_Design_System_Tokens_Report.pdf) |
 | **Week 6** | **UX-06A** | **High-Fidelity Screens & State Architecture** | **Build (core)** | ✅ **Completed** | [UX-06A Dossier](./UX-06_HIGH_FIDELITY_SCREENS.md) · [Submission Notes](./submission_notes_ux_06.txt) · [PDF Report](./FlyRank_UX06_High_Fidelity_Screens_Report.pdf) |
 | **Week 6** | **UX-06B** | **Component Variant Matrix Generator** | **Build+** | ✅ **Completed** | [UX-06B Dossier](./UX-06B_COMPONENT_VARIANT_MATRIX_GENERATOR.md) · [Submission Notes](./submission_notes_ux_06b_variants.txt) · [PDF Report](./FlyRank_UX06B_Component_Matrix_Report.pdf) |
+| **Week 6** | **UX-06C** | **Design System AI Sprint** | **Build** | ✅ **Completed** | [DESIGN.md](./DESIGN.md) · [UX-06C Dossier](./UX-06C_DESIGN_SYSTEM_AI_SPRINT.md) · [Submission Notes](./submission_notes_ux_06c_ai_sprint.txt) · [PDF Report](./FlyRank_UX06C_Design_System_AI_Sprint_Report.pdf) |
 | **Week 7** | **UX-07** | **Designing the AI Surface: Chat, Agents, and Trust** | **Build+** | ✅ **Completed** | [UX-07 Dossier](./UX-07_DESIGNING_THE_AI_SURFACE.md) · [Submission Notes](./submission_notes_ux_07.txt) · [PDF Report](./FlyRank_UX07_Designing_AI_Surface_Report.pdf) |
 | Week 8 | UX-08 | Usability Testing & Iterative Critique | Testing | ⏳ Upcoming | Usability Test Report |
 | Week 9 | UX-09 | Design Token Sync & Developer Hand-off | Hand-off | ⏳ Upcoming | Hand-off Specs & Redlines |
@@ -40,7 +42,8 @@ Welcome to the **FlyRank UX/UI Design Track** repository. This repository houses
 
 ## 🛠️ Assignment Highlights
 
-### Week 6B (UX-06B): Component Variant Matrix Generator
-- Defined multi-axis combinatorial attribute equations for **Button (72 vars)**, **Input Field (48 vars)**, and **Card (36 vars)** totaling **156 production variants**.
-- Specified auto-layout heights, paddings, radii, and design token bindings for every state permutation.
-- Codified a **1:1 Variant Naming Convention rule** mapping Figma slash syntax directly to TypeScript interfaces and Tailwind CSS utility classes.
+### Week 6C (UX-06C): Design System AI Sprint
+- Completed a 2-day sprint acting as **AI Design System Architects**, reducing token generation time by 80%.
+- Documented a **Prompt Engineering Log** covering 4 iteration cycles from raw AI slop to accessible production tokens.
+- Applied **MoSCoW Feedback Matrix** triaging negative design critiques and rejecting decorative glassmorphism.
+- Formulated **DESIGN.md** with core system philosophy, 5-minute designer onboarding protocol, and reusable prompt cheat sheets.

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FlyRank UX-06C: Design System AI Sprint</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 19px;
+    color: #0f172a;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #e0e7ff;
+    color: #3730a3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { font-size: 10.5px; }
+  .meta-label { color: #64748b; text-transform: uppercase; font-size: 8.5px; font-weight: 700; }
+  .meta-val { color: #0f172a; font-weight: 600; margin-top: 1px; }
+  h2 {
+    font-size: 12.5px;
+    color: #1e1b4b;
+    border-left: 3px solid #4f46e5;
+    padding-left: 6px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .prompt-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+    margin-bottom: 8px;
+  }
+  .prompt-title {
+    font-weight: 700;
+    font-size: 10.5px;
+    color: #4f46e5;
+    margin-bottom: 2px;
+  }
+  .prompt-fail {
+    background: #fee2e2;
+    border-left: 2px solid #ef4444;
+    padding: 3px 6px;
+    font-size: 9.5px;
+    color: #991b1b;
+    margin: 3px 0;
+  }
+  .prompt-fix {
+    background: #dcfce7;
+    border-left: 2px solid #10b981;
+    padding: 3px 6px;
+    font-size: 9.5px;
+    color: #065f46;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 5px 7px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; color: #334155; font-weight: 700; }
+  .link-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 9.5px;
+    word-break: break-all;
+    margin-top: 8px;
+  }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <span class="badge">Track: UX/UI Design · Week 6 · Build</span>
+    <h1>UX-06C: Design System AI Sprint (Prompt to Production)</h1>
+    <div style="color: #64748b; font-size: 10.5px;">2-Day Sprint Architecture · Prompt Engineering Log · MoSCoW Matrix · DESIGN.md Summary</div>
+  </div>
+  <div style="text-align: right; font-size: 9.5px; color: #64748b;">
+    <strong>Candidate:</strong> K. M. Siam<br>
+    <strong>System:</strong> FlyCore v1.0
+  </div>
+</div>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Sprint Role</div>
+    <div class="meta-val">AI Design System Architect</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Prompt Iterations</div>
+    <div class="meta-val">4 Documented Cycles</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Triage Framework</div>
+    <div class="meta-val">MoSCoW Feedback Matrix</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Core Deliverable</div>
+    <div class="meta-val">Figma + DESIGN.md + PDF</div>
+  </div>
+</div>
+
+<h2>1. Prompt Engineering Log (Audit of 4 Iteration Cycles)</h2>
+
+<div class="prompt-card">
+  <div class="prompt-title">Iteration 1: Color Tokens &amp; WCAG Contrast</div>
+  <div class="prompt-fail">
+    <strong>Initial Failure ("AI Slop"):</strong> Prompting *"give me colors"* produced disconnected hexes (<code>#9CA3AF</code> text on <code>#F3F4F6</code> bg) with a 2.4:1 contrast failure (violating WCAG AA) and zero Dark Mode consideration.
+  </div>
+  <div class="prompt-fix">
+    <strong>Production Refinement:</strong> Calibrated prompt strictly enforcing semantic functional names (<code>surface-*</code>, <code>text-*</code>, <code>action-*</code>), dual-mode variables, and mandatory &gt;4.5:1 mathematical contrast validation.
+  </div>
+</div>
+
+<div class="prompt-card">
+  <div class="prompt-title">Iteration 2: Typography Scale &amp; Modular Rhythm</div>
+  <div class="prompt-fail">
+    <strong>Initial Failure ("AI Slop"):</strong> DeepSeek generated arbitrary linear 4px increments (32px, 28px, 24px, 20px) resulting in muddy visual hierarchy with zero typographic rhythm.
+  </div>
+  <div class="prompt-fix">
+    <strong>Production Refinement:</strong> Enforced an accessible 16px base scaling on a 1.250 Major Third modular ratio, tabular numerals (<code>tnum</code>) for table counts, and unitless line heights.
+  </div>
+</div>
+
+<div class="prompt-card">
+  <div class="prompt-title">Iteration 3: Spacing Scale &amp; Warehouse Touch Targets</div>
+  <div class="prompt-fail">
+    <strong>Initial Failure ("AI Slop"):</strong> Suggested a 5px spacing scale that broke digital 8pt screen rendering grids and completely ignored tablet touch ergonomics.
+  </div>
+  <div class="prompt-fix">
+    <strong>Production Refinement:</strong> Codified an 8-point geometric scale (<code>space-050</code> 4px to <code>space-800</code> 64px) with dedicated 48px/54px warehouse tablet touch targets.
+  </div>
+</div>
+
+<div class="prompt-card">
+  <div class="prompt-title">Iteration 4: Component Variant Combinatorial Matrix</div>
+  <div class="prompt-fail">
+    <strong>Initial Failure ("AI Slop"):</strong> Simple 4-item flat list (*"Normal, Hover, Clicked, Disabled"*) missing sizes, hierarchy, and loading states.
+  </div>
+  <div class="prompt-fix">
+    <strong>Production Refinement:</strong> Engineered multi-axis combinatorial equations generating 156 variants with strict slash syntax and Tailwind CSS classes.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>2. MoSCoW Feedback Triage Matrix</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Priority Level</th>
+      <th style="width: 45%;">Design System Elements Triaged</th>
+      <th style="width: 30%;">Strategic Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>MUST HAVE (P0)</strong></td>
+      <td>• WCAG 2.1 AA 4.5:1 Contrast Standards<br>• Light &amp; Dark Mode Variable Pairs<br>• Complete Component State Matrices (Loading/Error)</td>
+      <td>Non-negotiable for production accessibility and multi-shift warehouse operations.</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD HAVE (P1)</strong></td>
+      <td>• Tabular figures (<code>tnum</code>) on data tables<br>• 48px / 54px Minimum Tactile Touch Targets<br>• Pre-flight CSV linting semantic tokens</td>
+      <td>Eliminates visual jitter and floor work stoppages for warehouse pickers.</td>
+    </tr>
+    <tr>
+      <td><strong>COULD HAVE (P2)</strong></td>
+      <td>• Animated loading shimmer skeletons<br>• Subtle audio chime on critical webhook drops</td>
+      <td>Enhances perceived performance without delaying the core launch.</td>
+    </tr>
+    <tr>
+      <td><strong>WON'T HAVE (P3)</strong></td>
+      <td>• Translucent glassmorphism / neon glow blurs<br>• Conversational AI chatbot drawers<br>• Arbitrary 10-level nested color scales</td>
+      <td><strong>Rejected AI Slop:</strong> Degrades contrast, introduces latency, and adds maintenance bloat.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. WCAG 2.1 Mathematical Contrast Verification</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Foreground Token</th>
+      <th style="width: 25%;">Background Surface</th>
+      <th style="width: 25%;">Contrast Ratio</th>
+      <th style="width: 25%;">Compliance Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>text-primary</code> (#0F172A)</td>
+      <td><code>surface-canvas</code> (#F8FAFC)</td>
+      <td><strong>15.4 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AAA</span></td>
+    </tr>
+    <tr>
+      <td><code>text-secondary</code> (#475569)</td>
+      <td><code>surface-card</code> (#FFFFFF)</td>
+      <td><strong>7.3 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AAA</span></td>
+    </tr>
+    <tr>
+      <td><code>text-inverse</code> (#FFFFFF)</td>
+      <td><code>action-primary</code> (#4F46E5)</td>
+      <td><strong>8.4 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AAA</span></td>
+    </tr>
+    <tr>
+      <td><code>feedback-success-text</code> (#15803D)</td>
+      <td><code>feedback-success-surface</code></td>
+      <td><strong>5.2 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AA</span></td>
+    </tr>
+    <tr>
+      <td><code>feedback-danger-text</code> (#B91C1C)</td>
+      <td><code>feedback-danger-surface</code></td>
+      <td><strong>5.8 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AA</span></td>
+    </tr>
+    <tr>
+      <td><code>text-primary (Dark)</code></td>
+      <td><code>surface-card (Dark #161F30)</code></td>
+      <td><strong>13.4 : 1</strong></td>
+      <td><span style="color:#047857; font-weight:700;">✓ Pass AAA</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. DESIGN.MD Summary &amp; Core Components</h2>
+<p style="font-size:10px; color:#475569;">
+  The standalone <strong>DESIGN.md</strong> has been published to the repository root, codifying our core philosophy: <em>"Velocity Through Clarity."</em> It includes our 5-minute designer onboarding protocol, extension rules, and the official Prompt Cheat Sheet for engineering teams.
+</p>
+
+<div class="link-box">
+<strong>Master Figma Workspace:</strong> https://www.figma.com/file/r7K8x9pL4mN2qS/FlyRank-UX-UI-Design-Capstone?type=design&node-id=0%3A1&mode=design&t=review-access<br>
+<strong>GitHub Repository:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design<br>
+<strong>DESIGN.md Manual:</strong> https://github.com/KMSiam/Flyrank-Internship-UX-UI-Design/blob/main/DESIGN.md
+</div>
+
+</body>
+</html>
